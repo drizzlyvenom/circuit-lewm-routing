@@ -80,6 +80,14 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+def artifact_ref(path: Path) -> str:
+    resolved = path.resolve()
+    try:
+        return resolved.relative_to(ROOT).as_posix()
+    except ValueError:
+        return resolved.name
+
+
 def load_vqa_samples(manifest_path: Path, max_samples: int) -> list[dict[str, Any]]:
     samples = [row for row in read_jsonl(manifest_path) if row.get("sample_family") == "vqa_evaluation"]
     return samples[:max_samples]
@@ -97,14 +105,14 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         "generated_at_utc": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "model": {
             "name": "Qwen3-VL-4B-Instruct",
-            "path": str(model_path),
+            "path": artifact_ref(model_path),
             "dtype": args.dtype,
             "local_files_only": True,
         },
         "dataset": {
             "source_dataset": "ayoubkirouane/CircuitVQA",
             "source_split": "test",
-            "manifest": str(manifest_path),
+            "manifest": artifact_ref(manifest_path),
             "selected_vqa_samples": len(samples),
             "selection_policy": "first N vqa_evaluation rows from M2 test manifest",
             "license_caveat": "HF dataset card does not declare a license; result stores refs/hashes, not raw prompts or expected answers.",

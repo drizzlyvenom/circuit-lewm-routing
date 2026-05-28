@@ -40,6 +40,7 @@ active_evidence_if:
 000_dataset_source_audit_ko.md
 001_circuit_sample_schema_ko.md
 002_qwen_baseline_ko.md
+003_security_hygiene_review_ko.md
 ```
 
 ---

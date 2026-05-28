@@ -100,6 +100,26 @@ def summarize_features(first_rows: dict[str, Any] | None) -> list[dict[str, str]
     return features
 
 
+def sanitize_preview_value(key: str, value: Any) -> Any:
+    if value is None or isinstance(value, (bool, int, float)):
+        return value
+    if not isinstance(value, str):
+        return f"<{type(value).__name__}>"
+
+    text = value.strip()
+    if re.search(r"(Expires=|Signature=|Key-Pair-Id|X-Amz-)", text):
+        return "<signed_url_redacted>"
+
+    key_lower = key.lower()
+    looks_like_path = bool(re.search(r"(^[A-Za-z]:[\\/]|^/home/|^/users/|^/mnt/|^\\\\)", text, flags=re.I))
+    key_suggests_path = key_lower.endswith("path") or key_lower.endswith("_path")
+    if looks_like_path or (key_suggests_path and bool(re.search(r"[\\/]", text))):
+        basename = re.split(r"[\\/]", text.rstrip("/\\"))[-1]
+        return f"<path_redacted>/{basename}" if basename else "<path_redacted>"
+
+    return text[:120]
+
+
 def summarize_first_row(first_rows: dict[str, Any] | None) -> dict[str, Any]:
     rows = (first_rows or {}).get("rows", [])
     if not rows:
@@ -111,9 +131,13 @@ def summarize_first_row(first_rows: dict[str, Any] | None) -> dict[str, Any]:
             shapes[key] = {"kind": "list", "length": len(value)}
         elif isinstance(value, dict):
             clean_dict = {k: v for k, v in value.items() if k not in {"src", "bytes"}}
-            shapes[key] = {"kind": "dict", "keys": sorted(value.keys()), "preview": clean_dict}
+            preview = {
+                nested_key: sanitize_preview_value(nested_key, nested_value)
+                for nested_key, nested_value in list(clean_dict.items())[:8]
+            }
+            shapes[key] = {"kind": "dict", "keys": sorted(value.keys()), "preview": preview}
         else:
-            shapes[key] = {"kind": type(value).__name__, "preview": str(value)[:120]}
+            shapes[key] = {"kind": type(value).__name__, "preview": sanitize_preview_value(key, value)}
     return {"row_keys": list(row.keys()), "field_shapes": shapes}
 
 
