@@ -1,0 +1,28 @@
+adapter_id: circuit_structure_projector_lora_v1
+base_backbone: lewm_s
+backbone_type: lewm_world_model
+adapter_slot: structure_projector
+taxonomy:
+  domain: circuit
+  evidence_type: component_relation
+  operation: structure_alignment
+  failure_mode: missed_connection_or_symbol
+training:
+  train_manifest: data/circuit_curricula/train.jsonl
+  holdout_manifest: data/circuit_curricula/holdout.jsonl
+weights:
+  adapter_path_local_only: checkpoints/adapters/circuit_structure_projector_lora_v1
+  rank: null
+  alpha: null
+actual_certification:
+  status: incomplete
+  base_score: null
+  correct_score: null
+  wrong_score: null
+  random_score: null
+  gain_vs_base: null
+  margin_vs_wrong: null
+  margin_vs_random: null
+  failure_reason: null
+serving:
+  online_routing_allowed: false

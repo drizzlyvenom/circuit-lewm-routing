@@ -1,0 +1,14 @@
+router_eval_id: router_eval_v1
+router_type: llm_router
+perception_model_id: lewm_s
+adapter_registry: configs/router/adapter_registry.yaml
+split: holdout
+metrics:
+  top1_hit: null
+  routed_score: null
+  oracle_score: null
+  random_score: null
+  abstain_rate: null
+  router_regret: null
+  wrong_adapter_damage: null
+status: incomplete

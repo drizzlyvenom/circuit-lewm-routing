@@ -1,0 +1,15 @@
+probe_id: lewm_s_frozen_probe_v1
+model_id: lewm_s
+checkpoint_ref: local_only
+split: holdout
+metrics:
+  component_presence_f1: null
+  symbol_type_f1: null
+  structure_retrieval_top1: null
+  structure_retrieval_top5: null
+  crop_to_component_hit: null
+failure_summary:
+  perception: []
+  structure: []
+  tile_or_resize: []
+status: incomplete

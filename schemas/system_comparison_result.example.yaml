@@ -1,0 +1,24 @@
+comparison_id: qwen_vs_lewm_main_v1
+split: test
+systems:
+  - system_id: qwen3_vl_single_backbone
+    accuracy: null
+    resident_vram_mb: null
+    peak_vram_mb: null
+    latency_ms: null
+    total_parameters: null
+  - system_id: perception_lewm_lora_routing_llm
+    accuracy: null
+    resident_vram_mb: null
+    peak_vram_mb: null
+    latency_ms: null
+    total_parameters: null
+  - system_id: perception_lewm_jepa_router
+    accuracy: null
+    resident_vram_mb: null
+    peak_vram_mb: null
+    latency_ms: null
+    total_parameters: null
+claim_boundary:
+  status: incomplete
+  notes: []

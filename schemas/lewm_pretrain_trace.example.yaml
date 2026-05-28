@@ -1,0 +1,19 @@
+run_id: lewm_s_open_schematics_v1
+model_id: lewm_s
+runtime: wsl_linux
+source_manifest: data/circuit_sources/source_manifest.json
+train_manifest: data/circuit_curricula/train.jsonl
+holdout_manifest: data/circuit_curricula/holdout.jsonl
+objectives:
+  - image_to_structure_alignment
+  - masked_crop_or_neighbor_prediction
+metrics:
+  train_loss: null
+  holdout_retrieval_top1: null
+  holdout_retrieval_top5: null
+resource:
+  peak_vram_mb: null
+  duration_seconds: null
+artifacts:
+  checkpoint_path_local_only: null
+  summary_path: results/lewm_s/pretrain_log_summary.json

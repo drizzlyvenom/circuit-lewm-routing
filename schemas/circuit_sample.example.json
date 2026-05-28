@@ -1,0 +1,26 @@
+{
+  "sample_id": "circuit_sample_000001",
+  "source_dataset": "bshada/open-schematics",
+  "split": "train",
+  "image": {
+    "image_path_or_ref": "hf://datasets/bshada/open-schematics/train/0/image",
+    "width": null,
+    "height": null
+  },
+  "query": {
+    "prompt": null,
+    "expected_answers": null,
+    "answer_type": null
+  },
+  "structure": {
+    "structure_path_or_ref": "hf://datasets/bshada/open-schematics/train/0/kicad",
+    "component_list": null,
+    "netlist_or_edges": null,
+    "metadata_text": null
+  },
+  "supervision": {
+    "taxonomy": null,
+    "hard_negatives": [],
+    "roi_or_tile_boxes": null
+  }
+}

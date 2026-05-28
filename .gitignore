@@ -1,0 +1,63 @@
+# Local environments
+.local/
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local model and checkpoint artifacts
+/models/
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.gguf
+*.bin
+*.onnx
+
+# Dataset and experiment artifacts
+data/raw/
+data/cache/
+data/downloads/
+artifacts/
+logs/
+runs/
+outputs/
+wandb/
+results/tmp/
+results/cache/
+wsl/lewm/.venv/
+wsl/lewm/data/
+wsl/lewm/runs/
+wsl/lewm/outputs/
+wsl/lewm/checkpoints/
+wsl/lewm/wandb/
+
+# Large tabular/binary data
+*.parquet
+*.arrow
+*.lance
+*.h5
+*.hdf5
+*.sqlite
+*.db
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local secrets
+.env
+.env.*
+!.env.example
