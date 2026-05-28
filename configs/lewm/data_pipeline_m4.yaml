@@ -1,0 +1,30 @@
+name: m4_lewm_data_pipeline
+status: active
+
+input_manifest: data/circuit_curricula/train.jsonl
+output: results/lewm_data_pipeline/sanity_check.json
+
+dataset:
+  source_dataset: bshada/open-schematics
+  source_split: train
+  sample_family: structure_pretraining
+  usable_pair_policy: require image.src and non-empty schematic
+
+batch:
+  batch_size: 64
+  max_scan: 256
+  global_size: 224
+  tile_size: 224
+  num_tiles: 4
+
+augmentation:
+  enabled: true
+  deterministic_seed: 20260529
+  brightness_jitter: 0.04
+  contrast_jitter: 0.04
+
+artifact_policy:
+  store_raw_images: false
+  store_signed_urls: false
+  store_raw_schematic: false
+  store_hashes_and_counts_only: true

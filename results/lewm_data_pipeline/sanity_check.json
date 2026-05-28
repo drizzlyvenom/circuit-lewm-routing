@@ -1,0 +1,4710 @@
+{
+  "batch_shapes": {
+    "global_view": [
+      64,
+      3,
+      224,
+      224
+    ],
+    "structure_features": [
+      64,
+      8
+    ],
+    "tile_view": [
+      64,
+      4,
+      3,
+      224,
+      224
+    ]
+  },
+  "config": {
+    "augment": true,
+    "batch_size": 64,
+    "global_size": 224,
+    "manifest": "data/circuit_curricula/train.jsonl",
+    "max_scan": 256,
+    "num_tiles": 4,
+    "seed": 20260529,
+    "source_dataset": "bshada/open-schematics",
+    "tile_size": 224
+  },
+  "generated_at_utc": "2026-05-28T18:21:57+00:00",
+  "memory": {
+    "gpu_memory_after_mb": 1201,
+    "gpu_memory_before_mb": 1213,
+    "process_rss_after_mb": 887.824,
+    "process_rss_before_mb": 495.211,
+    "process_rss_delta_mb": 392.613,
+    "ram_limit_mb": 24576,
+    "system": {
+      "available_mb": 22618.477,
+      "percent": 30.6,
+      "total_mb": 32581.426
+    },
+    "under_ram_limit": true
+  },
+  "records": [
+    {
+      "augmentation": {
+        "brightness": 0.973048,
+        "contrast": 1.016252,
+        "enabled": true
+      },
+      "component_set_hash": "3543f74da0c747d8",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "c35f2305d705103d",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000001",
+      "schematic_hash": "f77fef0f897bd21f",
+      "source_row_idx": 18038,
+      "structure_features": {
+        "component_library_count": 6,
+        "junction_count": 2,
+        "label_count": 15,
+        "reference_property_count": 16,
+        "schematic_chars": 35445,
+        "schematic_lines": 1018,
+        "symbol_count": 29,
+        "wire_count": 10
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.019676,
+        "contrast": 1.014898,
+        "enabled": true
+      },
+      "component_set_hash": "3307e7ad5b6f4e52",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "26428e7de2aaa217",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000003",
+      "schematic_hash": "2c7ff957fa62eaea",
+      "source_row_idx": 8676,
+      "structure_features": {
+        "component_library_count": 7,
+        "junction_count": 24,
+        "label_count": 6,
+        "reference_property_count": 30,
+        "schematic_chars": 55283,
+        "schematic_lines": 1518,
+        "symbol_count": 44,
+        "wire_count": 81
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.012218,
+        "contrast": 0.992778,
+        "enabled": true
+      },
+      "component_set_hash": "d968210178c74115",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "f3b951dd13291a4f",
+      "original_size": {
+        "height": 1056,
+        "width": 1632
+      },
+      "sample_id": "openschematic_train_000004",
+      "schematic_hash": "f5a63778f2029dff",
+      "source_row_idx": 33397,
+      "structure_features": {
+        "component_library_count": 7,
+        "junction_count": 0,
+        "label_count": 0,
+        "reference_property_count": 24,
+        "schematic_chars": 55494,
+        "schematic_lines": 3427,
+        "symbol_count": 38,
+        "wire_count": 38
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 816,
+            "y0": 0,
+            "y1": 528
+          },
+          {
+            "tile_index": 1,
+            "x0": 816,
+            "x1": 1632,
+            "y0": 0,
+            "y1": 528
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 816,
+            "y0": 528,
+            "y1": 1056
+          },
+          {
+            "tile_index": 3,
+            "x0": 816,
+            "x1": 1632,
+            "y0": 528,
+            "y1": 1056
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.007948,
+        "contrast": 0.984926,
+        "enabled": true
+      },
+      "component_set_hash": "6fa54fac7cd798d1",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "000bf598be13061a",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000007",
+      "schematic_hash": "e85e14e0a5dfa3ec",
+      "source_row_idx": 33947,
+      "structure_features": {
+        "component_library_count": 5,
+        "junction_count": 3,
+        "label_count": 0,
+        "reference_property_count": 28,
+        "schematic_chars": 46942,
+        "schematic_lines": 1104,
+        "symbol_count": 37,
+        "wire_count": 13
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.973558,
+        "contrast": 0.971277,
+        "enabled": true
+      },
+      "component_set_hash": "2e6ad16a4ffb718f",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "d94ce43c0c177f86",
+      "original_size": {
+        "height": 1123,
+        "width": 1587
+      },
+      "sample_id": "openschematic_train_000011",
+      "schematic_hash": "5819021a9227b60f",
+      "source_row_idx": 2669,
+      "structure_features": {
+        "component_library_count": 9,
+        "junction_count": 11,
+        "label_count": 104,
+        "reference_property_count": 28,
+        "schematic_chars": 107679,
+        "schematic_lines": 2868,
+        "symbol_count": 42,
+        "wire_count": 147
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 793,
+            "y0": 0,
+            "y1": 561
+          },
+          {
+            "tile_index": 1,
+            "x0": 793,
+            "x1": 1587,
+            "y0": 0,
+            "y1": 561
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 793,
+            "y0": 561,
+            "y1": 1123
+          },
+          {
+            "tile_index": 3,
+            "x0": 793,
+            "x1": 1587,
+            "y0": 561,
+            "y1": 1123
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.975829,
+        "contrast": 0.977748,
+        "enabled": true
+      },
+      "component_set_hash": "c37539293eab3fd4",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "bcadfa9e2afe427b",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000012",
+      "schematic_hash": "f678a4cf827fc2ce",
+      "source_row_idx": 16738,
+      "structure_features": {
+        "component_library_count": 9,
+        "junction_count": 29,
+        "label_count": 33,
+        "reference_property_count": 33,
+        "schematic_chars": 165424,
+        "schematic_lines": 10336,
+        "symbol_count": 53,
+        "wire_count": 168
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.007045,
+        "contrast": 0.983393,
+        "enabled": true
+      },
+      "component_set_hash": "ac81a82ec1ccb83e",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "85b3155780851200",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000013",
+      "schematic_hash": "a30b01cb15a05047",
+      "source_row_idx": 15264,
+      "structure_features": {
+        "component_library_count": 11,
+        "junction_count": 15,
+        "label_count": 0,
+        "reference_property_count": 38,
+        "schematic_chars": 54360,
+        "schematic_lines": 1600,
+        "symbol_count": 60,
+        "wire_count": 37
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.963115,
+        "contrast": 0.984703,
+        "enabled": true
+      },
+      "component_set_hash": "267bf2469a79b615",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "44f25b2a26def84f",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000014",
+      "schematic_hash": "285507a78c74c54f",
+      "source_row_idx": 31263,
+      "structure_features": {
+        "component_library_count": 13,
+        "junction_count": 10,
+        "label_count": 4,
+        "reference_property_count": 41,
+        "schematic_chars": 94825,
+        "schematic_lines": 5898,
+        "symbol_count": 65,
+        "wire_count": 53
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.003741,
+        "contrast": 1.039489,
+        "enabled": true
+      },
+      "component_set_hash": "388265048708ee90",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "275df5638f99ebeb",
+      "original_size": {
+        "height": 1123,
+        "width": 1587
+      },
+      "sample_id": "openschematic_train_000017",
+      "schematic_hash": "65beaebe8847dc2e",
+      "source_row_idx": 14079,
+      "structure_features": {
+        "component_library_count": 15,
+        "junction_count": 63,
+        "label_count": 214,
+        "reference_property_count": 90,
+        "schematic_chars": 283471,
+        "schematic_lines": 7126,
+        "symbol_count": 119,
+        "wire_count": 259
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 793,
+            "y0": 0,
+            "y1": 561
+          },
+          {
+            "tile_index": 1,
+            "x0": 793,
+            "x1": 1587,
+            "y0": 0,
+            "y1": 561
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 793,
+            "y0": 561,
+            "y1": 1123
+          },
+          {
+            "tile_index": 3,
+            "x0": 793,
+            "x1": 1587,
+            "y0": 561,
+            "y1": 1123
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.974408,
+        "contrast": 0.965227,
+        "enabled": true
+      },
+      "component_set_hash": "ce9f38afd23a10e7",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "dca96b23e901eef4",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000023",
+      "schematic_hash": "b8b0b21f1a8719c8",
+      "source_row_idx": 31304,
+      "structure_features": {
+        "component_library_count": 9,
+        "junction_count": 39,
+        "label_count": 0,
+        "reference_property_count": 34,
+        "schematic_chars": 69895,
+        "schematic_lines": 4219,
+        "symbol_count": 51,
+        "wire_count": 67
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.968283,
+        "contrast": 1.037167,
+        "enabled": true
+      },
+      "component_set_hash": "3829b99c1d22d710",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "eaa9798511939460",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000024",
+      "schematic_hash": "55e5b33ebdb2b2cb",
+      "source_row_idx": 11550,
+      "structure_features": {
+        "component_library_count": 15,
+        "junction_count": 35,
+        "label_count": 45,
+        "reference_property_count": 50,
+        "schematic_chars": 156807,
+        "schematic_lines": 3667,
+        "symbol_count": 75,
+        "wire_count": 185
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.987455,
+        "contrast": 1.016671,
+        "enabled": true
+      },
+      "component_set_hash": "7ff716d5c05415f8",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "1be80bdeaa5f18c0",
+      "original_size": {
+        "height": 816,
+        "width": 1056
+      },
+      "sample_id": "openschematic_train_000025",
+      "schematic_hash": "52ee936829a0b2f9",
+      "source_row_idx": 24341,
+      "structure_features": {
+        "component_library_count": 17,
+        "junction_count": 22,
+        "label_count": 16,
+        "reference_property_count": 67,
+        "schematic_chars": 137319,
+        "schematic_lines": 3736,
+        "symbol_count": 95,
+        "wire_count": 160
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 528,
+            "y0": 0,
+            "y1": 408
+          },
+          {
+            "tile_index": 1,
+            "x0": 528,
+            "x1": 1056,
+            "y0": 0,
+            "y1": 408
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 528,
+            "y0": 408,
+            "y1": 816
+          },
+          {
+            "tile_index": 3,
+            "x0": 528,
+            "x1": 1056,
+            "y0": 408,
+            "y1": 816
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.004658,
+        "contrast": 1.028285,
+        "enabled": true
+      },
+      "component_set_hash": "3cde14d668a163ae",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "98e07d4e39530369",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000030",
+      "schematic_hash": "b225956dbdffcb17",
+      "source_row_idx": 34150,
+      "structure_features": {
+        "component_library_count": 20,
+        "junction_count": 152,
+        "label_count": 12,
+        "reference_property_count": 104,
+        "schematic_chars": 330340,
+        "schematic_lines": 19934,
+        "symbol_count": 149,
+        "wire_count": 376
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.965879,
+        "contrast": 1.008987,
+        "enabled": true
+      },
+      "component_set_hash": "f5893f5bb14872b7",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "13502372d583e8ec",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000033",
+      "schematic_hash": "c2bea038d3f3ba21",
+      "source_row_idx": 28738,
+      "structure_features": {
+        "component_library_count": 9,
+        "junction_count": 9,
+        "label_count": 30,
+        "reference_property_count": 65,
+        "schematic_chars": 115540,
+        "schematic_lines": 7106,
+        "symbol_count": 78,
+        "wire_count": 55
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.032539,
+        "contrast": 0.970386,
+        "enabled": true
+      },
+      "component_set_hash": "eb2ae480431609f7",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "4dbb7ef68742c560",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000035",
+      "schematic_hash": "0d0fc44dfc1f05dd",
+      "source_row_idx": 30493,
+      "structure_features": {
+        "component_library_count": 12,
+        "junction_count": 20,
+        "label_count": 51,
+        "reference_property_count": 48,
+        "schematic_chars": 114023,
+        "schematic_lines": 7127,
+        "symbol_count": 68,
+        "wire_count": 107
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.980316,
+        "contrast": 1.031628,
+        "enabled": true
+      },
+      "component_set_hash": "71676b00b1f2f7c2",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "af2a79b76eb81db5",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000036",
+      "schematic_hash": "de0d0c0e9d6d01c5",
+      "source_row_idx": 14131,
+      "structure_features": {
+        "component_library_count": 8,
+        "junction_count": 65,
+        "label_count": 8,
+        "reference_property_count": 67,
+        "schematic_chars": 169205,
+        "schematic_lines": 10206,
+        "symbol_count": 101,
+        "wire_count": 208
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.008277,
+        "contrast": 0.998941,
+        "enabled": true
+      },
+      "component_set_hash": "537237b8806c4aa8",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "d185de09802a4cb3",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000044",
+      "schematic_hash": "7b198a3af4067978",
+      "source_row_idx": 4150,
+      "structure_features": {
+        "component_library_count": 28,
+        "junction_count": 63,
+        "label_count": 20,
+        "reference_property_count": 112,
+        "schematic_chars": 267267,
+        "schematic_lines": 16021,
+        "symbol_count": 167,
+        "wire_count": 212
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.003823,
+        "contrast": 0.977318,
+        "enabled": true
+      },
+      "component_set_hash": "7eb972f7c978428b",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "5a897daa7b44e6a8",
+      "original_size": {
+        "height": 1123,
+        "width": 1587
+      },
+      "sample_id": "openschematic_train_000045",
+      "schematic_hash": "8c0cebeb7481165e",
+      "source_row_idx": 13975,
+      "structure_features": {
+        "component_library_count": 3,
+        "junction_count": 6,
+        "label_count": 361,
+        "reference_property_count": 17,
+        "schematic_chars": 302962,
+        "schematic_lines": 7522,
+        "symbol_count": 22,
+        "wire_count": 423
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 793,
+            "y0": 0,
+            "y1": 561
+          },
+          {
+            "tile_index": 1,
+            "x0": 793,
+            "x1": 1587,
+            "y0": 0,
+            "y1": 561
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 793,
+            "y0": 561,
+            "y1": 1123
+          },
+          {
+            "tile_index": 3,
+            "x0": 793,
+            "x1": 1587,
+            "y0": 561,
+            "y1": 1123
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.992366,
+        "contrast": 1.035985,
+        "enabled": true
+      },
+      "component_set_hash": "2da8a3d75b905881",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "5549c86956e31dc7",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000048",
+      "schematic_hash": "2334f0707c59a3ec",
+      "source_row_idx": 19316,
+      "structure_features": {
+        "component_library_count": 4,
+        "junction_count": 2,
+        "label_count": 2,
+        "reference_property_count": 9,
+        "schematic_chars": 21435,
+        "schematic_lines": 1336,
+        "symbol_count": 17,
+        "wire_count": 10
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.037298,
+        "contrast": 1.039004,
+        "enabled": true
+      },
+      "component_set_hash": "6531d736430a1fc6",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "73f29dc5be39eb36",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000049",
+      "schematic_hash": "422c34304e0ab202",
+      "source_row_idx": 12310,
+      "structure_features": {
+        "component_library_count": 5,
+        "junction_count": 3,
+        "label_count": 12,
+        "reference_property_count": 20,
+        "schematic_chars": 38695,
+        "schematic_lines": 2284,
+        "symbol_count": 30,
+        "wire_count": 18
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.011363,
+        "contrast": 1.023653,
+        "enabled": true
+      },
+      "component_set_hash": "b7ecf0f5870a158b",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "7b2c3deea128a9be",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000057",
+      "schematic_hash": "62db494724df5d32",
+      "source_row_idx": 33624,
+      "structure_features": {
+        "component_library_count": 10,
+        "junction_count": 10,
+        "label_count": 8,
+        "reference_property_count": 29,
+        "schematic_chars": 52331,
+        "schematic_lines": 1306,
+        "symbol_count": 49,
+        "wire_count": 65
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.031762,
+        "contrast": 0.989426,
+        "enabled": true
+      },
+      "component_set_hash": "5f3548a0537ea66f",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "2eca532d0a171200",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000062",
+      "schematic_hash": "68e0f6818a45c451",
+      "source_row_idx": 13042,
+      "structure_features": {
+        "component_library_count": 9,
+        "junction_count": 11,
+        "label_count": 8,
+        "reference_property_count": 33,
+        "schematic_chars": 50438,
+        "schematic_lines": 1432,
+        "symbol_count": 49,
+        "wire_count": 26
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.989471,
+        "contrast": 1.004575,
+        "enabled": true
+      },
+      "component_set_hash": "1ef2f00441bc3532",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "7f477156d4c7146a",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000066",
+      "schematic_hash": "23885e6a1f9c3149",
+      "source_row_idx": 30550,
+      "structure_features": {
+        "component_library_count": 15,
+        "junction_count": 20,
+        "label_count": 0,
+        "reference_property_count": 51,
+        "schematic_chars": 113147,
+        "schematic_lines": 6929,
+        "symbol_count": 78,
+        "wire_count": 66
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.016223,
+        "contrast": 1.031156,
+        "enabled": true
+      },
+      "component_set_hash": "fb2277a563c6d528",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "0b349f1843a27ab2",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000067",
+      "schematic_hash": "0f0c50a8a275ce99",
+      "source_row_idx": 15761,
+      "structure_features": {
+        "component_library_count": 10,
+        "junction_count": 39,
+        "label_count": 26,
+        "reference_property_count": 43,
+        "schematic_chars": 110903,
+        "schematic_lines": 6607,
+        "symbol_count": 63,
+        "wire_count": 128
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.992029,
+        "contrast": 0.99533,
+        "enabled": true
+      },
+      "component_set_hash": "a194495b932428d3",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "0977b9f72928052b",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000073",
+      "schematic_hash": "9e43297304f9ab65",
+      "source_row_idx": 13730,
+      "structure_features": {
+        "component_library_count": 12,
+        "junction_count": 28,
+        "label_count": 7,
+        "reference_property_count": 66,
+        "schematic_chars": 131906,
+        "schematic_lines": 3531,
+        "symbol_count": 92,
+        "wire_count": 125
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.001741,
+        "contrast": 1.037927,
+        "enabled": true
+      },
+      "component_set_hash": "052b7e50843ee52d",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "afcc32349c713556",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000074",
+      "schematic_hash": "724f75a6ae8b99a0",
+      "source_row_idx": 5043,
+      "structure_features": {
+        "component_library_count": 3,
+        "junction_count": 10,
+        "label_count": 66,
+        "reference_property_count": 15,
+        "schematic_chars": 119750,
+        "schematic_lines": 2834,
+        "symbol_count": 30,
+        "wire_count": 108
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.000994,
+        "contrast": 1.036017,
+        "enabled": true
+      },
+      "component_set_hash": "e7595fb52822d3ad",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "191a1e67c7448a1d",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000079",
+      "schematic_hash": "6043fdd90ea1ed0a",
+      "source_row_idx": 27865,
+      "structure_features": {
+        "component_library_count": 5,
+        "junction_count": 8,
+        "label_count": 4,
+        "reference_property_count": 25,
+        "schematic_chars": 65953,
+        "schematic_lines": 3001,
+        "symbol_count": 34,
+        "wire_count": 44
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.998721,
+        "contrast": 1.020293,
+        "enabled": true
+      },
+      "component_set_hash": "0ac3759c11f46ae1",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "96dfe847780fcd1b",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000083",
+      "schematic_hash": "c57852b5f6ccdf99",
+      "source_row_idx": 8532,
+      "structure_features": {
+        "component_library_count": 13,
+        "junction_count": 21,
+        "label_count": 17,
+        "reference_property_count": 45,
+        "schematic_chars": 110197,
+        "schematic_lines": 6770,
+        "symbol_count": 70,
+        "wire_count": 99
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.973959,
+        "contrast": 1.022575,
+        "enabled": true
+      },
+      "component_set_hash": "12a7d5eb460a76f4",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "d46b59131c8ba95e",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000087",
+      "schematic_hash": "bf622a4232f0e36c",
+      "source_row_idx": 28166,
+      "structure_features": {
+        "component_library_count": 14,
+        "junction_count": 45,
+        "label_count": 55,
+        "reference_property_count": 74,
+        "schematic_chars": 183777,
+        "schematic_lines": 11495,
+        "symbol_count": 97,
+        "wire_count": 171
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.036637,
+        "contrast": 0.97618,
+        "enabled": true
+      },
+      "component_set_hash": "61ded7e741055937",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "4082438247b3f219",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000089",
+      "schematic_hash": "b4a33778f1b2e27a",
+      "source_row_idx": 9104,
+      "structure_features": {
+        "component_library_count": 5,
+        "junction_count": 8,
+        "label_count": 12,
+        "reference_property_count": 22,
+        "schematic_chars": 33583,
+        "schematic_lines": 901,
+        "symbol_count": 31,
+        "wire_count": 34
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.99883,
+        "contrast": 1.033331,
+        "enabled": true
+      },
+      "component_set_hash": "968881d34b103b0d",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "7be4c09cb4170e92",
+      "original_size": {
+        "height": 1123,
+        "width": 794
+      },
+      "sample_id": "openschematic_train_000090",
+      "schematic_hash": "9f830b872e6d0b61",
+      "source_row_idx": 24519,
+      "structure_features": {
+        "component_library_count": 10,
+        "junction_count": 0,
+        "label_count": 0,
+        "reference_property_count": 26,
+        "schematic_chars": 83569,
+        "schematic_lines": 2406,
+        "symbol_count": 46,
+        "wire_count": 53
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 397,
+            "y0": 0,
+            "y1": 561
+          },
+          {
+            "tile_index": 1,
+            "x0": 397,
+            "x1": 794,
+            "y0": 0,
+            "y1": 561
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 397,
+            "y0": 561,
+            "y1": 1123
+          },
+          {
+            "tile_index": 3,
+            "x0": 397,
+            "x1": 794,
+            "y0": 561,
+            "y1": 1123
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.026639,
+        "contrast": 0.990577,
+        "enabled": true
+      },
+      "component_set_hash": "dd2eb14494396826",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "5ce697307c4e81bb",
+      "original_size": {
+        "height": 720,
+        "width": 1056
+      },
+      "sample_id": "openschematic_train_000093",
+      "schematic_hash": "6135c685b7c437ff",
+      "source_row_idx": 3366,
+      "structure_features": {
+        "component_library_count": 10,
+        "junction_count": 19,
+        "label_count": 0,
+        "reference_property_count": 28,
+        "schematic_chars": 94307,
+        "schematic_lines": 5818,
+        "symbol_count": 49,
+        "wire_count": 88
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 528,
+            "y0": 0,
+            "y1": 360
+          },
+          {
+            "tile_index": 1,
+            "x0": 528,
+            "x1": 1056,
+            "y0": 0,
+            "y1": 360
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 528,
+            "y0": 360,
+            "y1": 720
+          },
+          {
+            "tile_index": 3,
+            "x0": 528,
+            "x1": 1056,
+            "y0": 360,
+            "y1": 720
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.014172,
+        "contrast": 1.008891,
+        "enabled": true
+      },
+      "component_set_hash": "1399e651eb3a6a5c",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "75945f662a4bee97",
+      "original_size": {
+        "height": 1123,
+        "width": 1587
+      },
+      "sample_id": "openschematic_train_000094",
+      "schematic_hash": "b20259d5e57e2921",
+      "source_row_idx": 12163,
+      "structure_features": {
+        "component_library_count": 10,
+        "junction_count": 14,
+        "label_count": 22,
+        "reference_property_count": 32,
+        "schematic_chars": 120270,
+        "schematic_lines": 7408,
+        "symbol_count": 84,
+        "wire_count": 87
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 793,
+            "y0": 0,
+            "y1": 561
+          },
+          {
+            "tile_index": 1,
+            "x0": 793,
+            "x1": 1587,
+            "y0": 0,
+            "y1": 561
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 793,
+            "y0": 561,
+            "y1": 1123
+          },
+          {
+            "tile_index": 3,
+            "x0": 793,
+            "x1": 1587,
+            "y0": 561,
+            "y1": 1123
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.976652,
+        "contrast": 0.995017,
+        "enabled": true
+      },
+      "component_set_hash": "8f3139268005848d",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "b7f0a56a909a7442",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000104",
+      "schematic_hash": "c0c4912029adcf13",
+      "source_row_idx": 3856,
+      "structure_features": {
+        "component_library_count": 15,
+        "junction_count": 34,
+        "label_count": 0,
+        "reference_property_count": 69,
+        "schematic_chars": 118612,
+        "schematic_lines": 3387,
+        "symbol_count": 102,
+        "wire_count": 120
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.992316,
+        "contrast": 0.972595,
+        "enabled": true
+      },
+      "component_set_hash": "91a95c9d1e6556d0",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "98bd31c9cf69d54e",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000107",
+      "schematic_hash": "77a5bfb52058fb51",
+      "source_row_idx": 32416,
+      "structure_features": {
+        "component_library_count": 10,
+        "junction_count": 8,
+        "label_count": 24,
+        "reference_property_count": 43,
+        "schematic_chars": 73991,
+        "schematic_lines": 2068,
+        "symbol_count": 61,
+        "wire_count": 45
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.008044,
+        "contrast": 0.991619,
+        "enabled": true
+      },
+      "component_set_hash": "901f257d5f07ca44",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "f8cb33d17fbaced7",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000108",
+      "schematic_hash": "7582adc4133c4ece",
+      "source_row_idx": 35016,
+      "structure_features": {
+        "component_library_count": 17,
+        "junction_count": 19,
+        "label_count": 10,
+        "reference_property_count": 84,
+        "schematic_chars": 154944,
+        "schematic_lines": 9626,
+        "symbol_count": 121,
+        "wire_count": 61
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.027883,
+        "contrast": 0.983112,
+        "enabled": true
+      },
+      "component_set_hash": "7593afa339a3048b",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "8fde1160b09626b6",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000112",
+      "schematic_hash": "54a9eb42faa7b714",
+      "source_row_idx": 22237,
+      "structure_features": {
+        "component_library_count": 8,
+        "junction_count": 9,
+        "label_count": 0,
+        "reference_property_count": 19,
+        "schematic_chars": 32668,
+        "schematic_lines": 872,
+        "symbol_count": 35,
+        "wire_count": 36
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.98112,
+        "contrast": 0.977132,
+        "enabled": true
+      },
+      "component_set_hash": "d17cc9307723b8fb",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "3a958c63cd16b7d0",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000118",
+      "schematic_hash": "dac809d9f9214761",
+      "source_row_idx": 29482,
+      "structure_features": {
+        "component_library_count": 7,
+        "junction_count": 9,
+        "label_count": 4,
+        "reference_property_count": 38,
+        "schematic_chars": 107592,
+        "schematic_lines": 2171,
+        "symbol_count": 51,
+        "wire_count": 25
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.987741,
+        "contrast": 1.018955,
+        "enabled": true
+      },
+      "component_set_hash": "4af0d0a59174a7d2",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "7ef2429cdc9e054e",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000124",
+      "schematic_hash": "d45ebb7f1068ff7c",
+      "source_row_idx": 10264,
+      "structure_features": {
+        "component_library_count": 16,
+        "junction_count": 71,
+        "label_count": 29,
+        "reference_property_count": 132,
+        "schematic_chars": 249281,
+        "schematic_lines": 15085,
+        "symbol_count": 165,
+        "wire_count": 253
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.989841,
+        "contrast": 0.992587,
+        "enabled": true
+      },
+      "component_set_hash": "6f6a28af28bf3183",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "689c0e1854fbab1b",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000129",
+      "schematic_hash": "08ad4bcddc08abaf",
+      "source_row_idx": 3613,
+      "structure_features": {
+        "component_library_count": 20,
+        "junction_count": 12,
+        "label_count": 15,
+        "reference_property_count": 78,
+        "schematic_chars": 294388,
+        "schematic_lines": 8702,
+        "symbol_count": 108,
+        "wire_count": 75
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.996273,
+        "contrast": 1.005269,
+        "enabled": true
+      },
+      "component_set_hash": "5b5edcf3bc915b6d",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "6f0056e802596474",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000130",
+      "schematic_hash": "ff44443f4302e9bc",
+      "source_row_idx": 21636,
+      "structure_features": {
+        "component_library_count": 6,
+        "junction_count": 4,
+        "label_count": 4,
+        "reference_property_count": 19,
+        "schematic_chars": 39115,
+        "schematic_lines": 2399,
+        "symbol_count": 30,
+        "wire_count": 28
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.02012,
+        "contrast": 0.988978,
+        "enabled": true
+      },
+      "component_set_hash": "ce4d17fa92456705",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "52cddf265427c613",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000131",
+      "schematic_hash": "e0e1644abd1545a2",
+      "source_row_idx": 28264,
+      "structure_features": {
+        "component_library_count": 13,
+        "junction_count": 58,
+        "label_count": 97,
+        "reference_property_count": 71,
+        "schematic_chars": 179042,
+        "schematic_lines": 4688,
+        "symbol_count": 92,
+        "wire_count": 246
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.006198,
+        "contrast": 0.970007,
+        "enabled": true
+      },
+      "component_set_hash": "03ce6215c040356b",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "1665cc8f938b2ae7",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000133",
+      "schematic_hash": "d5aff2d11255b202",
+      "source_row_idx": 14463,
+      "structure_features": {
+        "component_library_count": 16,
+        "junction_count": 17,
+        "label_count": 14,
+        "reference_property_count": 50,
+        "schematic_chars": 109252,
+        "schematic_lines": 6902,
+        "symbol_count": 78,
+        "wire_count": 95
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.98928,
+        "contrast": 1.011158,
+        "enabled": true
+      },
+      "component_set_hash": "834730a8d47efe70",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "9500de2297bcd70d",
+      "original_size": {
+        "height": 816,
+        "width": 1056
+      },
+      "sample_id": "openschematic_train_000134",
+      "schematic_hash": "8adf3c739c0b6183",
+      "source_row_idx": 30244,
+      "structure_features": {
+        "component_library_count": 6,
+        "junction_count": 36,
+        "label_count": 120,
+        "reference_property_count": 36,
+        "schematic_chars": 121816,
+        "schematic_lines": 7400,
+        "symbol_count": 47,
+        "wire_count": 88
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 528,
+            "y0": 0,
+            "y1": 408
+          },
+          {
+            "tile_index": 1,
+            "x0": 528,
+            "x1": 1056,
+            "y0": 0,
+            "y1": 408
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 528,
+            "y0": 408,
+            "y1": 816
+          },
+          {
+            "tile_index": 3,
+            "x0": 528,
+            "x1": 1056,
+            "y0": 408,
+            "y1": 816
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.985322,
+        "contrast": 1.015184,
+        "enabled": true
+      },
+      "component_set_hash": "e3a9852496a7d84b",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "9c93f9c46292e6a0",
+      "original_size": {
+        "height": 1587,
+        "width": 2245
+      },
+      "sample_id": "openschematic_train_000135",
+      "schematic_hash": "d5a82754d610aae9",
+      "source_row_idx": 13959,
+      "structure_features": {
+        "component_library_count": 18,
+        "junction_count": 68,
+        "label_count": 227,
+        "reference_property_count": 75,
+        "schematic_chars": 314676,
+        "schematic_lines": 7899,
+        "symbol_count": 160,
+        "wire_count": 362
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 1122,
+            "y0": 0,
+            "y1": 793
+          },
+          {
+            "tile_index": 1,
+            "x0": 1122,
+            "x1": 2245,
+            "y0": 0,
+            "y1": 793
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 1122,
+            "y0": 793,
+            "y1": 1587
+          },
+          {
+            "tile_index": 3,
+            "x0": 1122,
+            "x1": 2245,
+            "y0": 793,
+            "y1": 1587
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.992796,
+        "contrast": 1.032837,
+        "enabled": true
+      },
+      "component_set_hash": "0bbc580765efda90",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "d1773fa756307d15",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000139",
+      "schematic_hash": "5be63f1b05aa08f1",
+      "source_row_idx": 25863,
+      "structure_features": {
+        "component_library_count": 18,
+        "junction_count": 98,
+        "label_count": 121,
+        "reference_property_count": 153,
+        "schematic_chars": 329535,
+        "schematic_lines": 19983,
+        "symbol_count": 189,
+        "wire_count": 306
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.972596,
+        "contrast": 1.006784,
+        "enabled": true
+      },
+      "component_set_hash": "2ff6cb5ddfd94489",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "540a1f983af6821d",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000140",
+      "schematic_hash": "6abbf8a5323209d8",
+      "source_row_idx": 23297,
+      "structure_features": {
+        "component_library_count": 2,
+        "junction_count": 0,
+        "label_count": 0,
+        "reference_property_count": 59,
+        "schematic_chars": 51426,
+        "schematic_lines": 1532,
+        "symbol_count": 61,
+        "wire_count": 0
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.008273,
+        "contrast": 1.0017,
+        "enabled": true
+      },
+      "component_set_hash": "dfcd1c7542940183",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "88faba80bce205fd",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000145",
+      "schematic_hash": "e3346e660227e108",
+      "source_row_idx": 7045,
+      "structure_features": {
+        "component_library_count": 9,
+        "junction_count": 18,
+        "label_count": 42,
+        "reference_property_count": 37,
+        "schematic_chars": 126825,
+        "schematic_lines": 3308,
+        "symbol_count": 89,
+        "wire_count": 120
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.967275,
+        "contrast": 0.973131,
+        "enabled": true
+      },
+      "component_set_hash": "a4232bae41455bad",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "39ff6cb533a666e3",
+      "original_size": {
+        "height": 1587,
+        "width": 2245
+      },
+      "sample_id": "openschematic_train_000146",
+      "schematic_hash": "df43dd0364d50be6",
+      "source_row_idx": 11396,
+      "structure_features": {
+        "component_library_count": 10,
+        "junction_count": 29,
+        "label_count": 52,
+        "reference_property_count": 71,
+        "schematic_chars": 161247,
+        "schematic_lines": 9917,
+        "symbol_count": 94,
+        "wire_count": 96
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 1122,
+            "y0": 0,
+            "y1": 793
+          },
+          {
+            "tile_index": 1,
+            "x0": 1122,
+            "x1": 2245,
+            "y0": 0,
+            "y1": 793
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 1122,
+            "y0": 793,
+            "y1": 1587
+          },
+          {
+            "tile_index": 3,
+            "x0": 1122,
+            "x1": 2245,
+            "y0": 793,
+            "y1": 1587
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.9651,
+        "contrast": 1.038144,
+        "enabled": true
+      },
+      "component_set_hash": "1f261104e3b0d46f",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "59c9358169610843",
+      "original_size": {
+        "height": 1123,
+        "width": 1587
+      },
+      "sample_id": "openschematic_train_000147",
+      "schematic_hash": "4259dc3cc1e45a6a",
+      "source_row_idx": 3229,
+      "structure_features": {
+        "component_library_count": 15,
+        "junction_count": 45,
+        "label_count": 163,
+        "reference_property_count": 273,
+        "schematic_chars": 343005,
+        "schematic_lines": 8031,
+        "symbol_count": 297,
+        "wire_count": 134
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 793,
+            "y0": 0,
+            "y1": 561
+          },
+          {
+            "tile_index": 1,
+            "x0": 793,
+            "x1": 1587,
+            "y0": 0,
+            "y1": 561
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 793,
+            "y0": 561,
+            "y1": 1123
+          },
+          {
+            "tile_index": 3,
+            "x0": 793,
+            "x1": 1587,
+            "y0": 561,
+            "y1": 1123
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.997643,
+        "contrast": 1.015874,
+        "enabled": true
+      },
+      "component_set_hash": "cc087c7b75c92e28",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "b466ace87304f52b",
+      "original_size": {
+        "height": 1056,
+        "width": 1920
+      },
+      "sample_id": "openschematic_train_000149",
+      "schematic_hash": "f8c2f1ba31f250cc",
+      "source_row_idx": 27406,
+      "structure_features": {
+        "component_library_count": 14,
+        "junction_count": 60,
+        "label_count": 70,
+        "reference_property_count": 139,
+        "schematic_chars": 266090,
+        "schematic_lines": 16038,
+        "symbol_count": 163,
+        "wire_count": 243
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 960,
+            "y0": 0,
+            "y1": 528
+          },
+          {
+            "tile_index": 1,
+            "x0": 960,
+            "x1": 1920,
+            "y0": 0,
+            "y1": 528
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 960,
+            "y0": 528,
+            "y1": 1056
+          },
+          {
+            "tile_index": 3,
+            "x0": 960,
+            "x1": 1920,
+            "y0": 528,
+            "y1": 1056
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.994522,
+        "contrast": 1.031212,
+        "enabled": true
+      },
+      "component_set_hash": "f3f19754f432d562",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "846c0bb1b3272518",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000151",
+      "schematic_hash": "091f190c271ac58f",
+      "source_row_idx": 22310,
+      "structure_features": {
+        "component_library_count": 10,
+        "junction_count": 19,
+        "label_count": 22,
+        "reference_property_count": 55,
+        "schematic_chars": 120796,
+        "schematic_lines": 3049,
+        "symbol_count": 91,
+        "wire_count": 106
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.994441,
+        "contrast": 1.009847,
+        "enabled": true
+      },
+      "component_set_hash": "420dff2dfc353c29",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "281ca05d9ad7039e",
+      "original_size": {
+        "height": 816,
+        "width": 1056
+      },
+      "sample_id": "openschematic_train_000157",
+      "schematic_hash": "aba027b7637d4b7a",
+      "source_row_idx": 10313,
+      "structure_features": {
+        "component_library_count": 30,
+        "junction_count": 133,
+        "label_count": 68,
+        "reference_property_count": 72,
+        "schematic_chars": 280345,
+        "schematic_lines": 16938,
+        "symbol_count": 128,
+        "wire_count": 383
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 528,
+            "y0": 0,
+            "y1": 408
+          },
+          {
+            "tile_index": 1,
+            "x0": 528,
+            "x1": 1056,
+            "y0": 0,
+            "y1": 408
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 528,
+            "y0": 408,
+            "y1": 816
+          },
+          {
+            "tile_index": 3,
+            "x0": 528,
+            "x1": 1056,
+            "y0": 408,
+            "y1": 816
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.032631,
+        "contrast": 0.979491,
+        "enabled": true
+      },
+      "component_set_hash": "42ed3f5503506628",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "44a08242647b1892",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000158",
+      "schematic_hash": "a42a9e1538fb5da7",
+      "source_row_idx": 4724,
+      "structure_features": {
+        "component_library_count": 16,
+        "junction_count": 16,
+        "label_count": 0,
+        "reference_property_count": 60,
+        "schematic_chars": 95711,
+        "schematic_lines": 2481,
+        "symbol_count": 88,
+        "wire_count": 105
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.984617,
+        "contrast": 1.028006,
+        "enabled": true
+      },
+      "component_set_hash": "7c4ec631e0ac8673",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "c81b3c1742188324",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000159",
+      "schematic_hash": "039cf74d0dd28774",
+      "source_row_idx": 35930,
+      "structure_features": {
+        "component_library_count": 9,
+        "junction_count": 8,
+        "label_count": 0,
+        "reference_property_count": 28,
+        "schematic_chars": 51212,
+        "schematic_lines": 3171,
+        "symbol_count": 45,
+        "wire_count": 31
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.967035,
+        "contrast": 0.982417,
+        "enabled": true
+      },
+      "component_set_hash": "7855f22516fc37af",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "8bc224713ad4a55e",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000160",
+      "schematic_hash": "e765b30895243c74",
+      "source_row_idx": 2,
+      "structure_features": {
+        "component_library_count": 4,
+        "junction_count": 0,
+        "label_count": 0,
+        "reference_property_count": 11,
+        "schematic_chars": 110906,
+        "schematic_lines": 5539,
+        "symbol_count": 23,
+        "wire_count": 0
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.027874,
+        "contrast": 1.000383,
+        "enabled": true
+      },
+      "component_set_hash": "c26caa3cce974ed5",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "dc8863749e459d1e",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000164",
+      "schematic_hash": "053ddf9fed98df4b",
+      "source_row_idx": 6675,
+      "structure_features": {
+        "component_library_count": 19,
+        "junction_count": 73,
+        "label_count": 73,
+        "reference_property_count": 136,
+        "schematic_chars": 251401,
+        "schematic_lines": 6756,
+        "symbol_count": 175,
+        "wire_count": 181
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.00119,
+        "contrast": 1.037046,
+        "enabled": true
+      },
+      "component_set_hash": "a5a77068e48dad2a",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "25439f82668cd115",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000168",
+      "schematic_hash": "af188e853e086d0b",
+      "source_row_idx": 5024,
+      "structure_features": {
+        "component_library_count": 12,
+        "junction_count": 26,
+        "label_count": 25,
+        "reference_property_count": 47,
+        "schematic_chars": 109598,
+        "schematic_lines": 6809,
+        "symbol_count": 70,
+        "wire_count": 74
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.003584,
+        "contrast": 0.999391,
+        "enabled": true
+      },
+      "component_set_hash": "3f32d08413206c9a",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "e706320e18c6783b",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000175",
+      "schematic_hash": "6bdb443e0f3512e8",
+      "source_row_idx": 1613,
+      "structure_features": {
+        "component_library_count": 23,
+        "junction_count": 54,
+        "label_count": 92,
+        "reference_property_count": 114,
+        "schematic_chars": 249026,
+        "schematic_lines": 15676,
+        "symbol_count": 152,
+        "wire_count": 269
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.008707,
+        "contrast": 1.031523,
+        "enabled": true
+      },
+      "component_set_hash": "9b9c2b1724b7681a",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "ce7d38df471810c6",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000176",
+      "schematic_hash": "cfd11f1e33b91a6a",
+      "source_row_idx": 21325,
+      "structure_features": {
+        "component_library_count": 15,
+        "junction_count": 9,
+        "label_count": 2,
+        "reference_property_count": 59,
+        "schematic_chars": 88954,
+        "schematic_lines": 2550,
+        "symbol_count": 85,
+        "wire_count": 75
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.022387,
+        "contrast": 1.037686,
+        "enabled": true
+      },
+      "component_set_hash": "8359ba68656ee2f3",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "a3a26fb0a09cf706",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000182",
+      "schematic_hash": "90827d9e12481be1",
+      "source_row_idx": 36248,
+      "structure_features": {
+        "component_library_count": 3,
+        "junction_count": 1,
+        "label_count": 43,
+        "reference_property_count": 12,
+        "schematic_chars": 121913,
+        "schematic_lines": 6736,
+        "symbol_count": 22,
+        "wire_count": 50
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 0.969722,
+        "contrast": 0.964493,
+        "enabled": true
+      },
+      "component_set_hash": "5e72251a4d44d5b7",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "2acd3c5ab8a21695",
+      "original_size": {
+        "height": 794,
+        "width": 1123
+      },
+      "sample_id": "openschematic_train_000183",
+      "schematic_hash": "83a8c1df0865deb3",
+      "source_row_idx": 1908,
+      "structure_features": {
+        "component_library_count": 19,
+        "junction_count": 32,
+        "label_count": 48,
+        "reference_property_count": 96,
+        "schematic_chars": 141877,
+        "schematic_lines": 3690,
+        "symbol_count": 135,
+        "wire_count": 82
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 561,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 1,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 0,
+            "y1": 397
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 561,
+            "y0": 397,
+            "y1": 794
+          },
+          {
+            "tile_index": 3,
+            "x0": 561,
+            "x1": 1123,
+            "y0": 397,
+            "y1": 794
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.038715,
+        "contrast": 0.968171,
+        "enabled": true
+      },
+      "component_set_hash": "4a8789cb489ee410",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "ee20ca7cde162526",
+      "original_size": {
+        "height": 816,
+        "width": 1056
+      },
+      "sample_id": "openschematic_train_000189",
+      "schematic_hash": "7cef2ccb11de90cd",
+      "source_row_idx": 11149,
+      "structure_features": {
+        "component_library_count": 4,
+        "junction_count": 0,
+        "label_count": 0,
+        "reference_property_count": 9,
+        "schematic_chars": 44015,
+        "schematic_lines": 2756,
+        "symbol_count": 27,
+        "wire_count": 15
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 528,
+            "y0": 0,
+            "y1": 408
+          },
+          {
+            "tile_index": 1,
+            "x0": 528,
+            "x1": 1056,
+            "y0": 0,
+            "y1": 408
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 528,
+            "y0": 408,
+            "y1": 816
+          },
+          {
+            "tile_index": 3,
+            "x0": 528,
+            "x1": 1056,
+            "y0": 408,
+            "y1": 816
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    },
+    {
+      "augmentation": {
+        "brightness": 1.024272,
+        "contrast": 0.984713,
+        "enabled": true
+      },
+      "component_set_hash": "a90724c92f1ccc5f",
+      "global_view": {
+        "shape": [
+          3,
+          224,
+          224
+        ]
+      },
+      "image_hash": "ef4d62ef5d80ef2b",
+      "original_size": {
+        "height": 559,
+        "width": 794
+      },
+      "sample_id": "openschematic_train_000190",
+      "schematic_hash": "28389dc6567e03df",
+      "source_row_idx": 36127,
+      "structure_features": {
+        "component_library_count": 8,
+        "junction_count": 2,
+        "label_count": 0,
+        "reference_property_count": 28,
+        "schematic_chars": 39112,
+        "schematic_lines": 1190,
+        "symbol_count": 43,
+        "wire_count": 5
+      },
+      "tile_view": {
+        "boxes": [
+          {
+            "tile_index": 0,
+            "x0": 0,
+            "x1": 397,
+            "y0": 0,
+            "y1": 279
+          },
+          {
+            "tile_index": 1,
+            "x0": 397,
+            "x1": 794,
+            "y0": 0,
+            "y1": 279
+          },
+          {
+            "tile_index": 2,
+            "x0": 0,
+            "x1": 397,
+            "y0": 279,
+            "y1": 559
+          },
+          {
+            "tile_index": 3,
+            "x0": 397,
+            "x1": 794,
+            "y0": 279,
+            "y1": 559
+          }
+        ],
+        "shape": [
+          4,
+          3,
+          224,
+          224
+        ]
+      }
+    }
+  ],
+  "skipped_preview": [
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 38643,
+      "sample_id": "openschematic_train_000000"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 22063,
+      "sample_id": "openschematic_train_000002"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 50666,
+      "sample_id": "openschematic_train_000005"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 54117,
+      "sample_id": "openschematic_train_000006"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 80534,
+      "sample_id": "openschematic_train_000008"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 43512,
+      "sample_id": "openschematic_train_000009"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 42203,
+      "sample_id": "openschematic_train_000010"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 52710,
+      "sample_id": "openschematic_train_000015"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 43215,
+      "sample_id": "openschematic_train_000016"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 43293,
+      "sample_id": "openschematic_train_000018"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 80116,
+      "sample_id": "openschematic_train_000019"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 58451,
+      "sample_id": "openschematic_train_000020"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 65379,
+      "sample_id": "openschematic_train_000021"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 40156,
+      "sample_id": "openschematic_train_000022"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 48283,
+      "sample_id": "openschematic_train_000026"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 65857,
+      "sample_id": "openschematic_train_000027"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 44567,
+      "sample_id": "openschematic_train_000028"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 48314,
+      "sample_id": "openschematic_train_000029"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 54371,
+      "sample_id": "openschematic_train_000031"
+    },
+    {
+      "reason": "missing_image_or_schematic",
+      "row_idx": 41867,
+      "sample_id": "openschematic_train_000032"
+    }
+  ],
+  "status": "complete",
+  "timing": {
+    "elapsed_sec": 680.548,
+    "samples_per_sec": 0.094042
+  },
+  "validation": {
+    "candidate_rows_scanned": 256,
+    "image_structure_alignment_ok": true,
+    "pass": true,
+    "raw_payload_committed": false,
+    "signed_urls_committed": false,
+    "skipped_rows": 127,
+    "tile_trace_ok": true,
+    "usable_pairs_loaded": 64
+  }
+}
