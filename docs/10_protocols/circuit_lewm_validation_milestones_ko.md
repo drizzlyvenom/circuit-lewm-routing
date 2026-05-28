@@ -338,6 +338,32 @@ pass_if:
   - structure fields exist for structure pretraining samples
 ```
 
+Current closure:
+
+```yaml
+status: closed
+script: scripts/prepare_circuit_samples.py
+summary: data/circuit_curricula/usable_pair_summary.json
+result_brief: docs/20_results/001_circuit_sample_schema_ko.md
+outputs:
+  - data/circuit_curricula/train.jsonl
+  - data/circuit_curricula/holdout.jsonl
+  - data/circuit_curricula/test.jsonl
+  - data/circuit_curricula/usable_pair_summary.json
+main_counts:
+  train: 15208
+  holdout: 1637
+  test: 2942
+open_schematics_verified_pairs:
+  train: 5000
+  holdout: 512
+  test: 512
+notes:
+  - raw images and prompt/answer payloads are not committed
+  - CGHD local image/XML pairs point to ignored data/downloads
+  - CircuitVQA keeps HF row references with answer_type only
+```
+
 ---
 
 ## M3. Qwen Baseline Measurement

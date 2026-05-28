@@ -1,0 +1,212 @@
+{
+  "generated_at_utc": "2026-05-28T19:54:04+00:00",
+  "outputs": {
+    "holdout": "data/circuit_curricula/holdout.jsonl",
+    "summary": "data/circuit_curricula/usable_pair_summary.json",
+    "test": "data/circuit_curricula/test.jsonl",
+    "train": "data/circuit_curricula/train.jsonl"
+  },
+  "pass_checks": {
+    "open_schematics_train_at_least_5k": true,
+    "open_schematics_verified_before_curriculum": true,
+    "qa_samples_have_answer_type": true,
+    "source_leakage_policy_documented": true,
+    "split_files_exist": true,
+    "structure_pretraining_samples_have_structure_ref": true
+  },
+  "raw_payload_policy": {
+    "cghd_local_paths_point_to_ignored_data_downloads": true,
+    "committed_prompt_answer_bodies": false,
+    "committed_raw_images": false,
+    "open_schematics_refs_only": true
+  },
+  "script": "scripts/prepare_circuit_samples.py",
+  "sources": {
+    "cghd": {
+      "bad_images": 0,
+      "dataset_id": "lowercaseonly/cghd",
+      "image_files": 4181,
+      "license": "cc-by-3.0",
+      "local_dir": "data/downloads/hf/lowercaseonly_cghd",
+      "paired_image_xml_files": 3293,
+      "source_url": "https://huggingface.co/datasets/lowercaseonly/cghd",
+      "split_counts": {
+        "holdout": 267,
+        "test": 336,
+        "train": 2690
+      },
+      "split_unit": "drafter_plus_circuit_group",
+      "top_labels": [
+        [
+          "text",
+          91237
+        ],
+        [
+          "junction",
+          79594
+        ],
+        [
+          "resistor",
+          14488
+        ],
+        [
+          "terminal",
+          11297
+        ],
+        [
+          "crossover",
+          10188
+        ],
+        [
+          "capacitor.unpolarized",
+          5841
+        ],
+        [
+          "gnd",
+          5565
+        ],
+        [
+          "diode",
+          3922
+        ],
+        [
+          "transistor.bjt",
+          3694
+        ],
+        [
+          "capacitor.polarized",
+          2227
+        ],
+        [
+          "switch",
+          2184
+        ],
+        [
+          "inductor",
+          1976
+        ],
+        [
+          "integrated_circuit",
+          1506
+        ],
+        [
+          "vss",
+          1354
+        ],
+        [
+          "diode.light_emitting",
+          1252
+        ],
+        [
+          "resistor.adjustable",
+          1076
+        ],
+        [
+          "transistor.fet",
+          977
+        ],
+        [
+          "and",
+          860
+        ],
+        [
+          "voltage.battery",
+          773
+        ],
+        [
+          "operational_amplifier",
+          760
+        ]
+      ],
+      "unique_split_groups": 1043,
+      "xml_annotation_files": 3293
+    },
+    "circuitvqa": {
+      "answer_type": "hf_conversation_ref",
+      "dataset_id": "ayoubkirouane/CircuitVQA",
+      "failed_by_source_split": {},
+      "license": "not_declared_on_hf",
+      "payload_policy": "committed curriculum stores row refs and answer_type only; prompt and answer bodies stay on HF",
+      "source_url": "https://huggingface.co/datasets/ayoubkirouane/CircuitVQA",
+      "split_counts": {
+        "holdout": 858,
+        "test": 2094,
+        "train": 7518
+      },
+      "verified_by_source_split": {
+        "test": 2094,
+        "train": 8376
+      }
+    },
+    "open_schematics": {
+      "dataset_id": "bshada/open-schematics",
+      "failed_rows": {
+        "missing_or_bad_image": 24
+      },
+      "license": "cc-by-4.0",
+      "scanned_rows": 6349,
+      "source_url": "https://huggingface.co/datasets/bshada/open-schematics",
+      "split_unit": "source_project_name",
+      "targets": {
+        "holdout": 512,
+        "test": 512,
+        "train": 5000
+      },
+      "unique_split_groups": 6325,
+      "verification": "decoded image object with positive width/height and non-empty schematic string",
+      "verified_split_counts": {
+        "holdout": 512,
+        "test": 512,
+        "train": 5000
+      }
+    },
+    "schgen": {
+      "dataset_id": "microsoft/SchGen_dataset",
+      "license": "mit",
+      "m2_role": "structure_text_prior_only",
+      "source_url": "https://huggingface.co/datasets/microsoft/SchGen_dataset",
+      "status": "not_materialized_as_CircuitSample_because_it_has_no_image_field"
+    }
+  },
+  "split_leakage_policy": {
+    "cghd": "split by drafter plus circuit group hash",
+    "circuitvqa": "preserve provided test split; hash train rows into train/holdout references",
+    "open_schematics": "split by source project name hash"
+  },
+  "status": "closed",
+  "summary_version": 1,
+  "written": {
+    "answer_types": {
+      "hf_conversation_ref": 10470,
+      "object_detection_annotation_ref": 3293
+    },
+    "by_source": {
+      "ayoubkirouane/CircuitVQA": {
+        "holdout": 858,
+        "test": 2094,
+        "train": 7518
+      },
+      "bshada/open-schematics": {
+        "holdout": 512,
+        "test": 512,
+        "train": 5000
+      },
+      "lowercaseonly/cghd": {
+        "holdout": 267,
+        "test": 336,
+        "train": 2690
+      }
+    },
+    "by_split": {
+      "holdout": 1637,
+      "test": 2942,
+      "train": 15208
+    },
+    "counts": {
+      "holdout": 1637,
+      "test": 2942,
+      "train": 15208
+    },
+    "samples_with_structure_ref": 9317
+  }
+}

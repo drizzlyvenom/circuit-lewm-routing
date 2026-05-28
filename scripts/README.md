@@ -24,4 +24,10 @@ audit_sources.py
   - writes data/circuit_sources/source_manifest.json
   - records license, source URLs, split metadata, parquet footprint, field previews, file inventory, and M1 decisions
   - does not download raw datasets or store signed asset URLs
+
+prepare_circuit_samples.py
+  - writes data/circuit_curricula/train.jsonl, holdout.jsonl, test.jsonl, and usable_pair_summary.json
+  - verifies open-schematics image+schematic rows before adding them to the curriculum
+  - pairs local CGHD image/XML files from ignored data/downloads
+  - stores CircuitVQA row references without committing prompt/answer payloads
 ```

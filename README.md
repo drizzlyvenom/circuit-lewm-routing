@@ -1,6 +1,6 @@
 # Circuit LeWM Routing
 
-Status: M1 dataset source audit closed with caveats
+Status: M2 circuit sample schema and splits closed
 Scope: circuit-domain Perception LeWM training + router/adapter evaluation
 Target hardware: RTX 3090 24GB VRAM, local RAM 24~26GB
 Primary question: compact world-model perception vs monolithic VLM backbone
@@ -107,14 +107,14 @@ wsl/lewm/
 
 ## 현재 단계
 
-현재는 M1 dataset source audit를 닫고 M2 usable circuit curriculum 작업으로 넘어갈 수 있는 단계다. 아직 Qwen baseline, LeWM 학습 결과는 이 레포의 active evidence가 아니다.
+현재는 M2 circuit sample schema and splits를 닫은 단계다. 아직 Qwen baseline, LeWM 학습 결과는 이 레포의 active evidence가 아니다.
 
 첫 실행 순서는 다음과 같다.
 
 ```text
 M0. Repo scaffold and boundary
 M1. Dataset source audit                    closed_with_caveats
-M2. Usable circuit sample schema and splits next
+M2. Usable circuit sample schema and splits closed
 M3. Qwen baseline measurement
 M4. LeWM data pipeline
 M5. LeWM-S structure pretraining
@@ -123,3 +123,5 @@ M5. LeWM-S structure pretraining
 자세한 마일스톤은 [circuit_lewm_validation_milestones_ko.md](docs/10_protocols/circuit_lewm_validation_milestones_ko.md)를 따른다.
 
 M1 결과 문서는 [000_dataset_source_audit_ko.md](docs/20_results/000_dataset_source_audit_ko.md)에 있다.
+
+M2 결과 문서는 [001_circuit_sample_schema_ko.md](docs/20_results/001_circuit_sample_schema_ko.md)에 있고, split manifest는 `data/circuit_curricula/`에 있다.
