@@ -1,0 +1,83 @@
+{
+  "counts_by_split_and_family": {
+    "holdout": {
+      "perception_probe": 512,
+      "structure_pretraining": 512,
+      "structure_text_prior": 128,
+      "vqa_evaluation": 1024
+    },
+    "test": {
+      "perception_probe": 512,
+      "structure_pretraining": 512,
+      "structure_text_prior": 128,
+      "vqa_evaluation": 1024
+    },
+    "train": {
+      "perception_probe": 2048,
+      "structure_pretraining": 2048,
+      "structure_text_prior": 1024,
+      "vqa_evaluation": 4096
+    }
+  },
+  "counts_by_split_and_source": {
+    "holdout": {
+      "ayoubkirouane/CircuitVQA": 1024,
+      "bshada/open-schematics": 512,
+      "lowercaseonly/cghd": 512,
+      "microsoft/SchGen_dataset": 128
+    },
+    "test": {
+      "ayoubkirouane/CircuitVQA": 1024,
+      "bshada/open-schematics": 512,
+      "lowercaseonly/cghd": 512,
+      "microsoft/SchGen_dataset": 128
+    },
+    "train": {
+      "ayoubkirouane/CircuitVQA": 4096,
+      "bshada/open-schematics": 2048,
+      "lowercaseonly/cghd": 2048,
+      "microsoft/SchGen_dataset": 1024
+    }
+  },
+  "generated_at_utc": "2026-05-28T17:26:55+00:00",
+  "manifest_version": 1,
+  "raw_payload_policy": "Manifests store HF row/file references and provenance, not signed asset URLs or raw dataset payloads.",
+  "split_files": {
+    "holdout": "data/circuit_curricula/holdout.jsonl",
+    "test": "data/circuit_curricula/test.jsonl",
+    "train": "data/circuit_curricula/train.jsonl"
+  },
+  "split_policy": {
+    "cghd": "drafter+circuit grouped deterministic split over paired image/xml files",
+    "circuitvqa": "provided train split for train; provided test split divided by image row references into holdout/test",
+    "open_schematics": "deterministic row-reference split over audited train rows; project/name duplicate audit remains required before paper-ready training",
+    "schgen_dataset": "deterministic row-reference split over audited train rows; module duplicate audit remains required before paper-ready training"
+  },
+  "targets": {
+    "ayoubkirouane/CircuitVQA": {
+      "holdout": 1024,
+      "test": 1024,
+      "train": 4096
+    },
+    "bshada/open-schematics": {
+      "holdout": 512,
+      "test": 512,
+      "train": 2048
+    },
+    "lowercaseonly/cghd": {
+      "holdout": 512,
+      "test": 512,
+      "train": 2048
+    },
+    "microsoft/SchGen_dataset": {
+      "holdout": 128,
+      "test": 128,
+      "train": 1024
+    }
+  },
+  "total_rows_by_split": {
+    "holdout": 2176,
+    "test": 2176,
+    "train": 9216
+  }
+}

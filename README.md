@@ -1,6 +1,6 @@
 # Circuit LeWM Routing
 
-Status: proposal-stage research repo
+Status: M3 Qwen baseline measurement closed with caveats
 Scope: circuit-domain Perception LeWM + LoRA routing experiments
 Target hardware: RTX 3090 24GB VRAM, local RAM 24~26GB
 Primary question: compact world-model perception vs monolithic VLM backbone
@@ -107,17 +107,19 @@ wsl/lewm/
 
 ## 현재 단계
 
-현재는 repo scaffold와 protocol 문서를 정리하는 단계다. 아직 dataset audit, Qwen baseline, LeWM 학습 결과는 이 레포의 active evidence가 아니다.
+현재는 M3 Qwen baseline measurement까지 닫고 M4 LeWM data pipeline으로 넘어갈 수 있는 단계다. 아직 LeWM 학습 결과는 이 레포의 active evidence가 아니다.
 
 첫 실행 순서는 다음과 같다.
 
 ```text
-M0. Repo scaffold and boundary
-M1. Dataset source audit
-M2. Circuit sample schema and splits
-M3. Qwen baseline measurement
-M4. LeWM data pipeline
+M0. Repo scaffold and boundary              done
+M1. Dataset source audit                    closed_with_caveats
+M2. Circuit sample schema and splits        closed_with_caveats
+M3. Qwen baseline measurement               closed_with_caveats
+M4. LeWM data pipeline                      next
 M5. LeWM-S structure pretraining
 ```
 
 자세한 마일스톤은 [circuit_lewm_validation_milestones_ko.md](docs/10_protocols/circuit_lewm_validation_milestones_ko.md)를 따른다.
+
+M1 결과 문서는 [000_dataset_source_audit_ko.md](docs/20_results/000_dataset_source_audit_ko.md)에 있다. M2 결과 문서는 [001_circuit_sample_schema_ko.md](docs/20_results/001_circuit_sample_schema_ko.md)에 있다. M3 결과 문서는 [002_qwen_baseline_ko.md](docs/20_results/002_qwen_baseline_ko.md)에 있다.

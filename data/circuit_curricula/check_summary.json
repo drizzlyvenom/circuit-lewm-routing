@@ -1,0 +1,48 @@
+{
+  "family_counts": {
+    "holdout": {
+      "perception_probe": 512,
+      "structure_pretraining": 512,
+      "structure_text_prior": 128,
+      "vqa_evaluation": 1024
+    },
+    "test": {
+      "perception_probe": 512,
+      "structure_pretraining": 512,
+      "structure_text_prior": 128,
+      "vqa_evaluation": 1024
+    },
+    "train": {
+      "perception_probe": 2048,
+      "structure_pretraining": 2048,
+      "structure_text_prior": 1024,
+      "vqa_evaluation": 4096
+    }
+  },
+  "source_counts": {
+    "holdout": {
+      "ayoubkirouane/CircuitVQA": 1024,
+      "bshada/open-schematics": 512,
+      "lowercaseonly/cghd": 512,
+      "microsoft/SchGen_dataset": 128
+    },
+    "test": {
+      "ayoubkirouane/CircuitVQA": 1024,
+      "bshada/open-schematics": 512,
+      "lowercaseonly/cghd": 512,
+      "microsoft/SchGen_dataset": 128
+    },
+    "train": {
+      "ayoubkirouane/CircuitVQA": 4096,
+      "bshada/open-schematics": 2048,
+      "lowercaseonly/cghd": 2048,
+      "microsoft/SchGen_dataset": 1024
+    }
+  },
+  "split_counts": {
+    "holdout": 2176,
+    "test": 2176,
+    "train": 9216
+  },
+  "unique_source_groups": 6244
+}

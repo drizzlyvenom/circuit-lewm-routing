@@ -209,6 +209,18 @@ pass_if:
 
 open-schematics / SchGen / CircuitVQA / CGHD를 역할별로 검증한다.
 
+Current closure:
+
+```yaml
+status: closed_with_caveats
+manifest: data/circuit_sources/source_manifest.json
+result_brief: docs/20_results/000_dataset_source_audit_ko.md
+main_caveats:
+  - CircuitVQA license not declared on HF
+  - CGHD requires explicit image/annotation pairing manifest
+  - open-schematics final split should use project/name grouping after duplicate audit
+```
+
 ### 데이터셋 역할
 
 ```yaml
@@ -320,6 +332,28 @@ pass_if:
   - structure fields exist for structure pretraining samples
 ```
 
+Current closure:
+
+```yaml
+status: closed_with_caveats
+manifests:
+  - data/circuit_curricula/train.jsonl
+  - data/circuit_curricula/holdout.jsonl
+  - data/circuit_curricula/test.jsonl
+summary:
+  split_summary: data/circuit_curricula/split_summary.json
+  check_summary: data/circuit_curricula/check_summary.json
+result_brief: docs/20_results/001_circuit_sample_schema_ko.md
+main_counts:
+  train: 9216
+  holdout: 2176
+  test: 2176
+main_caveats:
+  - CircuitVQA license is still not declared on HF
+  - open-schematics and SchGen use deterministic row-reference splits for M2; project/module duplicate audit remains before paper-ready training
+  - CircuitVQA answer_type is a reference-level placeholder until M3 answer normalization loads actual QA payloads
+```
+
 ---
 
 ## M3. Qwen Baseline Measurement
@@ -366,6 +400,33 @@ pass_if:
   - Qwen3 baseline completes on selected test subset
   - at least one smaller/quantized Qwen baseline is measured or explicitly deferred
   - memory and latency are measured in a separate clean process
+```
+
+Current closure:
+
+```yaml
+status: closed_with_caveats
+outputs:
+  qwen3_single_backbone: results/qwen/qwen3_single_backbone.json
+  smaller_or_quantized_qwen: results/qwen/qwen_small_or_quantized.json
+result_brief: docs/20_results/002_qwen_baseline_ko.md
+selected_subset:
+  source: data/circuit_curricula/test.jsonl
+  source_dataset: ayoubkirouane/CircuitVQA
+  vqa_samples: 64
+metrics:
+  qwen3_vl_4b_contains_normalized_score: 0.4375
+  correct: 28
+  total: 64
+  resident_vram_after_load_mb: 10378
+  max_resident_vram_observed_mb: 10962
+  peak_torch_allocated_mb: 8794.849
+  latency_ms_mean: 691.297
+  total_parameters: 4437815808
+main_caveats:
+  - score is a normalized containment heuristic, not a full academic CircuitVQA metric
+  - selected subset is 64 VQA samples from the M2 test manifest, not the full 1024 VQA test manifest
+  - smaller/quantized Qwen baseline is explicitly deferred because no local checkpoint exists under models/qwen
 ```
 
 ---

@@ -1,26 +1,45 @@
 {
   "sample_id": "circuit_sample_000001",
+  "sample_family": "structure_pretraining",
   "source_dataset": "bshada/open-schematics",
+  "source_group_key": "row:0",
   "split": "train",
+  "source": {
+    "dataset": "bshada/open-schematics",
+    "config": "default",
+    "source_split": "train",
+    "row_idx": 0,
+    "row_url": "https://huggingface.co/datasets/bshada/open-schematics/viewer/default/train?row=0",
+    "fields_used": ["schematic", "image", "components_used", "json", "yaml", "name", "description", "type"]
+  },
   "image": {
-    "image_path_or_ref": "hf://datasets/bshada/open-schematics/train/0/image",
+    "image_path_or_ref": "hf://datasets/bshada/open-schematics/default/train/0/image",
     "width": null,
     "height": null
   },
   "query": {
     "prompt": null,
+    "prompt_ref": null,
     "expected_answers": null,
+    "expected_answer_ref": null,
     "answer_type": null
   },
   "structure": {
-    "structure_path_or_ref": "hf://datasets/bshada/open-schematics/train/0/kicad",
-    "component_list": null,
-    "netlist_or_edges": null,
-    "metadata_text": null
+    "structure_path_or_ref": "hf://datasets/bshada/open-schematics/default/train/0/schematic",
+    "component_list_ref": "hf://datasets/bshada/open-schematics/default/train/0/components_used",
+    "netlist_or_edges_ref": null,
+    "metadata_text": "source_row_idx=0",
+    "json_ref": "hf://datasets/bshada/open-schematics/default/train/0/json",
+    "yaml_ref": "hf://datasets/bshada/open-schematics/default/train/0/yaml"
   },
   "supervision": {
     "taxonomy": null,
     "hard_negatives": [],
     "roi_or_tile_boxes": null
+  },
+  "provenance": {
+    "source_url": "https://huggingface.co/datasets/bshada/open-schematics",
+    "license": "cc-by-4.0",
+    "license_caveat": null
   }
 }

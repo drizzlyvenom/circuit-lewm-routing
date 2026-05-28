@@ -1,0 +1,11 @@
+{
+  "baseline": "smaller_or_quantized_qwen",
+  "generated_at_utc": "2026-05-28T17:39:27+00:00",
+  "reason": "No smaller or quantized Qwen VLM checkpoint is present under local models/qwen at M3 time.",
+  "required_before_claim": [
+    "download or build a smaller/quantized Qwen VLM checkpoint",
+    "run the same selected CircuitVQA test subset in a separate clean process",
+    "record memory and latency with the same schema as qwen3_single_backbone.json"
+  ],
+  "status": "deferred"
+}
