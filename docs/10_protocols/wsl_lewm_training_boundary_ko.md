@@ -47,6 +47,7 @@ windows_or_codex_root:
 wsl_lewm_zone:
   repo_path: wsl/lewm
   runtime_path_recommended: <wsl-home>/circuit-lewm-routing
+  current_m5_runtime: external_official_lewm_checkout
   owns:
     - LeWM training wrappers
     - Linux-specific Hydra/config overrides
@@ -74,7 +75,7 @@ WSL 학습 결과 중 commit 가능한 것은 작은 summary뿐이다.
 ```yaml
 commit_allowed_after_training:
   - results/lewm_s/pretrain_log_summary.json
-  - docs/20_results/004_lewm_s_pretraining_ko.md
+  - docs/20_results/005_lewm_s_pretraining_ko.md
   - configs used for the run
   - source/split manifest
 

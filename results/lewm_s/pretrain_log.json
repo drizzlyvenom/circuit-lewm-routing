@@ -1,0 +1,155 @@
+{
+  "dataset": {
+    "augmentation_policy": "none; deterministic crop view is used only for masked-crop objective",
+    "component_vocab_size": 4096,
+    "holdout_component_vocab_coverage": {
+      "component_mention_coverage": 0.818390452876377,
+      "component_mentions": 6536,
+      "covered_component_mentions": 5349,
+      "records_with_components": 511,
+      "records_with_covered_components": 507
+    },
+    "holdout_manifest": "data/circuit_curricula/holdout.jsonl",
+    "holdout_records": 512,
+    "license": "cc-by-4.0",
+    "raw_payload_policy": {
+      "stores_checkpoint_in_git": false,
+      "stores_raw_images": false,
+      "stores_raw_schematics": false
+    },
+    "source_dataset": "bshada/open-schematics",
+    "source_url": "https://huggingface.co/datasets/bshada/open-schematics",
+    "train_component_vocab_coverage": {
+      "component_mention_coverage": 0.8642915174675774,
+      "component_mentions": 66466,
+      "covered_component_mentions": 57446,
+      "records_with_components": 5000,
+      "records_with_covered_components": 4970
+    },
+    "train_manifest": "data/circuit_curricula/train.jsonl",
+    "train_records": 5000
+  },
+  "failure": null,
+  "generated_at_utc": "2026-05-28T21:02:44+00:00",
+  "loss": {
+    "lambda_align": 1.0,
+    "lambda_mask": 1.0,
+    "lambda_sigreg": 0.09,
+    "lambda_struct": 0.5,
+    "terms": [
+      "image_to_structure_contrastive_alignment",
+      "deterministic_crop_prediction",
+      "component_multilabel_prediction",
+      "sigreg_gaussian_latent_regularizer"
+    ]
+  },
+  "metrics": {
+    "elapsed_seconds": 235.931,
+    "epoch_summaries": [
+      {
+        "align_loss": 4.010366,
+        "epoch": 1,
+        "holdout_alignment_retrieval_top1": 0.003906,
+        "holdout_alignment_retrieval_top5": 0.011719,
+        "holdout_random_top1": 0.001953,
+        "holdout_random_top5": 0.009766,
+        "holdout_size": 512.0,
+        "loss": 5.206547,
+        "mask_loss": 0.005488,
+        "samples_per_second": 529.721,
+        "samples_seen": 4992,
+        "seconds": 9.424,
+        "sigreg_loss": 9.353365,
+        "struct_loss": 0.697342
+      },
+      {
+        "align_loss": 3.555267,
+        "epoch": 2,
+        "holdout_alignment_retrieval_top1": 0.005859,
+        "holdout_alignment_retrieval_top5": 0.009766,
+        "holdout_random_top1": 0.001953,
+        "holdout_random_top5": 0.009766,
+        "holdout_size": 512.0,
+        "loss": 4.296871,
+        "mask_loss": 0.005446,
+        "samples_per_second": 600.115,
+        "samples_seen": 4992,
+        "seconds": 8.318,
+        "sigreg_loss": 4.435697,
+        "struct_loss": 0.673689
+      },
+      {
+        "align_loss": 3.100455,
+        "epoch": 3,
+        "holdout_alignment_retrieval_top1": 0.001953,
+        "holdout_alignment_retrieval_top5": 0.011719,
+        "holdout_random_top1": 0.001953,
+        "holdout_random_top5": 0.009766,
+        "holdout_size": 512.0,
+        "loss": 3.760675,
+        "mask_loss": 0.005504,
+        "samples_per_second": 606.106,
+        "samples_seen": 4992,
+        "seconds": 8.236,
+        "sigreg_loss": 3.665064,
+        "struct_loss": 0.649476
+      }
+    ],
+    "final": {
+      "align_loss": 3.100455,
+      "epoch": 3,
+      "holdout_alignment_retrieval_top1": 0.001953,
+      "holdout_alignment_retrieval_top5": 0.011719,
+      "holdout_random_top1": 0.001953,
+      "holdout_random_top5": 0.009766,
+      "holdout_size": 512.0,
+      "loss": 3.760675,
+      "mask_loss": 0.005504,
+      "samples_per_second": 606.106,
+      "samples_seen": 4992,
+      "seconds": 8.236,
+      "sigreg_loss": 3.665064,
+      "struct_loss": 0.649476
+    },
+    "peak_vram_mb_torch_allocated": 4785.837,
+    "peak_vram_mb_torch_reserved": 5310.0,
+    "process_ram_mb_after_train": 5334.012,
+    "resident_vram_mb_after_train": null
+  },
+  "model": {
+    "embed_dim": 192,
+    "encoder": "ViT-tiny",
+    "image_size": 224,
+    "name": "Circuit LeWM-S",
+    "patch_size": 14,
+    "predictor_depth": 6,
+    "total_parameters": 16211904,
+    "trainable_parameters": 16211904
+  },
+  "pass_checks": {
+    "checkpoint_saved_local_only": true,
+    "holdout_retrieval_above_random": false,
+    "peak_vram_fits_24gb": true,
+    "training_is_stable": true
+  },
+  "result_version": 1,
+  "runtime": {
+    "checkpoint_path": "<lewm_official>/checkpoints/circuit_lewm_s_5k_20260529-055821/latest.pt",
+    "cuda_device_name": "NVIDIA GeForce RTX 3090",
+    "device": "cuda",
+    "metrics_csv": "<lewm_official>/runs/circuit_lewm_s_5k_20260529-055821/metrics.csv",
+    "official_repo": "<lewm_official>/.",
+    "run_dir": "<lewm_official>/runs/circuit_lewm_s_5k_20260529-055821"
+  },
+  "script": "wsl/lewm/scripts/train_circuit_lewm_s.py",
+  "status": "closed_with_caveats",
+  "training": {
+    "batch_size": 64,
+    "epochs_completed": 3,
+    "epochs_requested": 3,
+    "learning_rate": 5e-05,
+    "precision": "bf16",
+    "temperature": 0.07,
+    "weight_decay": 0.001
+  }
+}

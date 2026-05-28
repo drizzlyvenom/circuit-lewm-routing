@@ -250,7 +250,7 @@ tasks:
 
 ```text
 data/circuit_sources/source_manifest.json
-docs/20_results/000_dataset_source_audit_ko.md
+docs/20_results/001_dataset_source_audit_ko.md
 ```
 
 ### 통과 조건
@@ -268,7 +268,7 @@ Current closure:
 ```yaml
 status: closed_with_caveats
 manifest: data/circuit_sources/source_manifest.json
-result_brief: docs/20_results/000_dataset_source_audit_ko.md
+result_brief: docs/20_results/001_dataset_source_audit_ko.md
 main_caveats:
   - open-schematics full parquet footprint is about 6.21 GiB, so M1 avoids full local snapshot
   - row count is not the same as usable image+schematic pair count
@@ -323,7 +323,7 @@ data/circuit_curricula/train.jsonl
 data/circuit_curricula/holdout.jsonl
 data/circuit_curricula/test.jsonl
 data/circuit_curricula/usable_pair_summary.json
-docs/20_results/001_circuit_sample_schema_ko.md
+docs/20_results/002_circuit_sample_schema_ko.md
 ```
 
 ### 통과 조건
@@ -344,7 +344,7 @@ Current closure:
 status: closed
 script: scripts/prepare_circuit_samples.py
 summary: data/circuit_curricula/usable_pair_summary.json
-result_brief: docs/20_results/001_circuit_sample_schema_ko.md
+result_brief: docs/20_results/002_circuit_sample_schema_ko.md
 outputs:
   - data/circuit_curricula/train.jsonl
   - data/circuit_curricula/holdout.jsonl
@@ -400,7 +400,7 @@ metrics:
 ```text
 results/qwen/qwen3_single_backbone.json
 results/qwen/qwen_small_or_quantized.json
-docs/20_results/002_qwen_baseline_ko.md
+docs/20_results/003_qwen_baseline_ko.md
 ```
 
 ### 통과 조건
@@ -420,7 +420,7 @@ closed_at_kst: 2026-05-29
 evidence:
   - results/qwen/qwen3_single_backbone.json
   - results/qwen/qwen_small_or_quantized.json
-  - docs/20_results/002_qwen_baseline_ko.md
+  - docs/20_results/003_qwen_baseline_ko.md
 notes:
   - Qwen3-VL 4B single backbone completed on 64 deterministic CircuitVQA test QA refs.
   - smaller/quantized Qwen baseline was explicitly deferred because no local checkpoint or quantized runtime was available.
@@ -464,7 +464,7 @@ visual_pipeline:
 
 ```text
 results/lewm_data_pipeline/sanity_check.json
-docs/20_results/003_lewm_data_pipeline_ko.md
+docs/20_results/004_lewm_data_pipeline_ko.md
 ```
 
 ### 통과 조건
@@ -474,6 +474,21 @@ pass_if:
   - one batch can be loaded under RAM 24~26GB
   - image and structure target are aligned
   - tile/crop metadata is traceable back to original sample
+```
+
+### 현재 닫은 내용
+
+```yaml
+closure_status: closed
+closed_at_kst: 2026-05-29
+evidence:
+  - results/lewm_data_pipeline/sanity_check.json
+  - docs/20_results/004_lewm_data_pipeline_ko.md
+notes:
+  - Loaded one 64-record batch from the M2 train curriculum.
+  - Built global 224 views and 4 tile/crop 224 views per sample.
+  - Verified image/structure alignment and tile/crop traceability.
+  - RSS after batch load was 1844.246 MB under the 24~26GB RAM policy.
 ```
 
 ---
@@ -520,7 +535,7 @@ metrics:
 ```text
 checkpoints/lewm_s/latest.pt       # local only
 results/lewm_s/pretrain_log.json
-docs/20_results/004_lewm_s_pretraining_ko.md
+docs/20_results/005_lewm_s_pretraining_ko.md
 ```
 
 ### 통과 조건
@@ -530,6 +545,22 @@ pass_if:
   - training is stable
   - holdout retrieval above random
   - peak VRAM fits within 24GB
+```
+
+### 현재 시도 1
+
+```yaml
+attempt: m5_open_schematics_5k_v1
+status: closed_with_caveats
+evidence:
+  - results/lewm_s/pretrain_log.json
+  - docs/20_results/005_lewm_s_pretraining_ko.md
+summary:
+  - 5k open-schematics train pairs completed 3 epochs.
+  - Training was stable and peak torch reserved VRAM was 5310.0 MB.
+  - Final holdout top1 retrieval equaled random, so M5 pass_if is not fully satisfied.
+next_action:
+  - redesign structure target/encoder before increasing dataset size.
 ```
 
 ---
@@ -566,7 +597,7 @@ metrics:
 
 ```text
 results/lewm_s/probe_results.json
-docs/20_results/005_lewm_frozen_probe_ko.md
+docs/20_results/006_lewm_frozen_probe_ko.md
 ```
 
 ### 통과 조건
@@ -610,7 +641,7 @@ tasks:
 ```text
 configs/router/adapter_registry.yaml
 results/router/oracle_router_baseline.json
-docs/20_results/006_router_contract_ko.md
+docs/20_results/007_router_contract_ko.md
 ```
 
 ### 통과 조건
@@ -667,7 +698,7 @@ metrics:
 
 ```text
 results/router/llm_router_eval.json
-docs/20_results/007_llm_router_baseline_ko.md
+docs/20_results/008_llm_router_baseline_ko.md
 ```
 
 ### 통과 조건
@@ -722,7 +753,7 @@ metrics:
 
 ```text
 results/router/jepa_router_eval.json
-docs/20_results/008_jepa_router_baseline_ko.md
+docs/20_results/009_jepa_router_baseline_ko.md
 ```
 
 ### 통과 조건
@@ -766,7 +797,7 @@ metrics:
 
 ```text
 results/lewm_answer_head/eval.json
-docs/20_results/009_answer_head_eval_ko.md
+docs/20_results/010_answer_head_eval_ko.md
 ```
 
 ### 통과 조건
@@ -810,7 +841,7 @@ actual_certified_if:
 ```text
 configs/adapter_registry/certified_cards.yaml
 results/certification/actual_certification_result.json
-docs/20_results/010_actual_certification_registry_ko.md
+docs/20_results/011_actual_certification_registry_ko.md
 ```
 
 ### 통과 조건
@@ -861,7 +892,7 @@ metrics:
 
 ```text
 results/system_comparison/main_table.json
-docs/20_results/011_end_to_end_system_comparison_ko.md
+docs/20_results/012_end_to_end_system_comparison_ko.md
 ```
 
 ### 통과 조건

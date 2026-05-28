@@ -1,6 +1,6 @@
 # Circuit LeWM Routing
 
-Status: M3 Qwen baseline measurement closed
+Status: M5 first 5k LeWM-S run recorded with caveats
 Scope: circuit-domain Perception LeWM training + router/adapter evaluation
 Target hardware: RTX 3090 24GB VRAM, local RAM 24~26GB
 Primary question: compact world-model perception vs monolithic VLM backbone
@@ -107,7 +107,7 @@ wsl/lewm/
 
 ## 현재 단계
 
-현재는 M3 Qwen baseline measurement를 닫은 단계다. Qwen3-VL 단일 backbone baseline은 active evidence로 추가됐고, LeWM 학습 결과는 아직 이 레포의 active evidence가 아니다.
+현재는 M5 첫 5k LeWM-S run을 기록한 단계다. Qwen3-VL 단일 backbone baseline, LeWM data pipeline sanity, LeWM-S 5k 학습 health 결과는 active evidence로 추가됐다. 다만 M5 첫 run의 최종 holdout retrieval은 random top1을 넘지 못해 구조 target/encoder 재설계가 필요하다.
 
 첫 실행 순서는 다음과 같다.
 
@@ -116,14 +116,18 @@ M0. Repo scaffold and boundary
 M1. Dataset source audit                    closed_with_caveats
 M2. Usable circuit sample schema and splits closed
 M3. Qwen baseline measurement              closed
-M4. LeWM data pipeline
-M5. LeWM-S structure pretraining
+M4. LeWM data pipeline                     closed
+M5. LeWM-S structure pretraining           first_run_closed_with_caveats
 ```
 
 자세한 마일스톤은 [circuit_lewm_validation_milestones_ko.md](docs/10_protocols/circuit_lewm_validation_milestones_ko.md)를 따른다.
 
-M1 결과 문서는 [000_dataset_source_audit_ko.md](docs/20_results/000_dataset_source_audit_ko.md)에 있다.
+M1 결과 문서는 [001_dataset_source_audit_ko.md](docs/20_results/001_dataset_source_audit_ko.md)에 있다.
 
-M2 결과 문서는 [001_circuit_sample_schema_ko.md](docs/20_results/001_circuit_sample_schema_ko.md)에 있고, split manifest는 `data/circuit_curricula/`에 있다.
+M2 결과 문서는 [002_circuit_sample_schema_ko.md](docs/20_results/002_circuit_sample_schema_ko.md)에 있고, split manifest는 `data/circuit_curricula/`에 있다.
 
-M3 결과 문서는 [002_qwen_baseline_ko.md](docs/20_results/002_qwen_baseline_ko.md)에 있다.
+M3 결과 문서는 [003_qwen_baseline_ko.md](docs/20_results/003_qwen_baseline_ko.md)에 있다.
+
+M4 결과 문서는 [004_lewm_data_pipeline_ko.md](docs/20_results/004_lewm_data_pipeline_ko.md)에 있다.
+
+M5 첫 5k 결과 문서는 [005_lewm_s_pretraining_ko.md](docs/20_results/005_lewm_s_pretraining_ko.md)에 있다.

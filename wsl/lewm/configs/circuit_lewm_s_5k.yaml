@@ -1,0 +1,31 @@
+name: circuit_lewm_s_5k
+model:
+  tier: LeWM-S
+  encoder: vit_tiny
+  image_size: 224
+  patch_size: 14
+  embed_dim: 192
+  predictor_depth: 6
+data:
+  train_manifest: data/circuit_curricula/train.jsonl
+  holdout_manifest: data/circuit_curricula/holdout.jsonl
+  source_dataset: bshada/open-schematics
+  train_limit: 5000
+  holdout_limit: 512
+  augmentation_policy: none
+training:
+  epochs: 3
+  batch_size: 64
+  learning_rate: 0.00005
+  weight_decay: 0.001
+  precision: bf16
+loss:
+  lambda_align: 1.0
+  lambda_mask: 1.0
+  lambda_struct: 0.5
+  lambda_sigreg: 0.09
+  temperature: 0.07
+  component_vocab_size: 4096
+outputs:
+  summary: results/lewm_s/pretrain_log.json
+  checkpoint_policy: local_only_wsl_runtime

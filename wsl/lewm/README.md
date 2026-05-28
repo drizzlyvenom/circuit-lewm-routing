@@ -1,6 +1,6 @@
 # WSL LeWM Training Zone
 
-Status: Linux-only training scaffold
+Status: Linux-only training wrappers active
 
 This folder owns LeWM/world-model training wrappers and Linux-specific runtime configs.
 
@@ -34,4 +34,4 @@ wsl/lewm/checkpoints/
 wsl/lewm/wandb/
 ```
 
-Use a Linux-native runtime checkout such as `/home/user/circuit-lewm-routing` when full training I/O becomes heavy.
+M5 uses the external official LeWM checkout as the runtime environment and keeps checkpoints/step logs out of this repository. Commit only wrappers, configs, manifests, and compact result summaries.

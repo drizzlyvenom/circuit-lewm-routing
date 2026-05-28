@@ -34,12 +34,16 @@ active_evidence_if:
   - failure is preserved instead of smoothed over
 ```
 
+결과 문서 번호는 milestone 번호와 맞춘다. 예를 들어 `M4` 결과는 `004_*.md`로 둔다.
+
 현재 result briefs:
 
 ```text
-000_dataset_source_audit_ko.md
-001_circuit_sample_schema_ko.md
-002_qwen_baseline_ko.md
+001_dataset_source_audit_ko.md
+002_circuit_sample_schema_ko.md
+003_qwen_baseline_ko.md
+004_lewm_data_pipeline_ko.md
+005_lewm_s_pretraining_ko.md
 ```
 
 ---

@@ -7,6 +7,7 @@ Planned scripts:
 ```text
 audit_sources.py
 prepare_circuit_samples.py
+run_lewm_data_pipeline_sanity.py
 run_lewm_probe.py
 train_router_llm.py
 train_router_jepa.py
@@ -35,4 +36,10 @@ run_qwen_baseline.py
   - writes results/qwen/qwen3_single_backbone.json
   - can explicitly defer the smaller/quantized Qwen baseline into results/qwen/qwen_small_or_quantized.json
   - stores match flags, latency, and resource metrics without committing raw prompts, expected answers, or predictions
+
+run_lewm_data_pipeline_sanity.py
+  - runs M4 LeWM data pipeline sanity on 64 actual train records from data/circuit_curricula/train.jsonl
+  - builds global image views, tile/crop views, structure target hashes/counts, and traceable tile metadata
+  - writes results/lewm_data_pipeline/sanity_check.json
+  - does not store raw images, raw schematics, raw XML, or tile pixels in committed results
 ```

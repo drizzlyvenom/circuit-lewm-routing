@@ -1,0 +1,546 @@
+{
+  "batch": {
+    "global_tensor_dtype": "torch.float32",
+    "global_views_shape": [
+      64,
+      3,
+      224,
+      224
+    ],
+    "sample_ids_preview": [
+      "open_schematics_000000",
+      "open_schematics_000001",
+      "open_schematics_000002",
+      "open_schematics_000004",
+      "open_schematics_000006",
+      "open_schematics_000007",
+      "open_schematics_000008",
+      "open_schematics_000010"
+    ],
+    "structure_target_preview": [
+      {
+        "component_count": 20,
+        "metadata_text_sha1": "313edaa58f160cbf65423cd4d8911031657409fa",
+        "sample_id": "open_schematics_000000",
+        "structure_chars": 178825,
+        "structure_ref": "hf://datasets/bshada/open-schematics/default/train/0/schematic",
+        "structure_sha1": "549c2d3aae45233cf04627365503da7489d21b9b",
+        "target_type": "kicad_schematic_text",
+        "top_components": [
+          [
+            "Conn_01x01_Pin",
+            1
+          ],
+          [
+            "Conn_01x06_Pin",
+            1
+          ],
+          [
+            "USB_A",
+            1
+          ],
+          [
+            "Conn_02x05_Odd_Even",
+            1
+          ],
+          [
+            "Conn_01x06_MountingPin",
+            1
+          ],
+          [
+            "C",
+            1
+          ],
+          [
+            "Fuse_Small",
+            1
+          ],
+          [
+            "LED",
+            1
+          ]
+        ],
+        "unique_component_count": 20
+      },
+      {
+        "component_count": 20,
+        "metadata_text_sha1": "6e0ba2c81b3569a9e6a4a7f69621734119f121db",
+        "sample_id": "open_schematics_000001",
+        "structure_chars": 179293,
+        "structure_ref": "hf://datasets/bshada/open-schematics/default/train/1/schematic",
+        "structure_sha1": "e1d6ca7a1be735b29f28d6753cc8cf29f4302d6a",
+        "target_type": "kicad_schematic_text",
+        "top_components": [
+          [
+            "C_Small",
+            1
+          ],
+          [
+            "Conn_01x03",
+            1
+          ],
+          [
+            "Conn_01x06",
+            1
+          ],
+          [
+            "Conn_01x08",
+            1
+          ],
+          [
+            "Conn_01x10",
+            1
+          ],
+          [
+            "Conn_02x06_Odd_Even",
+            1
+          ],
+          [
+            "Jumper_3_Bridged12",
+            1
+          ],
+          [
+            "Jumper_3_Open",
+            1
+          ]
+        ],
+        "unique_component_count": 20
+      },
+      {
+        "component_count": 4,
+        "metadata_text_sha1": "2c891b3463580876c2e4b35ce7d78e880ea95896",
+        "sample_id": "open_schematics_000002",
+        "structure_chars": 110906,
+        "structure_ref": "hf://datasets/bshada/open-schematics/default/train/2/schematic",
+        "structure_sha1": "b66e945d2ac209f2b3e92112b3b779fa5aafee16",
+        "target_type": "kicad_schematic_text",
+        "top_components": [
+          [
+            "CPDT6-5V0UPC-HF",
+            1
+          ],
+          [
+            "NE555N-TD",
+            1
+          ],
+          [
+            "PESD5V0U4BW",
+            1
+          ],
+          [
+            "STM32F446VET6TR",
+            1
+          ]
+        ],
+        "unique_component_count": 4
+      },
+      {
+        "component_count": 12,
+        "metadata_text_sha1": "b23c085ac5291ddaf3f3551f4577e0579c373586",
+        "sample_id": "open_schematics_000004",
+        "structure_chars": 86326,
+        "structure_ref": "hf://datasets/bshada/open-schematics/default/train/4/schematic",
+        "structure_sha1": "e18aac6d27589ed43bdfbd6791b95046034ac01b",
+        "target_type": "kicad_schematic_text",
+        "top_components": [
+          [
+            "Conn_01x02",
+            1
+          ],
+          [
+            "Conn_02x04_Top_Bottom",
+            1
+          ],
+          [
+            "Conn_02x05_Odd_Even",
+            1
+          ],
+          [
+            "C",
+            1
+          ],
+          [
+            "LED",
+            1
+          ],
+          [
+            "R",
+            1
+          ],
+          [
+            "MAX3232",
+            1
+          ],
+          [
+            "MountingHole",
+            1
+          ]
+        ],
+        "unique_component_count": 12
+      },
+      {
+        "component_count": 14,
+        "metadata_text_sha1": "475e7a9aae9b15fda5d4cb9371e138657adff88c",
+        "sample_id": "open_schematics_000006",
+        "structure_chars": 150980,
+        "structure_ref": "hf://datasets/bshada/open-schematics/default/train/6/schematic",
+        "structure_sha1": "7eea71f49e45eb2c0c497a5c7b2f2105e4c0a916",
+        "target_type": "kicad_schematic_text",
+        "top_components": [
+          [
+            "LM358",
+            1
+          ],
+          [
+            "TestPoint",
+            1
+          ],
+          [
+            "C",
+            1
+          ],
+          [
+            "C_Polarized",
+            1
+          ],
+          [
+            "Crystal_GND2",
+            1
+          ],
+          [
+            "Q_NPN_BCE",
+            1
+          ],
+          [
+            "Q_PNP_BCE",
+            1
+          ],
+          [
+            "R",
+            1
+          ]
+        ],
+        "unique_component_count": 14
+      },
+      {
+        "component_count": 19,
+        "metadata_text_sha1": "5529fc33ca0b20d82255d937cb1344b22f77ca31",
+        "sample_id": "open_schematics_000007",
+        "structure_chars": 157389,
+        "structure_ref": "hf://datasets/bshada/open-schematics/default/train/7/schematic",
+        "structure_sha1": "f0573c7ef1d01e42fcbc538e6a3eb942492d3bac",
+        "target_type": "kicad_schematic_text",
+        "top_components": [
+          [
+            "GND",
+            2
+          ],
+          [
+            "USB_C_Receptacle_USB2.0",
+            1
+          ],
+          [
+            "Conn_01x03_MountingPin",
+            1
+          ],
+          [
+            "Conn_01x04_MountingPin",
+            1
+          ],
+          [
+            "C_Small",
+            1
+          ],
+          [
+            "D_Small",
+            1
+          ],
+          [
+            "LED",
+            1
+          ],
+          [
+            "L_Small",
+            1
+          ]
+        ],
+        "unique_component_count": 18
+      },
+      {
+        "component_count": 16,
+        "metadata_text_sha1": "0afe8e8a05e8caeb87e322c45d307f180ab40f74",
+        "sample_id": "open_schematics_000008",
+        "structure_chars": 127136,
+        "structure_ref": "hf://datasets/bshada/open-schematics/default/train/8/schematic",
+        "structure_sha1": "9b4c162727c92deb5fb593d09952f32b894473a4",
+        "target_type": "kicad_schematic_text",
+        "top_components": [
+          [
+            "SJ-3523N",
+            1
+          ],
+          [
+            "Barrel_Jack_Switch",
+            1
+          ],
+          [
+            "TestPoint",
+            1
+          ],
+          [
+            "C",
+            1
+          ],
+          [
+            "C_Polarized",
+            1
+          ],
+          [
+            "LED",
+            1
+          ],
+          [
+            "R",
+            1
+          ],
+          [
+            "R_Potentiometer",
+            1
+          ]
+        ],
+        "unique_component_count": 16
+      },
+      {
+        "component_count": 4,
+        "metadata_text_sha1": "41f4732b8773ac527a823a39063bab33ea7dcee0",
+        "sample_id": "open_schematics_000010",
+        "structure_chars": 28546,
+        "structure_ref": "hf://datasets/bshada/open-schematics/default/train/10/schematic",
+        "structure_sha1": "ca23853edd3ebf0ea88a45002e749892206a718b",
+        "target_type": "kicad_schematic_text",
+        "top_components": [
+          [
+            "2_axis_analog_joystick_button",
+            1
+          ],
+          [
+            "Alps_SRBE110301",
+            1
+          ],
+          [
+            "+3V3",
+            1
+          ],
+          [
+            "GND",
+            1
+          ]
+        ],
+        "unique_component_count": 4
+      }
+    ],
+    "tile_metadata_count": 256,
+    "tile_metadata_preview": [
+      {
+        "crop_policy": "grid",
+        "crop_xyxy_original": [
+          0,
+          0,
+          562,
+          397
+        ],
+        "original_height": 794,
+        "original_width": 1123,
+        "sample_id": "open_schematics_000000",
+        "source_dataset": "bshada/open-schematics",
+        "source_image_ref": "hf://datasets/bshada/open-schematics/default/train/0/image",
+        "tile_index": 0
+      },
+      {
+        "crop_policy": "grid",
+        "crop_xyxy_original": [
+          562,
+          0,
+          1123,
+          397
+        ],
+        "original_height": 794,
+        "original_width": 1123,
+        "sample_id": "open_schematics_000000",
+        "source_dataset": "bshada/open-schematics",
+        "source_image_ref": "hf://datasets/bshada/open-schematics/default/train/0/image",
+        "tile_index": 1
+      },
+      {
+        "crop_policy": "grid",
+        "crop_xyxy_original": [
+          0,
+          397,
+          562,
+          794
+        ],
+        "original_height": 794,
+        "original_width": 1123,
+        "sample_id": "open_schematics_000000",
+        "source_dataset": "bshada/open-schematics",
+        "source_image_ref": "hf://datasets/bshada/open-schematics/default/train/0/image",
+        "tile_index": 2
+      },
+      {
+        "crop_policy": "grid",
+        "crop_xyxy_original": [
+          562,
+          397,
+          1123,
+          794
+        ],
+        "original_height": 794,
+        "original_width": 1123,
+        "sample_id": "open_schematics_000000",
+        "source_dataset": "bshada/open-schematics",
+        "source_image_ref": "hf://datasets/bshada/open-schematics/default/train/0/image",
+        "tile_index": 3
+      },
+      {
+        "crop_policy": "grid",
+        "crop_xyxy_original": [
+          0,
+          0,
+          816,
+          528
+        ],
+        "original_height": 1056,
+        "original_width": 1632,
+        "sample_id": "open_schematics_000001",
+        "source_dataset": "bshada/open-schematics",
+        "source_image_ref": "hf://datasets/bshada/open-schematics/default/train/1/image",
+        "tile_index": 0
+      },
+      {
+        "crop_policy": "grid",
+        "crop_xyxy_original": [
+          816,
+          0,
+          1632,
+          528
+        ],
+        "original_height": 1056,
+        "original_width": 1632,
+        "sample_id": "open_schematics_000001",
+        "source_dataset": "bshada/open-schematics",
+        "source_image_ref": "hf://datasets/bshada/open-schematics/default/train/1/image",
+        "tile_index": 1
+      },
+      {
+        "crop_policy": "grid",
+        "crop_xyxy_original": [
+          0,
+          528,
+          816,
+          1056
+        ],
+        "original_height": 1056,
+        "original_width": 1632,
+        "sample_id": "open_schematics_000001",
+        "source_dataset": "bshada/open-schematics",
+        "source_image_ref": "hf://datasets/bshada/open-schematics/default/train/1/image",
+        "tile_index": 2
+      },
+      {
+        "crop_policy": "grid",
+        "crop_xyxy_original": [
+          816,
+          528,
+          1632,
+          1056
+        ],
+        "original_height": 1056,
+        "original_width": 1632,
+        "sample_id": "open_schematics_000001",
+        "source_dataset": "bshada/open-schematics",
+        "source_image_ref": "hf://datasets/bshada/open-schematics/default/train/1/image",
+        "tile_index": 3
+      }
+    ],
+    "tile_tensor_dtype": "torch.float32",
+    "tile_views_shape": [
+      64,
+      4,
+      3,
+      224,
+      224
+    ]
+  },
+  "command": {
+    "cghd_count": 32,
+    "global_resolution": 224,
+    "open_count": 32,
+    "ram_limit_mb": 26624,
+    "tile_resolution": 224,
+    "tiles_per_sample": 4,
+    "train_manifest": "data/circuit_curricula/train.jsonl"
+  },
+  "dataset": {
+    "manifest": "data/circuit_curricula/train.jsonl",
+    "raw_payload_policy": {
+      "stores_hashes_and_shapes_only": true,
+      "stores_raw_images": false,
+      "stores_raw_schematics": false,
+      "stores_raw_xml": false,
+      "stores_tile_pixels": false
+    },
+    "selected_records": 64,
+    "source_counts": {
+      "bshada/open-schematics": 32,
+      "lowercaseonly/cghd": 32
+    },
+    "target_types": {
+      "cghd_xml_symbol_annotations": 32,
+      "kicad_schematic_text": 32
+    }
+  },
+  "generated_at_utc": "2026-05-28T20:29:50+00:00",
+  "pass_checks": {
+    "batch_size_matches_requested_total": true,
+    "global_view_shape_ok": true,
+    "image_structure_targets_aligned": true,
+    "one_batch_loaded": true,
+    "ram_under_limit": true,
+    "structure_sources_mixed": true,
+    "tile_metadata_traceable": true,
+    "tile_view_shape_ok": true
+  },
+  "pipeline": {
+    "augmentation": {
+      "operations": [
+        "autocontrast_if_hash_even",
+        "small_brightness_jitter",
+        "small_contrast_jitter"
+      ],
+      "seed_policy": "deterministic per sample_id"
+    },
+    "global_view": {
+      "preprocess": "RGB convert -> deterministic light augmentation -> aspect-preserving letterbox resize",
+      "resolution": 224
+    },
+    "structure_encoder": {
+      "cghd": "XML sha1/length + symbol label counts",
+      "open_schematics": "schematic text sha1/length + component counts + metadata hash"
+    },
+    "tile_view": {
+      "policy": "CGHD ROI crops first, then grid fallback; open-schematics grid crops",
+      "resolution": 224,
+      "tiles_per_sample": 4
+    }
+  },
+  "resources": {
+    "elapsed_seconds": 25.643,
+    "ram_limit_mb": 26624,
+    "rss_mb_after": 1844.246,
+    "rss_mb_before": 546.113,
+    "rss_mb_delta": 1298.133
+  },
+  "result_version": 1,
+  "script": "scripts/run_lewm_data_pipeline_sanity.py",
+  "status": "closed"
+}
