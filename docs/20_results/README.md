@@ -44,6 +44,8 @@ active_evidence_if:
 003_qwen_baseline_ko.md
 004_lewm_data_pipeline_ko.md
 005_lewm_s_pretraining_ko.md
+005b_roi_structure_target_audit_ko.md
+005c_m5_3_roi_graph_diagnostic_ko.md
 ```
 
 ---

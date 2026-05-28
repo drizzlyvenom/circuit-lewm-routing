@@ -68,6 +68,7 @@ structure_pretraining:
       - KiCad / structured circuit representation
       - component metadata
       - image-to-structure alignment
+      - optional offline teacher anchor labels if separately audited
 
   schgen_dataset:
     role:

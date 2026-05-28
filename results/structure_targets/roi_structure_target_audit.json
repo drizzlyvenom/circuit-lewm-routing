@@ -1,0 +1,870 @@
+{
+  "cghd_train": {
+    "boxes_per_sample": {
+      "count": 2690,
+      "max": 542,
+      "mean": 76.34126394052045,
+      "median": 48,
+      "min": 6
+    },
+    "empty_or_bad_xml_records": 0,
+    "records": 2690,
+    "roi_area_ratio": {
+      "count": 205358,
+      "max": 0.2677436823104693,
+      "mean": 0.0012704975875216875,
+      "median": 0.00037550435635288066,
+      "min": 5.023469650205761e-06
+    },
+    "samples_with_boxes": 2690,
+    "samples_with_boxes_ratio": 1.0,
+    "target_feasibility": {
+      "detail_specialist_training_source": true,
+      "roi_supervision_available": true
+    },
+    "top_labels": [
+      [
+        "text",
+        75272
+      ],
+      [
+        "junction",
+        65386
+      ],
+      [
+        "resistor",
+        12120
+      ],
+      [
+        "terminal",
+        9312
+      ],
+      [
+        "crossover",
+        8300
+      ],
+      [
+        "capacitor.unpolarized",
+        4844
+      ],
+      [
+        "gnd",
+        4818
+      ],
+      [
+        "diode",
+        3267
+      ],
+      [
+        "transistor.bjt",
+        3025
+      ],
+      [
+        "capacitor.polarized",
+        1828
+      ],
+      [
+        "switch",
+        1661
+      ],
+      [
+        "inductor",
+        1603
+      ],
+      [
+        "integrated_circuit",
+        1303
+      ],
+      [
+        "vss",
+        1185
+      ],
+      [
+        "diode.light_emitting",
+        1027
+      ],
+      [
+        "resistor.adjustable",
+        854
+      ],
+      [
+        "transistor.fet",
+        721
+      ],
+      [
+        "and",
+        716
+      ],
+      [
+        "voltage.battery",
+        639
+      ],
+      [
+        "operational_amplifier",
+        639
+      ]
+    ]
+  },
+  "command": {
+    "cghd_train_limit": 2690,
+    "component_vocab_size": 4096,
+    "holdout_manifest": "data/circuit_curricula/holdout.jsonl",
+    "open_holdout_limit": 512,
+    "open_train_limit": 5000,
+    "train_manifest": "data/circuit_curricula/train.jsonl"
+  },
+  "decision": {
+    "cghd_roi_detail_source": "recommended_for_specialist_or_tile_probe",
+    "component_multihot_as_primary_target": "not_recommended",
+    "next_experiment": "512/128 diagnostic run using ROI-aware graph/set target before longer training",
+    "parsed_kicad_graph_or_set_target": "recommended",
+    "preserve_lora_roi_detail_design": true,
+    "ready_for_longer_m5_training": false,
+    "ready_for_m5_3_diagnostic_minirun": true,
+    "recommended_backbone_role": "roi_aware_structure_backbone"
+  },
+  "generated_at_utc": "2026-05-28T21:48:30+00:00",
+  "open_schematics_holdout": {
+    "collision": {
+      "manifest_component_count": {
+        "collision_group_preview_sample_ids": [
+          [
+            "open_schematics_001870",
+            "open_schematics_002565"
+          ],
+          [
+            "open_schematics_004492",
+            "open_schematics_004594"
+          ]
+        ],
+        "duplicate_group_count": 2,
+        "duplicate_sample_count": 4,
+        "duplicate_sample_ratio": 0.0078125,
+        "largest_collision_group": 2,
+        "records": 512,
+        "unique_target_count": 510
+      },
+      "manifest_component_multihot": {
+        "collision_group_preview_sample_ids": [
+          [
+            "open_schematics_001870",
+            "open_schematics_002565"
+          ],
+          [
+            "open_schematics_004492",
+            "open_schematics_004594"
+          ]
+        ],
+        "duplicate_group_count": 2,
+        "duplicate_sample_count": 4,
+        "duplicate_sample_ratio": 0.0078125,
+        "largest_collision_group": 2,
+        "records": 512,
+        "unique_target_count": 510
+      },
+      "parsed_symbol_lib_count": {
+        "collision_group_preview_sample_ids": [
+          [
+            "open_schematics_001870",
+            "open_schematics_002565"
+          ]
+        ],
+        "duplicate_group_count": 1,
+        "duplicate_sample_count": 2,
+        "duplicate_sample_ratio": 0.00390625,
+        "largest_collision_group": 2,
+        "records": 512,
+        "unique_target_count": 511
+      },
+      "roi_graph_signature": {
+        "collision_group_preview_sample_ids": [
+          [
+            "open_schematics_001870",
+            "open_schematics_002565"
+          ]
+        ],
+        "duplicate_group_count": 1,
+        "duplicate_sample_count": 2,
+        "duplicate_sample_ratio": 0.00390625,
+        "largest_collision_group": 2,
+        "records": 512,
+        "unique_target_count": 511
+      }
+    },
+    "component_distribution": {
+      "component_mentions": 6536,
+      "mean_component_mentions_per_record": 12.765625,
+      "median_component_mentions_per_record": 12,
+      "records": 512,
+      "top_components": [
+        [
+          "GND",
+          400
+        ],
+        [
+          "R",
+          272
+        ],
+        [
+          "C",
+          227
+        ],
+        [
+          "+5V",
+          187
+        ],
+        [
+          "LED",
+          154
+        ],
+        [
+          "+3.3V",
+          113
+        ],
+        [
+          "SW_Push",
+          112
+        ],
+        [
+          "PWR_FLAG",
+          97
+        ],
+        [
+          "C_Small",
+          89
+        ],
+        [
+          "VCC",
+          82
+        ],
+        [
+          "+3V3",
+          77
+        ],
+        [
+          "R_Small",
+          71
+        ],
+        [
+          "MountingHole",
+          68
+        ],
+        [
+          "Conn_01x02",
+          64
+        ],
+        [
+          "C_Polarized",
+          63
+        ],
+        [
+          "TestPoint",
+          53
+        ],
+        [
+          "Conn_01x04",
+          50
+        ],
+        [
+          "Conn_01x03",
+          46
+        ],
+        [
+          "+12V",
+          43
+        ],
+        [
+          "L",
+          41
+        ]
+      ],
+      "unique_component_names": 2223,
+      "vocab_mention_coverage": 1.0,
+      "vocab_size": 4096
+    },
+    "elapsed_seconds": 69.252,
+    "kicad_structure_parse": {
+      "label_count": {
+        "count": 512,
+        "max": 309,
+        "mean": 35.4921875,
+        "median": 22,
+        "min": 0
+      },
+      "roi_candidate_count": {
+        "count": 512,
+        "max": 425,
+        "mean": 123.712890625,
+        "median": 93,
+        "min": 1
+      },
+      "samples_with_labels": 414,
+      "samples_with_roi_trace": 512,
+      "samples_with_symbols": 512,
+      "samples_with_wire_skeleton": 493,
+      "samples_with_wires": 493,
+      "symbol_count": {
+        "count": 512,
+        "max": 213,
+        "mean": 53.583984375,
+        "median": 41,
+        "min": 1
+      },
+      "tile_2x2_symbol_occupancy": {
+        "count": 512,
+        "max": 4,
+        "mean": 3.75,
+        "median": 4,
+        "min": 0
+      },
+      "tile_4x4_symbol_occupancy": {
+        "count": 512,
+        "max": 16,
+        "mean": 11.3046875,
+        "median": 12,
+        "min": 0
+      },
+      "top_symbol_families": [
+        [
+          "power",
+          9346
+        ],
+        [
+          "Device",
+          7991
+        ],
+        [
+          "Connector",
+          1388
+        ],
+        [
+          "Switch",
+          849
+        ],
+        [
+          "Connector_Generic",
+          704
+        ],
+        [
+          "Mechanical",
+          503
+        ],
+        [
+          "Diode",
+          283
+        ],
+        [
+          "74xx",
+          266
+        ],
+        [
+          "Jumper",
+          192
+        ],
+        [
+          "LED",
+          166
+        ],
+        [
+          "mainboard-eagle-import",
+          133
+        ],
+        [
+          "keyboard_parts",
+          131
+        ],
+        [
+          "PCM_marbastlib-mx",
+          125
+        ],
+        [
+          "Regulator_Linear",
+          120
+        ],
+        [
+          "Transistor_BJT",
+          114
+        ],
+        [
+          "Transistor_FET",
+          113
+        ],
+        [
+          "Amplifier_Operational",
+          112
+        ],
+        [
+          "esp32_pro-rescue",
+          103
+        ],
+        [
+          "d50mram",
+          98
+        ],
+        [
+          "Zooids-rescue",
+          96
+        ]
+      ],
+      "wire_count": {
+        "count": 512,
+        "max": 541,
+        "mean": 118.712890625,
+        "median": 94,
+        "min": 0
+      }
+    },
+    "parse_failures": {},
+    "records_parsed": 512,
+    "records_requested": 512,
+    "target_feasibility": {
+      "component_multihot_is_too_weak_if_duplicate_ratio_high": 0.0078125,
+      "parsed_graph_target_available": true,
+      "roi_tile_target_available": true,
+      "wire_skeleton_available": true
+    }
+  },
+  "open_schematics_train": {
+    "collision": {
+      "manifest_component_count": {
+        "collision_group_preview_sample_ids": [
+          [
+            "open_schematics_000055",
+            "open_schematics_000926",
+            "open_schematics_001396",
+            "open_schematics_002028",
+            "open_schematics_002073",
+            "open_schematics_002321",
+            "open_schematics_003015",
+            "open_schematics_003497"
+          ],
+          [
+            "open_schematics_000085",
+            "open_schematics_001024",
+            "open_schematics_001897",
+            "open_schematics_002144",
+            "open_schematics_002892",
+            "open_schematics_003060",
+            "open_schematics_004798",
+            "open_schematics_005507"
+          ],
+          [
+            "open_schematics_000277",
+            "open_schematics_000827",
+            "open_schematics_001119",
+            "open_schematics_002089",
+            "open_schematics_003377",
+            "open_schematics_004944"
+          ],
+          [
+            "open_schematics_001561",
+            "open_schematics_003595",
+            "open_schematics_003809",
+            "open_schematics_003963",
+            "open_schematics_004529",
+            "open_schematics_005681"
+          ],
+          [
+            "open_schematics_000372",
+            "open_schematics_003042",
+            "open_schematics_004156",
+            "open_schematics_004772",
+            "open_schematics_005560"
+          ]
+        ],
+        "duplicate_group_count": 124,
+        "duplicate_sample_count": 345,
+        "duplicate_sample_ratio": 0.069,
+        "largest_collision_group": 10,
+        "records": 5000,
+        "unique_target_count": 4779
+      },
+      "manifest_component_multihot": {
+        "collision_group_preview_sample_ids": [
+          [
+            "open_schematics_000055",
+            "open_schematics_000926",
+            "open_schematics_001396",
+            "open_schematics_002028",
+            "open_schematics_002073",
+            "open_schematics_002321",
+            "open_schematics_003015",
+            "open_schematics_003497"
+          ],
+          [
+            "open_schematics_000085",
+            "open_schematics_001024",
+            "open_schematics_001897",
+            "open_schematics_002144",
+            "open_schematics_002892",
+            "open_schematics_003060",
+            "open_schematics_004798",
+            "open_schematics_005507"
+          ],
+          [
+            "open_schematics_000277",
+            "open_schematics_000827",
+            "open_schematics_001119",
+            "open_schematics_002089",
+            "open_schematics_003377",
+            "open_schematics_004944"
+          ],
+          [
+            "open_schematics_001561",
+            "open_schematics_003595",
+            "open_schematics_003809",
+            "open_schematics_003963",
+            "open_schematics_004529",
+            "open_schematics_005681"
+          ],
+          [
+            "open_schematics_000372",
+            "open_schematics_003042",
+            "open_schematics_004156",
+            "open_schematics_004772",
+            "open_schematics_005560"
+          ]
+        ],
+        "duplicate_group_count": 124,
+        "duplicate_sample_count": 345,
+        "duplicate_sample_ratio": 0.069,
+        "largest_collision_group": 10,
+        "records": 5000,
+        "unique_target_count": 4779
+      },
+      "parsed_symbol_lib_count": {
+        "collision_group_preview_sample_ids": [
+          [
+            "open_schematics_000926",
+            "open_schematics_002028",
+            "open_schematics_002321",
+            "open_schematics_003015",
+            "open_schematics_003497",
+            "open_schematics_003922",
+            "open_schematics_005694"
+          ],
+          [
+            "open_schematics_000616",
+            "open_schematics_001985",
+            "open_schematics_002667",
+            "open_schematics_004151",
+            "open_schematics_005537"
+          ],
+          [
+            "open_schematics_000624",
+            "open_schematics_001949",
+            "open_schematics_002172",
+            "open_schematics_004051",
+            "open_schematics_006106"
+          ],
+          [
+            "open_schematics_000774",
+            "open_schematics_001823",
+            "open_schematics_003187",
+            "open_schematics_003346",
+            "open_schematics_005579"
+          ],
+          [
+            "open_schematics_001484",
+            "open_schematics_002429",
+            "open_schematics_002664",
+            "open_schematics_003290",
+            "open_schematics_004483"
+          ]
+        ],
+        "duplicate_group_count": 114,
+        "duplicate_sample_count": 300,
+        "duplicate_sample_ratio": 0.06,
+        "largest_collision_group": 7,
+        "records": 5000,
+        "unique_target_count": 4814
+      },
+      "roi_graph_signature": {
+        "collision_group_preview_sample_ids": [
+          [
+            "open_schematics_000616",
+            "open_schematics_001985",
+            "open_schematics_002667",
+            "open_schematics_004151",
+            "open_schematics_005537"
+          ],
+          [
+            "open_schematics_000624",
+            "open_schematics_001949",
+            "open_schematics_002172",
+            "open_schematics_004051",
+            "open_schematics_006106"
+          ],
+          [
+            "open_schematics_000774",
+            "open_schematics_001823",
+            "open_schematics_003187",
+            "open_schematics_003346",
+            "open_schematics_005579"
+          ],
+          [
+            "open_schematics_000926",
+            "open_schematics_002028",
+            "open_schematics_003015",
+            "open_schematics_003922",
+            "open_schematics_005694"
+          ],
+          [
+            "open_schematics_001484",
+            "open_schematics_002429",
+            "open_schematics_002664",
+            "open_schematics_003290",
+            "open_schematics_004483"
+          ]
+        ],
+        "duplicate_group_count": 104,
+        "duplicate_sample_count": 274,
+        "duplicate_sample_ratio": 0.0548,
+        "largest_collision_group": 5,
+        "records": 5000,
+        "unique_target_count": 4830
+      }
+    },
+    "component_distribution": {
+      "component_mentions": 66466,
+      "mean_component_mentions_per_record": 13.2932,
+      "median_component_mentions_per_record": 12,
+      "records": 5000,
+      "top_components": [
+        [
+          "GND",
+          4096
+        ],
+        [
+          "R",
+          2668
+        ],
+        [
+          "C",
+          2178
+        ],
+        [
+          "+5V",
+          1776
+        ],
+        [
+          "LED",
+          1518
+        ],
+        [
+          "SW_Push",
+          1189
+        ],
+        [
+          "PWR_FLAG",
+          1122
+        ],
+        [
+          "+3.3V",
+          1056
+        ],
+        [
+          "C_Small",
+          1038
+        ],
+        [
+          "+3V3",
+          882
+        ],
+        [
+          "VCC",
+          759
+        ],
+        [
+          "MountingHole",
+          731
+        ],
+        [
+          "R_Small",
+          700
+        ],
+        [
+          "C_Polarized",
+          589
+        ],
+        [
+          "Conn_01x02",
+          535
+        ],
+        [
+          "TestPoint",
+          516
+        ],
+        [
+          "Conn_01x04",
+          503
+        ],
+        [
+          "L",
+          441
+        ],
+        [
+          "+12V",
+          408
+        ],
+        [
+          "Conn_01x03",
+          398
+        ]
+      ],
+      "unique_component_names": 13116,
+      "vocab_mention_coverage": 0.8642915174675774,
+      "vocab_size": 4096
+    },
+    "elapsed_seconds": 142.68,
+    "kicad_structure_parse": {
+      "label_count": {
+        "count": 5000,
+        "max": 444,
+        "mean": 35.2042,
+        "median": 23,
+        "min": 0
+      },
+      "roi_candidate_count": {
+        "count": 5000,
+        "max": 738,
+        "mean": 123.614,
+        "median": 104,
+        "min": 1
+      },
+      "samples_with_labels": 4086,
+      "samples_with_roi_trace": 5000,
+      "samples_with_symbols": 5000,
+      "samples_with_wire_skeleton": 4896,
+      "samples_with_wires": 4896,
+      "symbol_count": {
+        "count": 5000,
+        "max": 258,
+        "mean": 53.5286,
+        "median": 44,
+        "min": 1
+      },
+      "tile_2x2_symbol_occupancy": {
+        "count": 5000,
+        "max": 4,
+        "mean": 3.7954,
+        "median": 4,
+        "min": 0
+      },
+      "tile_4x4_symbol_occupancy": {
+        "count": 5000,
+        "max": 16,
+        "mean": 11.4674,
+        "median": 12,
+        "min": 0
+      },
+      "top_symbol_families": [
+        [
+          "power",
+          90435
+        ],
+        [
+          "Device",
+          79910
+        ],
+        [
+          "Connector",
+          11877
+        ],
+        [
+          "Switch",
+          8484
+        ],
+        [
+          "Connector_Generic",
+          6551
+        ],
+        [
+          "Mechanical",
+          4975
+        ],
+        [
+          "Diode",
+          3706
+        ],
+        [
+          "ScottoKeebs",
+          2286
+        ],
+        [
+          "74xx",
+          1913
+        ],
+        [
+          "e-radionica.com schematics",
+          1891
+        ],
+        [
+          "Jumper",
+          1763
+        ],
+        [
+          "LED",
+          1527
+        ],
+        [
+          "Regulator_Linear",
+          1210
+        ],
+        [
+          "MX_Alps_Hybrid",
+          1129
+        ],
+        [
+          "Amplifier_Operational",
+          1127
+        ],
+        [
+          "Transistor_FET",
+          1068
+        ],
+        [
+          "Transistor_BJT",
+          1051
+        ],
+        [
+          "keyboard_parts",
+          985
+        ],
+        [
+          "tinkerforge",
+          734
+        ],
+        [
+          "Library",
+          643
+        ]
+      ],
+      "wire_count": {
+        "count": 5000,
+        "max": 795,
+        "mean": 118.2382,
+        "median": 96,
+        "min": 0
+      }
+    },
+    "parse_failures": {},
+    "records_parsed": 5000,
+    "records_requested": 5000,
+    "target_feasibility": {
+      "component_multihot_is_too_weak_if_duplicate_ratio_high": 0.069,
+      "parsed_graph_target_available": true,
+      "roi_tile_target_available": true,
+      "wire_skeleton_available": true
+    }
+  },
+  "raw_payload_policy": {
+    "stores_raw_images": false,
+    "stores_raw_schematic_text": false,
+    "stores_raw_xml": false,
+    "stores_text_hashes_only_for_labels": true
+  },
+  "result_version": 1,
+  "script": "scripts/audit_roi_structure_targets.py",
+  "status": "completed"
+}

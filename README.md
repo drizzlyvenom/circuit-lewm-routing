@@ -1,6 +1,6 @@
 # Circuit LeWM Routing
 
-Status: M5 first 5k LeWM-S run recorded with caveats
+Status: M5 first 5k LeWM-S run, ROI target audit, and M5.3 diagnostic recorded; M5 closure pending review
 Scope: circuit-domain Perception LeWM training + router/adapter evaluation
 Target hardware: RTX 3090 24GB VRAM, local RAM 24~26GB
 Primary question: compact world-model perception vs monolithic VLM backbone
@@ -88,6 +88,7 @@ docs/
     circuit_lewm_validation_milestones_ko.md
     qwen_vs_lewm_comparison_protocol_ko.md
     circuit_lewm_training_reference_ko.md
+    offline_teacher_loop_protocol_ko.md
     actual_certification_protocol_ko.md
     local_artifact_policy_ko.md
     wsl_lewm_training_boundary_ko.md
@@ -107,7 +108,7 @@ wsl/lewm/
 
 ## 현재 단계
 
-현재는 M5 첫 5k LeWM-S run을 기록한 단계다. Qwen3-VL 단일 backbone baseline, LeWM data pipeline sanity, LeWM-S 5k 학습 health 결과는 active evidence로 추가됐다. 다만 M5 첫 run의 최종 holdout retrieval은 random top1을 넘지 못해 구조 target/encoder 재설계가 필요하다.
+현재는 M5 첫 5k LeWM-S run, ROI-aware structure target audit, M5.3 ROI graph diagnostic을 기록한 단계다. Qwen3-VL 단일 backbone baseline, LeWM data pipeline sanity, LeWM-S 5k 학습 health 결과는 active evidence로 추가됐다. 다만 M5 첫 run의 최종 holdout retrieval은 random top1을 넘지 못했고, M5.3에서도 final holdout top1이 random과 같아 M5 pass 여부는 아직 사용자 검토가 필요하다. 다음 검토 방향은 Gemma 4 같은 큰 VLM을 runtime backbone이 아니라 offline teacher/critic으로 제한해, LeWM이 따라갈 fixed structure anchor를 먼저 만드는 것이다.
 
 첫 실행 순서는 다음과 같다.
 
@@ -117,7 +118,7 @@ M1. Dataset source audit                    closed_with_caveats
 M2. Usable circuit sample schema and splits closed
 M3. Qwen baseline measurement              closed
 M4. LeWM data pipeline                     closed
-M5. LeWM-S structure pretraining           first_run_closed_with_caveats
+M5. LeWM-S structure pretraining           first_run_closed_with_caveats, m5_3_closed_with_caveats
 ```
 
 자세한 마일스톤은 [circuit_lewm_validation_milestones_ko.md](docs/10_protocols/circuit_lewm_validation_milestones_ko.md)를 따른다.
@@ -131,3 +132,9 @@ M3 결과 문서는 [003_qwen_baseline_ko.md](docs/20_results/003_qwen_baseline_
 M4 결과 문서는 [004_lewm_data_pipeline_ko.md](docs/20_results/004_lewm_data_pipeline_ko.md)에 있다.
 
 M5 첫 5k 결과 문서는 [005_lewm_s_pretraining_ko.md](docs/20_results/005_lewm_s_pretraining_ko.md)에 있다.
+
+M5 ROI-aware structure target audit 문서는 [005b_roi_structure_target_audit_ko.md](docs/20_results/005b_roi_structure_target_audit_ko.md)에 있다.
+
+M5.3 ROI graph diagnostic 결과 문서는 [005c_m5_3_roi_graph_diagnostic_ko.md](docs/20_results/005c_m5_3_roi_graph_diagnostic_ko.md)에 있다.
+
+Offline teacher loop 설계 초안은 [offline_teacher_loop_protocol_ko.md](docs/10_protocols/offline_teacher_loop_protocol_ko.md)에 있다.

@@ -12,6 +12,7 @@ allowed_claims:
   - perception evidence retention can be measured separately from routing and answering
   - actual-only certification can prevent uncertified adapters from being routed
   - resource/accuracy tradeoff can be measured directly
+  - large VLM teacher labels can be used as offline training aids only if separated from runtime evaluation
 ```
 
 ---
@@ -26,6 +27,8 @@ forbidden_claims:
   - proxy metrics certify adapter utility
   - smoke run validates the claim
   - Foveation itself is our main novelty
+  - Gemma 4 or another teacher VLM is the final runtime backbone
+  - teacher pseudo-labels replace actual-only certification
 ```
 
 ---

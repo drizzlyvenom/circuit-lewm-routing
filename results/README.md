@@ -6,7 +6,8 @@ Commit allowed:
 
 ```text
 results/qwen/*.json
-results/lewm_s/*summary*.json
+results/lewm_s/*.json
+results/structure_targets/*.json
 results/router/*.json
 results/certification/*.json
 results/system_comparison/*.json

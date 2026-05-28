@@ -42,4 +42,11 @@ run_lewm_data_pipeline_sanity.py
   - builds global image views, tile/crop views, structure target hashes/counts, and traceable tile metadata
   - writes results/lewm_data_pipeline/sanity_check.json
   - does not store raw images, raw schematics, raw XML, or tile pixels in committed results
+
+audit_roi_structure_targets.py
+  - audits M5 target redesign after the first LeWM-S 5k run failed to beat random top1 retrieval
+  - parses open-schematics KiCad schematic text into graph/set and ROI trace statistics
+  - audits local CGHD XML boxes as ROI/detail specialist supervision
+  - writes results/structure_targets/roi_structure_target_audit.json
+  - does not store raw images, raw schematics, raw XML, or raw label text
 ```

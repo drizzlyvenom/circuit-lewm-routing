@@ -160,3 +160,33 @@ dataset source audit
 ```
 
 Router/LoRA 결과는 perception evidence retention gate를 통과하기 전에는 main claim으로 해석하지 않는다.
+
+---
+
+## 5. Offline Teacher Loop
+
+M5.3 이후 확인된 병목은 단순 학습량보다 image latent가 따라갈 structure anchor가 약하다는 점이다.
+
+Gemma 4 같은 큰 VLM은 최종 runtime backbone으로 쓰지 않고, offline teacher / annotator / critic으로만 제한한다.
+
+```yaml
+offline_teacher_loop:
+  teacher:
+    role:
+      - schema_constrained_roi_labeler
+      - structure_anchor_critic
+      - hard_case_miner
+    not_role:
+      - runtime_backbone
+      - answer_oracle
+      - certification_replacement
+
+  student:
+    model: Perception LeWM
+    learns:
+      - fixed compact structure target
+      - ROI tile target
+      - uncertainty or hard-case flags
+```
+
+Teacher 출력은 자유문장 imitation으로 쓰지 않고, KiCad/CGHD evidence와 대조 가능한 compact target으로 변환한다.

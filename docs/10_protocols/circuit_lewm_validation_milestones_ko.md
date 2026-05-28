@@ -563,6 +563,65 @@ next_action:
   - redesign structure target/encoder before increasing dataset size.
 ```
 
+### 현재 타깃 감사
+
+```yaml
+attempt: m5b_roi_structure_target_audit
+status: completed_user_review_pending
+evidence:
+  - results/structure_targets/roi_structure_target_audit.json
+  - docs/20_results/005b_roi_structure_target_audit_ko.md
+summary:
+  - Audited 5,000 open-schematics train records and 512 holdout records for KiCad graph/set and ROI trace target feasibility.
+  - Audited 2,690 CGHD train records for ROI box supervision availability.
+  - Component multi-hot alone is not recommended as the primary LeWM target.
+  - Parsed KiCad graph/set target and ROI trace target are recommended for the next diagnostic run.
+  - The initial LoRA ROI-detail design is preserved: LeWM backbone should keep structure/ROI evidence, while detail specialists handle exact symbol/text/pin/value tasks.
+next_action:
+  - Run M5.3 512/128 diagnostic with ROI-aware graph/set target before another longer M5 training run.
+```
+
+### 현재 시도 2
+
+```yaml
+attempt: m5_3_roi_graph_diagnostic_512_128
+status: closed_with_caveats
+evidence:
+  - results/lewm_s/m5_3_roi_graph_diagnostic.json
+  - docs/20_results/005c_m5_3_roi_graph_diagnostic_ko.md
+summary:
+  - Trained Circuit LeWM-S ROI graph diagnostic on 512 train / 128 holdout open-schematics records.
+  - Used parsed KiCad graph/set target, 4x4 tile occupancy, and deterministic ROI crop objective.
+  - Training was stable and peak torch reserved VRAM was 5248.0 MB.
+  - Train retrieval rose above random, but final holdout top1 equaled random.
+  - Best holdout epoch showed weak above-random top1/top5, but the signal was not stable.
+interpretation:
+  - ROI-aware target gives partial signal, but M5 pass_if is still not fully satisfied.
+next_action:
+  - Treat M5 closure as user decision: closed_with_caveats or continue with objective ablation before scaling data.
+  - If continuing, design M5.4 Gemma 4 offline teacher anchor audit before scaling pseudo-labels.
+```
+
+### 다음 후보: M5.4 Offline Teacher Anchor Audit
+
+```yaml
+attempt: m5_4_offline_teacher_anchor_audit
+status: proposed
+protocol:
+  - docs/10_protocols/offline_teacher_loop_protocol_ko.md
+goal:
+  - Use Gemma 4 only as offline teacher / annotator / critic.
+  - Validate schema-constrained ROI and structure pseudo-labels against KiCad/CGHD evidence.
+  - Decide whether fixed teacher/KiCad hybrid targets are stable enough for another LeWM-S diagnostic.
+not_goal:
+  - Do not use Gemma 4 as runtime backbone.
+  - Do not treat teacher answers as actual certification.
+  - Do not imitate long free-text explanations.
+minimum_scope:
+  train_records: 128
+  holdout_records: 64
+```
+
 ---
 
 ## M6. Frozen Latent Probe
