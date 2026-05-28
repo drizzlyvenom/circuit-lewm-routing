@@ -1,0 +1,10 @@
+{
+  "baseline_id": "smaller_or_quantized_qwen",
+  "generated_at_utc": "2026-05-28T20:14:50+00:00",
+  "local_model_inventory_note": "No smaller or quantized Qwen VLM checkpoint was present under models/qwen at run time.",
+  "pass_condition_interpretation": "M3 allows the smaller_or_quantized baseline to be explicitly deferred.",
+  "reason": "No smaller or quantized Qwen VLM checkpoint is present under models/qwen, and bitsandbytes is not installed in the Windows venv; B1 is explicitly deferred for M3.",
+  "result_version": 1,
+  "script": "scripts/run_qwen_baseline.py",
+  "status": "deferred"
+}

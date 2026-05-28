@@ -412,6 +412,21 @@ pass_if:
   - memory and latency are measured in a separate clean process
 ```
 
+### 현재 닫은 내용
+
+```yaml
+closure_status: closed
+closed_at_kst: 2026-05-29
+evidence:
+  - results/qwen/qwen3_single_backbone.json
+  - results/qwen/qwen_small_or_quantized.json
+  - docs/20_results/002_qwen_baseline_ko.md
+notes:
+  - Qwen3-VL 4B single backbone completed on 64 deterministic CircuitVQA test QA refs.
+  - smaller/quantized Qwen baseline was explicitly deferred because no local checkpoint or quantized runtime was available.
+  - memory and latency were measured in a separate process from LeWM training.
+```
+
 ---
 
 ## M4. LeWM Data Pipeline

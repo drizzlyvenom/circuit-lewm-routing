@@ -7,7 +7,6 @@ Planned scripts:
 ```text
 audit_sources.py
 prepare_circuit_samples.py
-run_qwen_baseline.py
 run_lewm_probe.py
 train_router_llm.py
 train_router_jepa.py
@@ -30,4 +29,10 @@ prepare_circuit_samples.py
   - verifies open-schematics image+schematic rows before adding them to the curriculum
   - pairs local CGHD image/XML files from ignored data/downloads
   - stores CircuitVQA row references without committing prompt/answer payloads
+
+run_qwen_baseline.py
+  - runs M3 Qwen3-VL single-backbone evaluation on deterministic CircuitVQA test QA refs
+  - writes results/qwen/qwen3_single_backbone.json
+  - can explicitly defer the smaller/quantized Qwen baseline into results/qwen/qwen_small_or_quantized.json
+  - stores match flags, latency, and resource metrics without committing raw prompts, expected answers, or predictions
 ```
