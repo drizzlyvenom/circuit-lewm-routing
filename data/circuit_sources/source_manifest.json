@@ -1,0 +1,1607 @@
+{
+  "audit_scope": "M1 dataset source audit for circuit-domain Perception LeWM training and routing evaluation",
+  "entries": [
+    {
+      "api_caveats": {
+        "dataset_viewer_may_500_on_large_row_pages": true,
+        "file_tree_size_may_be_unknown": false,
+        "hub_full_error": null
+      },
+      "audit_date_utc": "2026-05-28T18:39:46+00:00",
+      "dataset_id": "bshada/open-schematics",
+      "dataset_server": {
+        "first_rows_by_split": {
+          "default/train": {
+            "error": null,
+            "features": [
+              {
+                "name": "schematic",
+                "type": "{\"_type\": \"Value\", \"dtype\": \"string\"}"
+              },
+              {
+                "name": "image",
+                "type": "{\"_type\": \"Image\"}"
+              },
+              {
+                "name": "components_used",
+                "type": "{\"_type\": \"List\", \"feature\": {\"_type\": \"Value\", \"dtype\": \"string\"}}"
+              },
+              {
+                "name": "json",
+                "type": "{\"_type\": \"Value\", \"dtype\": \"string\"}"
+              },
+              {
+                "name": "yaml",
+                "type": "{\"_type\": \"Value\", \"dtype\": \"string\"}"
+              },
+              {
+                "name": "name",
+                "type": "{\"_type\": \"Value\", \"dtype\": \"string\"}"
+              },
+              {
+                "name": "description",
+                "type": "{\"_type\": \"Value\", \"dtype\": \"string\"}"
+              },
+              {
+                "name": "type",
+                "type": "{\"_type\": \"Value\", \"dtype\": \"string\"}"
+              }
+            ],
+            "sample": {
+              "field_shapes": {
+                "components_used": {
+                  "kind": "str",
+                  "preview": "[\"Conn_01x01_Pin\",\"Conn_01x06_Pin\",\"USB_A\",\"Conn_02x05_Odd_Even\",\"Conn_01x06_MountingPin\",\"C\",\"Fuse_"
+                },
+                "description": {
+                  "kind": "str",
+                  "preview": "\"A versatile UART programming board designed for microcontroller development with flexible voltage s"
+                },
+                "image": {
+                  "keys": [
+                    "height",
+                    "src",
+                    "width"
+                  ],
+                  "kind": "dict",
+                  "preview": {
+                    "height": 794,
+                    "width": 1123
+                  }
+                },
+                "json": {
+                  "kind": "str",
+                  "preview": "\"{\\n  \\\"libSymbols\\\": [\\n    \\\"Connector:Conn_01x01_Pin\\\",\\n    \\\"Connector:Conn_01x06_Pin\\\",\\n    \\"
+                },
+                "name": {
+                  "kind": "str",
+                  "preview": "TiebeDeclercq/Uart-programmer"
+                },
+                "schematic": {
+                  "kind": "str",
+                  "preview": "\"(kicad_sch\\n\\t(version 20231120)\\n\\t(generator \\\"eeschema\\\")\\n\\t(generator_version \\\"8.0\\\")\\n\\t(uui"
+                },
+                "type": {
+                  "kind": "str",
+                  "preview": ".kicad_sch"
+                },
+                "yaml": {
+                  "kind": "str",
+                  "preview": "\"libSymbols:\\n- Connector:Conn_01x01_Pin\\n- Connector:Conn_01x06_Pin\\n- Connector:USB_A\\n- Connector"
+                }
+              },
+              "row_keys": [
+                "schematic",
+                "image",
+                "components_used",
+                "json",
+                "yaml",
+                "name",
+                "description",
+                "type"
+              ]
+            }
+          }
+        },
+        "parquet_error": null,
+        "parquet_file_count": 78,
+        "parquet_ok": true,
+        "size": {
+          "configs": [
+            {
+              "config": "default",
+              "dataset": "bshada/open-schematics",
+              "estimated_num_rows": null,
+              "num_bytes_memory": 15069671986,
+              "num_bytes_original_files": 6666345413,
+              "num_bytes_parquet_files": 6666345413,
+              "num_columns": 8,
+              "num_rows": 84470
+            }
+          ],
+          "dataset": {
+            "dataset": "bshada/open-schematics",
+            "estimated_num_rows": null,
+            "num_bytes_memory": 15069671986,
+            "num_bytes_original_files": 6666345413,
+            "num_bytes_parquet_files": 6666345413,
+            "num_rows": 84470
+          },
+          "splits": [
+            {
+              "config": "default",
+              "dataset": "bshada/open-schematics",
+              "estimated_num_rows": null,
+              "num_bytes_memory": 15069671986,
+              "num_bytes_parquet_files": 6666345413,
+              "num_columns": 8,
+              "num_rows": 84470,
+              "split": "train"
+            }
+          ]
+        },
+        "size_error": null,
+        "size_ok": true,
+        "splits": [
+          {
+            "config": "default",
+            "dataset": "bshada/open-schematics",
+            "split": "train"
+          }
+        ],
+        "splits_error": null,
+        "splits_ok": true
+      },
+      "download_footprint": {
+        "avg_parquet_bytes_per_row": 78919,
+        "estimated_5k_parquet_h": "376.32 MiB",
+        "file_inventory_total_siblings": 81,
+        "file_tree_size_caveat": "Hub file-tree byte size is not always exposed by cheap APIs; avoid full snapshot_download unless explicitly budgeted.",
+        "parquet_api_total_bytes": 6666345413,
+        "parquet_api_total_h": "6.21 GiB",
+        "parquet_file_count": 78,
+        "viewer_memory_bytes": 15069671986,
+        "viewer_memory_h": "14.03 GiB",
+        "viewer_num_rows": 84470,
+        "viewer_original_bytes": 6666345413,
+        "viewer_original_h": "6.21 GiB",
+        "viewer_parquet_bytes": 6666345413,
+        "viewer_parquet_h": "6.21 GiB"
+      },
+      "expected_fields": [
+        "schematic",
+        "image",
+        "components_used",
+        "json",
+        "yaml",
+        "name",
+        "description",
+        "type"
+      ],
+      "file_inventory": {
+        "extensions_top": [
+          [
+            ".parquet",
+            78
+          ],
+          [
+            "<none>",
+            1
+          ],
+          [
+            ".md",
+            1
+          ],
+          [
+            ".png",
+            1
+          ]
+        ],
+        "image_file_count": 1,
+        "json_file_count": 0,
+        "parquet_file_count": 78,
+        "top_level_dirs_top": [
+          [
+            "data",
+            78
+          ],
+          [
+            ".gitattributes",
+            1
+          ],
+          [
+            "README.md",
+            1
+          ],
+          [
+            "open-schematics.png",
+            1
+          ]
+        ],
+        "total_siblings": 81,
+        "xml_file_count": 0,
+        "zip_file_count": 0
+      },
+      "hub": {
+        "downloads": 5040,
+        "error": null,
+        "gated": false,
+        "id": "bshada/open-schematics",
+        "last_modified_utc": "2025-12-17T16:52:57.000Z",
+        "license": "cc-by-4.0",
+        "likes": 163,
+        "ok": true,
+        "private": false,
+        "size_categories": [
+          "10K<n<100K"
+        ],
+        "tags": [
+          "task_categories:text-generation",
+          "task_categories:image-to-text",
+          "task_categories:text-to-image",
+          "language:en",
+          "license:cc-by-4.0",
+          "size_categories:10K<n<100K",
+          "format:parquet",
+          "format:optimized-parquet",
+          "modality:image",
+          "modality:text",
+          "library:datasets",
+          "library:dask",
+          "library:polars",
+          "library:mlcroissant",
+          "region:us",
+          "electronics",
+          "schematics",
+          "kicad",
+          "hardware",
+          "pcb",
+          "circuit-design",
+          "engineering"
+        ],
+        "task_categories": [
+          "text-generation",
+          "image-to-text",
+          "text-to-image"
+        ]
+      },
+      "hub_api_url": "https://huggingface.co/api/datasets/bshada/open-schematics",
+      "local_download_recommendation": {
+        "local_download": "avoid_full_snapshot_for_m1",
+        "reason": "full parquet is about 6.2 GiB and decoded/cache footprint may be much larger; build a 5k usable-pair cache in M2 instead"
+      },
+      "m1_decision": "selected_for_structure_pretraining",
+      "priority": "primary",
+      "roles": [
+        "structure_world_model_pretraining",
+        "image_to_structure_alignment"
+      ],
+      "source_url": "https://huggingface.co/datasets/bshada/open-schematics",
+      "split_policy": "Use row references only in M1; M2 must build a usable image+schematic pair manifest."
+    },
+    {
+      "api_caveats": {
+        "dataset_viewer_may_500_on_large_row_pages": false,
+        "file_tree_size_may_be_unknown": false,
+        "hub_full_error": null
+      },
+      "audit_date_utc": "2026-05-28T18:39:46+00:00",
+      "dataset_id": "microsoft/SchGen_dataset",
+      "dataset_server": {
+        "first_rows_by_split": {
+          "default/train": {
+            "error": null,
+            "features": [
+              {
+                "name": "messages",
+                "type": "{\"_type\": \"List\", \"feature\": {\"_type\": \"Json\"}}"
+              },
+              {
+                "name": "meta",
+                "type": "{\"code_path\": {\"_type\": \"Value\", \"dtype\": \"string\"}, \"module\": {\"_type\": \"Value\", \"dtype\": \"string\"}, \"schematic\": {\"_type\": \"Value\", \"dtype\": \"string\"}, \"schematic_path\": {\"_type\": \"Value\", \"dtype\": \"string\"}, \"style\": {\"_type\": \"Value\", \"dtype\": \"string\"}, \"thinking_model\": {\"_type\": \"Value\", \"dtype\": \"string\"}}"
+              }
+            ],
+            "sample": {
+              "field_shapes": {
+                "messages": {
+                  "kind": "list",
+                  "length": 3
+                },
+                "meta": {
+                  "keys": [
+                    "code_path",
+                    "module",
+                    "schematic",
+                    "schematic_path",
+                    "style",
+                    "thinking_model"
+                  ],
+                  "kind": "dict",
+                  "preview": {
+                    "code_path": "<path_redacted>/sch_1_0_int.py",
+                    "module": "SparkFun_Micro_Pressure_Sensor_BMP581_Qwiic-Schematic",
+                    "schematic": "sch_1_0.kicad_sch",
+                    "schematic_path": "<path_redacted>/sch_1_0.kicad_sch",
+                    "style": "concise",
+                    "thinking_model": "gpt-oss-20b"
+                  }
+                }
+              },
+              "row_keys": [
+                "messages",
+                "meta"
+              ]
+            }
+          }
+        },
+        "parquet_error": null,
+        "parquet_file_count": 1,
+        "parquet_ok": true,
+        "size": {
+          "configs": [
+            {
+              "config": "default",
+              "dataset": "microsoft/SchGen_dataset",
+              "estimated_num_rows": null,
+              "num_bytes_memory": 134474737,
+              "num_bytes_original_files": 132395756,
+              "num_bytes_parquet_files": 134515952,
+              "num_columns": 2,
+              "num_rows": 8420
+            }
+          ],
+          "dataset": {
+            "dataset": "microsoft/SchGen_dataset",
+            "estimated_num_rows": null,
+            "num_bytes_memory": 134474737,
+            "num_bytes_original_files": 132395756,
+            "num_bytes_parquet_files": 134515952,
+            "num_rows": 8420
+          },
+          "splits": [
+            {
+              "config": "default",
+              "dataset": "microsoft/SchGen_dataset",
+              "estimated_num_rows": null,
+              "num_bytes_memory": 134474737,
+              "num_bytes_parquet_files": 134515952,
+              "num_columns": 2,
+              "num_rows": 8420,
+              "split": "train"
+            }
+          ]
+        },
+        "size_error": null,
+        "size_ok": true,
+        "splits": [
+          {
+            "config": "default",
+            "dataset": "microsoft/SchGen_dataset",
+            "split": "train"
+          }
+        ],
+        "splits_error": null,
+        "splits_ok": true
+      },
+      "download_footprint": {
+        "avg_parquet_bytes_per_row": 15975,
+        "estimated_5k_parquet_h": "76.17 MiB",
+        "file_inventory_total_siblings": 3,
+        "file_tree_size_caveat": "Hub file-tree byte size is not always exposed by cheap APIs; avoid full snapshot_download unless explicitly budgeted.",
+        "parquet_api_total_bytes": 134515952,
+        "parquet_api_total_h": "128.28 MiB",
+        "parquet_file_count": 1,
+        "viewer_memory_bytes": 134474737,
+        "viewer_memory_h": "128.25 MiB",
+        "viewer_num_rows": 8420,
+        "viewer_original_bytes": 132395756,
+        "viewer_original_h": "126.26 MiB",
+        "viewer_parquet_bytes": 134515952,
+        "viewer_parquet_h": "128.28 MiB"
+      },
+      "expected_fields": [
+        "messages",
+        "meta"
+      ],
+      "file_inventory": {
+        "extensions_top": [
+          [
+            "<none>",
+            1
+          ],
+          [
+            ".md",
+            1
+          ],
+          [
+            ".jsonl",
+            1
+          ]
+        ],
+        "image_file_count": 0,
+        "json_file_count": 0,
+        "parquet_file_count": 0,
+        "top_level_dirs_top": [
+          [
+            ".gitattributes",
+            1
+          ],
+          [
+            "README.md",
+            1
+          ],
+          [
+            "SchGen_dataset.jsonl",
+            1
+          ]
+        ],
+        "total_siblings": 3,
+        "xml_file_count": 0,
+        "zip_file_count": 0
+      },
+      "hub": {
+        "downloads": 91,
+        "error": null,
+        "gated": false,
+        "id": "microsoft/SchGen_dataset",
+        "last_modified_utc": "2026-05-21T00:17:41.000Z",
+        "license": "mit",
+        "likes": 2,
+        "ok": true,
+        "private": false,
+        "size_categories": null,
+        "tags": [
+          "language:en",
+          "license:mit",
+          "size_categories:1K<n<10K",
+          "format:json",
+          "modality:text",
+          "library:datasets",
+          "library:pandas",
+          "library:polars",
+          "library:mlcroissant",
+          "region:us",
+          "PCB",
+          "EDA",
+          "KiCAD",
+          "Hardware-Design",
+          "Schematic-Generation",
+          "LLM",
+          "Circuit-Design"
+        ],
+        "task_categories": null
+      },
+      "hub_api_url": "https://huggingface.co/api/datasets/microsoft/SchGen_dataset",
+      "local_download_recommendation": {
+        "local_download": "acceptable_if_needed",
+        "reason": "sub-1GiB parquet footprint"
+      },
+      "m1_decision": "selected_for_structure_text_prior",
+      "priority": "primary",
+      "roles": [
+        "circuit_structure_text_prior",
+        "kicad_generation_prior",
+        "teacher_curriculum_support"
+      ],
+      "source_url": "https://huggingface.co/datasets/microsoft/SchGen_dataset",
+      "split_policy": "Use as structure/text prior only; do not mix into VQA evaluation."
+    },
+    {
+      "api_caveats": {
+        "dataset_viewer_may_500_on_large_row_pages": false,
+        "file_tree_size_may_be_unknown": false,
+        "hub_full_error": null
+      },
+      "audit_date_utc": "2026-05-28T18:39:46+00:00",
+      "dataset_id": "ayoubkirouane/CircuitVQA",
+      "dataset_server": {
+        "first_rows_by_split": {
+          "default/test": {
+            "error": null,
+            "features": [
+              {
+                "name": "texts",
+                "type": "{\"_type\": \"List\", \"feature\": {\"assistant\": {\"_type\": \"Value\", \"dtype\": \"string\"}, \"user\": {\"_type\": \"Value\", \"dtype\": \"string\"}}}"
+              },
+              {
+                "name": "images",
+                "type": "{\"_type\": \"List\", \"feature\": {\"_type\": \"Image\"}}"
+              }
+            ],
+            "sample": {
+              "field_shapes": {
+                "images": {
+                  "kind": "list",
+                  "length": 1
+                },
+                "texts": {
+                  "kind": "list",
+                  "length": 6
+                }
+              },
+              "row_keys": [
+                "texts",
+                "images"
+              ]
+            }
+          },
+          "default/train": {
+            "error": null,
+            "features": [
+              {
+                "name": "texts",
+                "type": "{\"_type\": \"List\", \"feature\": {\"assistant\": {\"_type\": \"Value\", \"dtype\": \"string\"}, \"user\": {\"_type\": \"Value\", \"dtype\": \"string\"}}}"
+              },
+              {
+                "name": "images",
+                "type": "{\"_type\": \"List\", \"feature\": {\"_type\": \"Image\"}}"
+              }
+            ],
+            "sample": {
+              "field_shapes": {
+                "images": {
+                  "kind": "list",
+                  "length": 1
+                },
+                "texts": {
+                  "kind": "list",
+                  "length": 6
+                }
+              },
+              "row_keys": [
+                "texts",
+                "images"
+              ]
+            }
+          }
+        },
+        "parquet_error": null,
+        "parquet_file_count": 2,
+        "parquet_ok": true,
+        "size": {
+          "configs": [
+            {
+              "config": "default",
+              "dataset": "ayoubkirouane/CircuitVQA",
+              "estimated_num_rows": null,
+              "num_bytes_memory": 392111152,
+              "num_bytes_original_files": 381486768,
+              "num_bytes_parquet_files": 381486768,
+              "num_columns": 2,
+              "num_rows": 10470
+            }
+          ],
+          "dataset": {
+            "dataset": "ayoubkirouane/CircuitVQA",
+            "estimated_num_rows": null,
+            "num_bytes_memory": 392111152,
+            "num_bytes_original_files": 381486768,
+            "num_bytes_parquet_files": 381486768,
+            "num_rows": 10470
+          },
+          "splits": [
+            {
+              "config": "default",
+              "dataset": "ayoubkirouane/CircuitVQA",
+              "estimated_num_rows": null,
+              "num_bytes_memory": 308075394,
+              "num_bytes_parquet_files": 304986841,
+              "num_columns": 2,
+              "num_rows": 8376,
+              "split": "train"
+            },
+            {
+              "config": "default",
+              "dataset": "ayoubkirouane/CircuitVQA",
+              "estimated_num_rows": null,
+              "num_bytes_memory": 84035758,
+              "num_bytes_parquet_files": 76499927,
+              "num_columns": 2,
+              "num_rows": 2094,
+              "split": "test"
+            }
+          ]
+        },
+        "size_error": null,
+        "size_ok": true,
+        "splits": [
+          {
+            "config": "default",
+            "dataset": "ayoubkirouane/CircuitVQA",
+            "split": "train"
+          },
+          {
+            "config": "default",
+            "dataset": "ayoubkirouane/CircuitVQA",
+            "split": "test"
+          }
+        ],
+        "splits_error": null,
+        "splits_ok": true
+      },
+      "download_footprint": {
+        "avg_parquet_bytes_per_row": 36436,
+        "estimated_5k_parquet_h": "173.74 MiB",
+        "file_inventory_total_siblings": 4,
+        "file_tree_size_caveat": "Hub file-tree byte size is not always exposed by cheap APIs; avoid full snapshot_download unless explicitly budgeted.",
+        "parquet_api_total_bytes": 381486768,
+        "parquet_api_total_h": "363.81 MiB",
+        "parquet_file_count": 2,
+        "viewer_memory_bytes": 392111152,
+        "viewer_memory_h": "373.95 MiB",
+        "viewer_num_rows": 10470,
+        "viewer_original_bytes": 381486768,
+        "viewer_original_h": "363.81 MiB",
+        "viewer_parquet_bytes": 381486768,
+        "viewer_parquet_h": "363.81 MiB"
+      },
+      "expected_fields": [
+        "texts",
+        "images"
+      ],
+      "file_inventory": {
+        "extensions_top": [
+          [
+            ".parquet",
+            2
+          ],
+          [
+            "<none>",
+            1
+          ],
+          [
+            ".md",
+            1
+          ]
+        ],
+        "image_file_count": 0,
+        "json_file_count": 0,
+        "parquet_file_count": 2,
+        "top_level_dirs_top": [
+          [
+            "data",
+            2
+          ],
+          [
+            ".gitattributes",
+            1
+          ],
+          [
+            "README.md",
+            1
+          ]
+        ],
+        "total_siblings": 4,
+        "xml_file_count": 0,
+        "zip_file_count": 0
+      },
+      "hub": {
+        "downloads": 91,
+        "error": null,
+        "gated": false,
+        "id": "ayoubkirouane/CircuitVQA",
+        "last_modified_utc": "2025-09-08T17:25:43.000Z",
+        "license": null,
+        "likes": 0,
+        "ok": true,
+        "private": false,
+        "size_categories": null,
+        "tags": [
+          "size_categories:10K<n<100K",
+          "format:parquet",
+          "modality:image",
+          "modality:text",
+          "library:datasets",
+          "library:pandas",
+          "library:mlcroissant",
+          "library:polars",
+          "region:us"
+        ],
+        "task_categories": null
+      },
+      "hub_api_url": "https://huggingface.co/api/datasets/ayoubkirouane/CircuitVQA",
+      "local_download_recommendation": {
+        "local_download": "metadata_or_eval_cache_only",
+        "reason": "license is not declared on HF; keep raw payload out of committed artifacts"
+      },
+      "m1_decision": "selected_for_vqa_evaluation_with_license_caveat",
+      "priority": "primary",
+      "roles": [
+        "vqa_evaluation",
+        "qwen_baseline_comparison",
+        "end_to_end_system_evaluation"
+      ],
+      "source_url": "https://huggingface.co/datasets/ayoubkirouane/CircuitVQA",
+      "split_policy": "Use provided train/test split first; keep prompt/answer payload out of committed artifacts."
+    },
+    {
+      "api_caveats": {
+        "dataset_viewer_may_500_on_large_row_pages": false,
+        "file_tree_size_may_be_unknown": true,
+        "hub_full_error": null
+      },
+      "audit_date_utc": "2026-05-28T18:39:46+00:00",
+      "dataset_id": "lowercaseonly/cghd",
+      "dataset_server": {
+        "first_rows_by_split": {
+          "default/train": {
+            "error": "HTTPError: HTTP Error 500: Internal Server Error",
+            "features": [],
+            "sample": {
+              "field_shapes": {},
+              "row_keys": []
+            }
+          }
+        },
+        "parquet_error": null,
+        "parquet_file_count": 0,
+        "parquet_ok": true,
+        "size": {
+          "configs": [],
+          "dataset": {
+            "dataset": "lowercaseonly/cghd",
+            "estimated_num_rows": null,
+            "num_bytes_memory": 0,
+            "num_bytes_original_files": 0,
+            "num_bytes_parquet_files": 0,
+            "num_rows": 0
+          },
+          "splits": []
+        },
+        "size_error": null,
+        "size_ok": true,
+        "splits": [
+          {
+            "config": "default",
+            "dataset": "lowercaseonly/cghd",
+            "split": "train"
+          }
+        ],
+        "splits_error": null,
+        "splits_ok": true
+      },
+      "download_footprint": {
+        "avg_parquet_bytes_per_row": null,
+        "estimated_5k_parquet_h": null,
+        "file_inventory_total_siblings": 8207,
+        "file_tree_size_caveat": "Hub file-tree byte size is not always exposed by cheap APIs; avoid full snapshot_download unless explicitly budgeted.",
+        "parquet_api_total_bytes": null,
+        "parquet_api_total_h": null,
+        "parquet_file_count": 0,
+        "viewer_memory_bytes": 0,
+        "viewer_memory_h": "0.00 B",
+        "viewer_num_rows": 0,
+        "viewer_original_bytes": 0,
+        "viewer_original_h": "0.00 B",
+        "viewer_parquet_bytes": null,
+        "viewer_parquet_h": null
+      },
+      "expected_fields": [
+        "images",
+        "annotations",
+        "instances",
+        "segmentation",
+        "classes"
+      ],
+      "file_inventory": {
+        "extensions_top": [
+          [
+            ".xml",
+            3293
+          ],
+          [
+            ".jpg",
+            2901
+          ],
+          [
+            ".png",
+            1128
+          ],
+          [
+            ".jpeg",
+            508
+          ],
+          [
+            ".json",
+            358
+          ],
+          [
+            ".asc",
+            12
+          ],
+          [
+            ".py",
+            4
+          ],
+          [
+            "<none>",
+            1
+          ],
+          [
+            ".md",
+            1
+          ],
+          [
+            ".txt",
+            1
+          ]
+        ],
+        "image_file_count": 4537,
+        "json_file_count": 358,
+        "parquet_file_count": 0,
+        "top_level_dirs_top": [
+          [
+            "drafter_0",
+            1188
+          ],
+          [
+            "drafter_-1",
+            290
+          ],
+          [
+            "drafter_1",
+            238
+          ],
+          [
+            "drafter_5",
+            226
+          ],
+          [
+            "drafter_10",
+            222
+          ],
+          [
+            "drafter_2",
+            222
+          ],
+          [
+            "drafter_13",
+            220
+          ],
+          [
+            "drafter_6",
+            220
+          ],
+          [
+            "drafter_20",
+            219
+          ],
+          [
+            "drafter_15",
+            218
+          ],
+          [
+            "drafter_21",
+            218
+          ],
+          [
+            "drafter_3",
+            218
+          ],
+          [
+            "drafter_4",
+            218
+          ],
+          [
+            "drafter_11",
+            216
+          ],
+          [
+            "drafter_12",
+            216
+          ],
+          [
+            "drafter_14",
+            216
+          ],
+          [
+            "drafter_16",
+            216
+          ],
+          [
+            "drafter_17",
+            216
+          ],
+          [
+            "drafter_18",
+            216
+          ],
+          [
+            "drafter_19",
+            216
+          ]
+        ],
+        "total_siblings": 8207,
+        "xml_file_count": 3293,
+        "zip_file_count": 0
+      },
+      "hub": {
+        "downloads": 1036,
+        "error": null,
+        "gated": false,
+        "id": "lowercaseonly/cghd",
+        "last_modified_utc": "2026-02-27T22:16:49.000Z",
+        "license": "cc-by-3.0",
+        "likes": 2,
+        "ok": true,
+        "private": false,
+        "size_categories": [
+          "1K<n<10K"
+        ],
+        "tags": [
+          "task_categories:object-detection",
+          "task_categories:image-segmentation",
+          "language:en",
+          "language:de",
+          "license:cc-by-3.0",
+          "size_categories:1K<n<10K",
+          "region:us"
+        ],
+        "task_categories": [
+          "object-detection",
+          "image-segmentation"
+        ]
+      },
+      "hub_api_url": "https://huggingface.co/api/datasets/lowercaseonly/cghd",
+      "local_download_recommendation": {
+        "local_download": "partial_or_pattern_only",
+        "reason": "file-tree dataset; pair image/XML first and avoid full snapshot until exact cache budget is known"
+      },
+      "m1_decision": "selected_for_perception_probe",
+      "priority": "primary",
+      "roles": [
+        "symbol_grounding_probe",
+        "object_detection_probe",
+        "segmentation_probe"
+      ],
+      "source_url": "https://huggingface.co/datasets/lowercaseonly/cghd",
+      "split_policy": "File-tree dataset; M2 must pair image/XML by file stem and split by drafter+circuit group."
+    },
+    {
+      "api_caveats": {
+        "dataset_viewer_may_500_on_large_row_pages": false,
+        "file_tree_size_may_be_unknown": true,
+        "hub_full_error": null
+      },
+      "audit_date_utc": "2026-05-28T18:39:46+00:00",
+      "dataset_id": "MirandaAbhilash/circuitvqa-dataset",
+      "dataset_server": {
+        "first_rows_by_split": {
+          "default/test": {
+            "error": null,
+            "features": [
+              {
+                "name": "image",
+                "type": "{\"_type\": \"Image\"}"
+              },
+              {
+                "name": "label",
+                "type": "{\"_type\": \"ClassLabel\", \"names\": [\"test\", \"train\", \"val\"]}"
+              }
+            ],
+            "sample": {
+              "field_shapes": {
+                "image": {
+                  "keys": [
+                    "height",
+                    "src",
+                    "width"
+                  ],
+                  "kind": "dict",
+                  "preview": {
+                    "height": 384,
+                    "width": 216
+                  }
+                },
+                "label": {
+                  "kind": "int",
+                  "preview": 0
+                }
+              },
+              "row_keys": [
+                "image",
+                "label"
+              ]
+            }
+          },
+          "default/train": {
+            "error": null,
+            "features": [
+              {
+                "name": "image",
+                "type": "{\"_type\": \"Image\"}"
+              },
+              {
+                "name": "label",
+                "type": "{\"_type\": \"ClassLabel\", \"names\": [\"test\", \"train\", \"val\"]}"
+              }
+            ],
+            "sample": {
+              "field_shapes": {
+                "image": {
+                  "keys": [
+                    "height",
+                    "src",
+                    "width"
+                  ],
+                  "kind": "dict",
+                  "preview": {
+                    "height": 384,
+                    "width": 216
+                  }
+                },
+                "label": {
+                  "kind": "NoneType",
+                  "preview": null
+                }
+              },
+              "row_keys": [
+                "image",
+                "label"
+              ]
+            }
+          },
+          "default/validation": {
+            "error": null,
+            "features": [
+              {
+                "name": "image",
+                "type": "{\"_type\": \"Image\"}"
+              },
+              {
+                "name": "label",
+                "type": "{\"_type\": \"ClassLabel\", \"names\": [\"test\", \"train\", \"val\"]}"
+              }
+            ],
+            "sample": {
+              "field_shapes": {
+                "image": {
+                  "keys": [
+                    "height",
+                    "src",
+                    "width"
+                  ],
+                  "kind": "dict",
+                  "preview": {
+                    "height": 384,
+                    "width": 216
+                  }
+                },
+                "label": {
+                  "kind": "int",
+                  "preview": 2
+                }
+              },
+              "row_keys": [
+                "image",
+                "label"
+              ]
+            }
+          }
+        },
+        "parquet_error": null,
+        "parquet_file_count": 3,
+        "parquet_ok": true,
+        "size": {
+          "configs": [
+            {
+              "config": "default",
+              "dataset": "MirandaAbhilash/circuitvqa-dataset",
+              "estimated_num_rows": null,
+              "num_bytes_memory": 87647613,
+              "num_bytes_original_files": 87214723,
+              "num_bytes_parquet_files": 87724812,
+              "num_columns": 2,
+              "num_rows": 8515
+            }
+          ],
+          "dataset": {
+            "dataset": "MirandaAbhilash/circuitvqa-dataset",
+            "estimated_num_rows": null,
+            "num_bytes_memory": 87647613,
+            "num_bytes_original_files": 87214723,
+            "num_bytes_parquet_files": 87724812,
+            "num_rows": 8515
+          },
+          "splits": [
+            {
+              "config": "default",
+              "dataset": "MirandaAbhilash/circuitvqa-dataset",
+              "estimated_num_rows": null,
+              "num_bytes_memory": 60971570,
+              "num_bytes_parquet_files": 61009156,
+              "num_columns": 2,
+              "num_rows": 5963,
+              "split": "train"
+            },
+            {
+              "config": "default",
+              "dataset": "MirandaAbhilash/circuitvqa-dataset",
+              "estimated_num_rows": null,
+              "num_bytes_memory": 8859072,
+              "num_bytes_parquet_files": 8873397,
+              "num_columns": 2,
+              "num_rows": 846,
+              "split": "validation"
+            },
+            {
+              "config": "default",
+              "dataset": "MirandaAbhilash/circuitvqa-dataset",
+              "estimated_num_rows": null,
+              "num_bytes_memory": 17816971,
+              "num_bytes_parquet_files": 17842259,
+              "num_columns": 2,
+              "num_rows": 1706,
+              "split": "test"
+            }
+          ]
+        },
+        "size_error": null,
+        "size_ok": true,
+        "splits": [
+          {
+            "config": "default",
+            "dataset": "MirandaAbhilash/circuitvqa-dataset",
+            "split": "train"
+          },
+          {
+            "config": "default",
+            "dataset": "MirandaAbhilash/circuitvqa-dataset",
+            "split": "validation"
+          },
+          {
+            "config": "default",
+            "dataset": "MirandaAbhilash/circuitvqa-dataset",
+            "split": "test"
+          }
+        ],
+        "splits_error": null,
+        "splits_ok": true
+      },
+      "download_footprint": {
+        "avg_parquet_bytes_per_row": 10302,
+        "estimated_5k_parquet_h": "49.12 MiB",
+        "file_inventory_total_siblings": 8523,
+        "file_tree_size_caveat": "Hub file-tree byte size is not always exposed by cheap APIs; avoid full snapshot_download unless explicitly budgeted.",
+        "parquet_api_total_bytes": 87724812,
+        "parquet_api_total_h": "83.66 MiB",
+        "parquet_file_count": 3,
+        "viewer_memory_bytes": 87647613,
+        "viewer_memory_h": "83.59 MiB",
+        "viewer_num_rows": 8515,
+        "viewer_original_bytes": 87214723,
+        "viewer_original_h": "83.17 MiB",
+        "viewer_parquet_bytes": 87724812,
+        "viewer_parquet_h": "83.66 MiB"
+      },
+      "expected_fields": [
+        "image",
+        "label"
+      ],
+      "file_inventory": {
+        "extensions_top": [
+          [
+            ".jpg",
+            8515
+          ],
+          [
+            ".json",
+            7
+          ],
+          [
+            "<none>",
+            1
+          ]
+        ],
+        "image_file_count": 8515,
+        "json_file_count": 7,
+        "parquet_file_count": 0,
+        "top_level_dirs_top": [
+          [
+            "384a",
+            8515
+          ],
+          [
+            "questions",
+            7
+          ],
+          [
+            ".gitattributes",
+            1
+          ]
+        ],
+        "total_siblings": 8523,
+        "xml_file_count": 0,
+        "zip_file_count": 0
+      },
+      "hub": {
+        "downloads": 15,
+        "error": null,
+        "gated": false,
+        "id": "MirandaAbhilash/circuitvqa-dataset",
+        "last_modified_utc": "2026-03-07T09:20:28.000Z",
+        "license": null,
+        "likes": 0,
+        "ok": true,
+        "private": false,
+        "size_categories": null,
+        "tags": [
+          "size_categories:1K<n<10K",
+          "format:imagefolder",
+          "modality:image",
+          "library:datasets",
+          "library:mlcroissant",
+          "region:us"
+        ],
+        "task_categories": null
+      },
+      "hub_api_url": "https://huggingface.co/api/datasets/MirandaAbhilash/circuitvqa-dataset",
+      "local_download_recommendation": {
+        "local_download": "acceptable_if_needed",
+        "reason": "sub-1GiB parquet footprint"
+      },
+      "m1_decision": "optional_supplementary_image_candidate",
+      "priority": "secondary",
+      "roles": [
+        "supplementary_image_baseline_candidate"
+      ],
+      "source_url": "https://huggingface.co/datasets/MirandaAbhilash/circuitvqa-dataset",
+      "split_policy": "Use only after license and label semantics audit."
+    },
+    {
+      "api_caveats": {
+        "dataset_viewer_may_500_on_large_row_pages": false,
+        "file_tree_size_may_be_unknown": false,
+        "hub_full_error": null
+      },
+      "audit_date_utc": "2026-05-28T18:39:46+00:00",
+      "dataset_id": "Ailiance-fr/kicad9plus-copyleft",
+      "dataset_server": {
+        "first_rows_by_split": {
+          "default/train": {
+            "error": null,
+            "features": [
+              {
+                "name": "messages",
+                "type": "{\"_type\": \"List\", \"feature\": {\"content\": {\"_type\": \"Value\", \"dtype\": \"string\"}, \"role\": {\"_type\": \"Value\", \"dtype\": \"string\"}}}"
+              },
+              {
+                "name": "metadata",
+                "type": "{\"commit_sha\": {\"_type\": \"Value\", \"dtype\": \"string\"}, \"compliance_notes\": {\"_type\": \"Value\", \"dtype\": \"string\"}, \"downloaded_at\": {\"_type\": \"Value\", \"dtype\": \"timestamp[s]\"}, \"file_sha256\": {\"_type\": \"Value\", \"dtype\": \"string\"}, \"file_size_bytes\": {\"_type\": \"Value\", \"dtype\": \"int64\"}, \"ia_act_status\": {\"_type\": \"Value\", \"dtype\": \"string\"}, \"kicad_version\": {\"_type\": \"Value\", \"dtype\": \"string\"}, \"license_spdx\": {\"_type\": \"Value\", \"dtype\": \"string\"}, \"rel_path\": {\"_type\": \"Value\", \"dtype\": \"string\"}, \"repo\": {\"_type\": \"Value\", \"dtype\": \"string\"}, \"source_url\": {\"_type\": \"Value\", \"dtype\": \"string\"}}"
+              }
+            ],
+            "sample": {
+              "field_shapes": {
+                "messages": {
+                  "kind": "list",
+                  "length": 2
+                },
+                "metadata": {
+                  "keys": [
+                    "commit_sha",
+                    "compliance_notes",
+                    "downloaded_at",
+                    "file_sha256",
+                    "file_size_bytes",
+                    "ia_act_status",
+                    "kicad_version",
+                    "license_spdx",
+                    "rel_path",
+                    "repo",
+                    "source_url"
+                  ],
+                  "kind": "dict",
+                  "preview": {
+                    "commit_sha": "51b31ad8e6962b76d652d8b956b0495d39725633",
+                    "file_sha256": "bbee3e5a0640f8438882dc976b4a9c6f54bcce4cd2d5649012c4af9cd42a6d55",
+                    "file_size_bytes": 253898,
+                    "kicad_version": "20250114",
+                    "license_spdx": "CERN-OHL-S-2.0",
+                    "rel_path": "asic.kicad_sch",
+                    "repo": "bitaxeorg/bitaxeBonanza",
+                    "source_url": "https://github.com/bitaxeorg/bitaxeBonanza/blob/51b31ad8e6962b76d652d8b956b0495d39725633/asic.kicad_sch"
+                  }
+                }
+              },
+              "row_keys": [
+                "messages",
+                "metadata"
+              ]
+            }
+          }
+        },
+        "parquet_error": null,
+        "parquet_file_count": 1,
+        "parquet_ok": true,
+        "size": {
+          "configs": [
+            {
+              "config": "default",
+              "dataset": "Ailiance-fr/kicad9plus-copyleft",
+              "estimated_num_rows": null,
+              "num_bytes_memory": 1668678,
+              "num_bytes_original_files": 2275630,
+              "num_bytes_parquet_files": 1675731,
+              "num_columns": 2,
+              "num_rows": 209
+            }
+          ],
+          "dataset": {
+            "dataset": "Ailiance-fr/kicad9plus-copyleft",
+            "estimated_num_rows": null,
+            "num_bytes_memory": 1668678,
+            "num_bytes_original_files": 2275630,
+            "num_bytes_parquet_files": 1675731,
+            "num_rows": 209
+          },
+          "splits": [
+            {
+              "config": "default",
+              "dataset": "Ailiance-fr/kicad9plus-copyleft",
+              "estimated_num_rows": null,
+              "num_bytes_memory": 1668678,
+              "num_bytes_parquet_files": 1675731,
+              "num_columns": 2,
+              "num_rows": 209,
+              "split": "train"
+            }
+          ]
+        },
+        "size_error": null,
+        "size_ok": true,
+        "splits": [
+          {
+            "config": "default",
+            "dataset": "Ailiance-fr/kicad9plus-copyleft",
+            "split": "train"
+          }
+        ],
+        "splits_error": null,
+        "splits_ok": true
+      },
+      "download_footprint": {
+        "avg_parquet_bytes_per_row": 8017,
+        "estimated_5k_parquet_h": "38.23 MiB",
+        "file_inventory_total_siblings": 4,
+        "file_tree_size_caveat": "Hub file-tree byte size is not always exposed by cheap APIs; avoid full snapshot_download unless explicitly budgeted.",
+        "parquet_api_total_bytes": 1675731,
+        "parquet_api_total_h": "1.60 MiB",
+        "parquet_file_count": 1,
+        "viewer_memory_bytes": 1668678,
+        "viewer_memory_h": "1.59 MiB",
+        "viewer_num_rows": 209,
+        "viewer_original_bytes": 2275630,
+        "viewer_original_h": "2.17 MiB",
+        "viewer_parquet_bytes": 1675731,
+        "viewer_parquet_h": "1.60 MiB"
+      },
+      "expected_fields": [
+        "messages",
+        "metadata"
+      ],
+      "file_inventory": {
+        "extensions_top": [
+          [
+            ".md",
+            2
+          ],
+          [
+            "<none>",
+            1
+          ],
+          [
+            ".jsonl",
+            1
+          ]
+        ],
+        "image_file_count": 0,
+        "json_file_count": 0,
+        "parquet_file_count": 0,
+        "top_level_dirs_top": [
+          [
+            ".gitattributes",
+            1
+          ],
+          [
+            "LICENSE_INVENTORY.md",
+            1
+          ],
+          [
+            "README.md",
+            1
+          ],
+          [
+            "dataset.jsonl",
+            1
+          ]
+        ],
+        "total_siblings": 4,
+        "xml_file_count": 0,
+        "zip_file_count": 0
+      },
+      "hub": {
+        "downloads": 70,
+        "error": null,
+        "gated": false,
+        "id": "Ailiance-fr/kicad9plus-copyleft",
+        "last_modified_utc": "2026-05-11T18:30:26.000Z",
+        "license": "gpl-3.0",
+        "likes": 0,
+        "ok": true,
+        "private": false,
+        "size_categories": [
+          "n<1K"
+        ],
+        "tags": [
+          "task_categories:text-generation",
+          "language:en",
+          "language:fr",
+          "license:gpl-3.0",
+          "size_categories:n<1K",
+          "format:json",
+          "modality:text",
+          "library:datasets",
+          "library:pandas",
+          "library:polars",
+          "library:mlcroissant",
+          "region:us",
+          "kicad",
+          "eda",
+          "schematic",
+          "s-expression",
+          "electronics",
+          "hardware",
+          "copyleft",
+          "ailiance"
+        ],
+        "task_categories": [
+          "text-generation"
+        ]
+      },
+      "hub_api_url": "https://huggingface.co/api/datasets/Ailiance-fr/kicad9plus-copyleft",
+      "local_download_recommendation": {
+        "local_download": "acceptable_if_needed",
+        "reason": "sub-1GiB parquet footprint"
+      },
+      "m1_decision": "exclude_from_initial_training_due_to_copyleft_scope",
+      "priority": "secondary_restricted",
+      "roles": [
+        "optional_kicad_text_corpus"
+      ],
+      "source_url": "https://huggingface.co/datasets/Ailiance-fr/kicad9plus-copyleft",
+      "split_policy": "Keep out of initial training unless GPL/copyleft obligations are explicitly accepted."
+    },
+    {
+      "api_caveats": {
+        "dataset_viewer_may_500_on_large_row_pages": false,
+        "file_tree_size_may_be_unknown": false,
+        "hub_full_error": null
+      },
+      "audit_date_utc": "2026-05-28T18:39:46+00:00",
+      "dataset_id": "hanky2397/schematic_images",
+      "dataset_server": {
+        "first_rows_by_split": {},
+        "parquet_error": "HTTPError: HTTP Error 401: Unauthorized",
+        "parquet_file_count": 0,
+        "parquet_ok": false,
+        "size": null,
+        "size_error": "HTTPError: HTTP Error 401: Unauthorized",
+        "size_ok": false,
+        "splits": [],
+        "splits_error": "HTTPError: HTTP Error 401: Unauthorized",
+        "splits_ok": false
+      },
+      "download_footprint": {
+        "avg_parquet_bytes_per_row": null,
+        "estimated_5k_parquet_h": null,
+        "file_inventory_total_siblings": 7,
+        "file_tree_size_caveat": "Hub file-tree byte size is not always exposed by cheap APIs; avoid full snapshot_download unless explicitly budgeted.",
+        "parquet_api_total_bytes": null,
+        "parquet_api_total_h": null,
+        "parquet_file_count": 0,
+        "viewer_memory_bytes": null,
+        "viewer_memory_h": null,
+        "viewer_num_rows": null,
+        "viewer_original_bytes": null,
+        "viewer_original_h": null,
+        "viewer_parquet_bytes": null,
+        "viewer_parquet_h": null
+      },
+      "expected_fields": [
+        "images.zip",
+        "components.zip",
+        "pkl.zip",
+        "sp.zip"
+      ],
+      "file_inventory": {
+        "extensions_top": [
+          [
+            ".zip",
+            4
+          ],
+          [
+            "<none>",
+            1
+          ],
+          [
+            ".md",
+            1
+          ],
+          [
+            ".txt",
+            1
+          ]
+        ],
+        "image_file_count": 0,
+        "json_file_count": 0,
+        "parquet_file_count": 0,
+        "top_level_dirs_top": [
+          [
+            ".gitattributes",
+            1
+          ],
+          [
+            "README.md",
+            1
+          ],
+          [
+            "comoponent_id.txt",
+            1
+          ],
+          [
+            "components.zip",
+            1
+          ],
+          [
+            "images.zip",
+            1
+          ],
+          [
+            "pkl.zip",
+            1
+          ],
+          [
+            "sp.zip",
+            1
+          ]
+        ],
+        "total_siblings": 7,
+        "xml_file_count": 0,
+        "zip_file_count": 4
+      },
+      "hub": {
+        "downloads": 67,
+        "error": null,
+        "gated": "auto",
+        "id": "hanky2397/schematic_images",
+        "last_modified_utc": "2025-02-20T10:25:21.000Z",
+        "license": null,
+        "likes": 11,
+        "ok": true,
+        "private": false,
+        "size_categories": null,
+        "tags": [
+          "modality:image",
+          "modality:text",
+          "region:us"
+        ],
+        "task_categories": null
+      },
+      "hub_api_url": "https://huggingface.co/api/datasets/hanky2397/schematic_images",
+      "local_download_recommendation": {
+        "local_download": "avoid_initially",
+        "reason": "dataset is gated or requires access review"
+      },
+      "m1_decision": "exclude_initially_due_to_gated_access_and_missing_license",
+      "priority": "excluded_initially",
+      "roles": [
+        "possible_netlist_extraction_dataset"
+      ],
+      "source_url": "https://huggingface.co/datasets/hanky2397/schematic_images",
+      "split_policy": "Do not use until access terms and license are reviewed."
+    }
+  ],
+  "generated_at_utc": "2026-05-28T18:39:46+00:00",
+  "manifest_version": 1,
+  "source_count": 7
+}

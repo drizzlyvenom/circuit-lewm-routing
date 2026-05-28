@@ -9,6 +9,7 @@ data/circuit_sources/source_manifest.json
 data/circuit_curricula/train.jsonl
 data/circuit_curricula/holdout.jsonl
 data/circuit_curricula/test.jsonl
+data/circuit_curricula/usable_pair_summary.json
 ```
 
 Commit forbidden:

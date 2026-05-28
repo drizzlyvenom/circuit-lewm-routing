@@ -33,7 +33,7 @@ why_wsl:
 
 ```yaml
 windows_or_codex_root:
-  path: C:/Users/user/Documents/taxonomy-lora-bank-for-vision-model
+  path: <repo-root-on-windows>
   owns:
     - README.md
     - docs/
@@ -46,7 +46,7 @@ windows_or_codex_root:
 
 wsl_lewm_zone:
   repo_path: wsl/lewm
-  runtime_path_recommended: /home/user/circuit-lewm-routing
+  runtime_path_recommended: <wsl-home>/circuit-lewm-routing
   owns:
     - LeWM training wrappers
     - Linux-specific Hydra/config overrides

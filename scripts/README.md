@@ -15,3 +15,13 @@ run_system_comparison.py
 ```
 
 Do not place LeWM training entrypoints here. WSL/Linux world-model training entrypoints live under `wsl/lewm/scripts/`.
+
+Current scripts:
+
+```text
+audit_sources.py
+  - queries Hugging Face Hub API and Dataset Viewer API
+  - writes data/circuit_sources/source_manifest.json
+  - records license, source URLs, split metadata, parquet footprint, field previews, file inventory, and M1 decisions
+  - does not download raw datasets or store signed asset URLs
+```

@@ -1,11 +1,11 @@
 # Circuit LeWM Routing
 
-Status: proposal-stage research repo
-Scope: circuit-domain Perception LeWM + LoRA routing experiments
+Status: M1 dataset source audit closed with caveats
+Scope: circuit-domain Perception LeWM training + router/adapter evaluation
 Target hardware: RTX 3090 24GB VRAM, local RAM 24~26GB
 Primary question: compact world-model perception vs monolithic VLM backbone
 
-이 레포는 회로 도메인에서 **작은 Perception LeWM이 회로 구조 evidence를 충분히 보존할 수 있는지** 검증하기 위한 실험 레포다.
+이 레포는 회로 도메인에서 **작은 Perception LeWM이 회로 구조 evidence를 충분히 보존하도록 학습될 수 있는지** 검증하기 위한 실험 레포다.
 
 기존 `taxonomy-lora-bank-for-vision-model` 레포는 Qwen 계열 VLM 위에서 taxonomy LoRA bank와 actual-only certification protocol을 검증하던 control-plane 성격의 레포였다. 이 레포는 그 다음 단계로, 같은 문제를 더 작은 perception/world-model backbone으로 옮겨 검증한다.
 
@@ -107,17 +107,19 @@ wsl/lewm/
 
 ## 현재 단계
 
-현재는 repo scaffold와 protocol 문서를 정리하는 단계다. 아직 dataset audit, Qwen baseline, LeWM 학습 결과는 이 레포의 active evidence가 아니다.
+현재는 M1 dataset source audit를 닫고 M2 usable circuit curriculum 작업으로 넘어갈 수 있는 단계다. 아직 Qwen baseline, LeWM 학습 결과는 이 레포의 active evidence가 아니다.
 
 첫 실행 순서는 다음과 같다.
 
 ```text
 M0. Repo scaffold and boundary
-M1. Dataset source audit
-M2. Circuit sample schema and splits
+M1. Dataset source audit                    closed_with_caveats
+M2. Usable circuit sample schema and splits next
 M3. Qwen baseline measurement
 M4. LeWM data pipeline
 M5. LeWM-S structure pretraining
 ```
 
 자세한 마일스톤은 [circuit_lewm_validation_milestones_ko.md](docs/10_protocols/circuit_lewm_validation_milestones_ko.md)를 따른다.
+
+M1 결과 문서는 [000_dataset_source_audit_ko.md](docs/20_results/000_dataset_source_audit_ko.md)에 있다.

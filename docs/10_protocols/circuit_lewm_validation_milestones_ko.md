@@ -263,13 +263,28 @@ pass_if:
   - ambiguous/gated/copyleft sources are marked optional or excluded
 ```
 
+Current closure:
+
+```yaml
+status: closed_with_caveats
+manifest: data/circuit_sources/source_manifest.json
+result_brief: docs/20_results/000_dataset_source_audit_ko.md
+main_caveats:
+  - open-schematics full parquet footprint is about 6.21 GiB, so M1 avoids full local snapshot
+  - row count is not the same as usable image+schematic pair count
+  - CircuitVQA license is not declared on HF
+  - CGHD is file-tree based and requires explicit image/XML pairing
+next_milestone_requirement:
+  - M2 must build a usable training curriculum, targeting at least 5k verified open-schematics image+schematic train pairs if available
+```
+
 ---
 
 ## M2. Circuit Sample Schema and Splits
 
 ### 목표
 
-모든 후속 실험이 같은 sample schema를 쓰게 한다.
+모든 후속 실험이 같은 sample schema를 쓰게 하고, 실제 학습 가능한 usable circuit curriculum을 만든다.
 
 ### Schema
 
@@ -307,6 +322,7 @@ CircuitSample:
 data/circuit_curricula/train.jsonl
 data/circuit_curricula/holdout.jsonl
 data/circuit_curricula/test.jsonl
+data/circuit_curricula/usable_pair_summary.json
 docs/20_results/001_circuit_sample_schema_ko.md
 ```
 
@@ -315,6 +331,8 @@ docs/20_results/001_circuit_sample_schema_ko.md
 ```yaml
 pass_if:
   - train/holdout/test split exists
+  - open-schematics rows are verified as actual image+schematic pairs before entering the training curriculum
+  - train split targets at least 5k usable image+schematic pairs if source availability allows it
   - source leakage policy is documented
   - answer_type is present for QA samples
   - structure fields exist for structure pretraining samples

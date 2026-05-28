@@ -34,6 +34,12 @@ active_evidence_if:
   - failure is preserved instead of smoothed over
 ```
 
+현재 result briefs:
+
+```text
+000_dataset_source_audit_ko.md
+```
+
 ---
 
 ## 2. Quarantine
