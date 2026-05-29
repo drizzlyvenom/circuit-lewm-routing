@@ -1,6 +1,6 @@
 # Circuit LeWM Routing
 
-Status: M5 first 5k LeWM-S run, ROI target audit, and M5.3 diagnostic recorded; M5 closure pending review
+Status: paused after M5/M5.3 bottleneck analysis
 Scope: circuit-domain Perception LeWM training + router/adapter evaluation
 Target hardware: RTX 3090 24GB VRAM, local RAM 24~26GB
 Primary question: compact world-model perception vs monolithic VLM backbone
@@ -96,6 +96,7 @@ docs/
     README.md
   30_paper_notes/
     claim_boundary_ko.md
+    project_pause_report_ko.md
 
 schemas/
 configs/
@@ -106,9 +107,11 @@ scripts/
 wsl/lewm/
 ```
 
-## 현재 단계
+## 현재 상태
 
-현재는 M5 첫 5k LeWM-S run, ROI-aware structure target audit, M5.3 ROI graph diagnostic을 기록한 단계다. Qwen3-VL 단일 backbone baseline, LeWM data pipeline sanity, LeWM-S 5k 학습 health 결과는 active evidence로 추가됐다. 다만 M5 첫 run의 최종 holdout retrieval은 random top1을 넘지 못했고, M5.3에서도 final holdout top1이 random과 같아 M5 pass 여부는 아직 사용자 검토가 필요하다. 다음 검토 방향은 Gemma 4 같은 큰 VLM을 runtime backbone이 아니라 offline teacher/critic으로 제한해, LeWM이 따라갈 fixed structure anchor를 먼저 만드는 것이다.
+현재는 M5 첫 5k LeWM-S run, ROI-aware structure target audit, M5.3 ROI graph diagnostic을 기록한 뒤 프로젝트를 잠정 중단한 상태다.
+
+Qwen3-VL 단일 backbone baseline, LeWM data pipeline sanity, LeWM-S 5k 학습 health 결과는 active evidence로 추가됐다. 다만 M5 첫 run의 final holdout top1 retrieval은 random과 같았고, M5.3 ROI graph diagnostic에서도 final holdout top1이 random과 같았다. 따라서 현재 결과만으로는 LeWM latent가 회로 구조 evidence를 안정적으로 보존한다고 말할 수 없다.
 
 첫 실행 순서는 다음과 같다.
 
@@ -122,6 +125,79 @@ M5. LeWM-S structure pretraining           first_run_closed_with_caveats, m5_3_c
 ```
 
 자세한 마일스톤은 [circuit_lewm_validation_milestones_ko.md](docs/10_protocols/circuit_lewm_validation_milestones_ko.md)를 따른다.
+
+## 잠정 중단 판단
+
+현재 구조를 그대로 확장하기보다 잠정 중단하는 편이 타당하다.
+
+중단 사유:
+
+- 핵심 실험 질문이 너무 넓다.
+- 회로 정적 이미지 도메인은 LeWM 첫 성공 사례로 과하게 어렵다.
+- M5/M5.3 결과는 partial signal은 있지만, 다음 단계 router/LoRA 실험으로 넘어갈 만큼 안정적이지 않다.
+- LeWM backbone의 evidence retention이 먼저 안정화되어야 한다.
+
+이 중단은 실패 폐기가 아니라 병목을 확인한 뒤 범위를 줄이기 위한 중단이다.
+
+## 핵심 병목
+
+### 1. Structure Anchor 정렬 문제
+
+현재 병목은 단순히 데이터가 부족하다기보다 image latent가 따라갈 structure anchor가 약하다는 쪽에 가깝다.
+
+```text
+image latent
+  -> 어떤 구조 표현을 기준으로 배워야 하는가?
+```
+
+M5 첫 run은 component multi-hot target을 사용했다. 이 target은 같은 component set을 가진 서로 다른 회로를 구분하기 어렵고, symbol 위치, wire, junction, net relation 같은 구조 정보를 충분히 담지 못했다.
+
+M5.3에서는 KiCad parse 기반 ROI-aware graph/set target으로 바꿨지만, 여전히 완전한 topology target은 아니었다. 또한 image encoder와 structure encoder가 함께 움직이는 구조였기 때문에, loss는 줄어도 실제 회로 구조 의미를 안정적으로 보존한다는 증거가 약했다.
+
+### 2. 회로 정적 이미지 도메인의 난도
+
+회로 도메인에서는 작은 문자, 얇은 선, junction/crossing 구분, symbol identity, component placement, net/topology relation, schematic-level global structure가 동시에 중요하다.
+
+224 resize나 단순 global view에서는 작은 문자와 선 정보가 쉽게 손실된다. Tile/ROI가 필요하지만, ROI routing 자체도 별도의 검증 주제가 된다. 또한 회로 데이터는 정적 이미지 중심이라 LeWM/world-model의 장점인 시간적 변화, state transition, rollout consistency를 살리기 어렵다.
+
+### 3. 실험 범위 과다
+
+현재 프로젝트에는 compact Perception LeWM backbone, offline taxonomy / teacher loop, foveater-like ROI routing, multi-local LoRA or adapter bank, actual-only certification registry, Qwen3-VL monolithic comparison이 동시에 들어와 있다.
+
+이 축들은 각각 독립된 연구 주제가 될 만큼 크다. Backbone evidence retention 자체가 안정화되지 않은 상태에서 router, LoRA, ROI routing을 추가하면 성능이 나쁘게 나왔을 때 어느 모듈이 실패했는지 판단하기 어렵다.
+
+### 4. Metric 해석 한계
+
+현재 M5/M5.3 metric은 병목을 드러내는 데는 유용했지만, 강한 성공 증거로 쓰기에는 한계가 있었다.
+
+- `retrieval_top1`: final holdout top1이 random에 머물렀다.
+- `retrieval_top5`: 일부 epoch에서 random보다 높았지만 안정적이지 않았다.
+- `tile_probe`: positive tile 비율이 높아 random baseline 자체가 높았다.
+- `train_loss`: loss 감소가 structure evidence retention을 직접 보장하지 않았다.
+
+따라서 현재 결과는 “학습이 실행되고 일부 weak signal이 있다”는 증거이지, “LeWM이 회로 구조 evidence를 충분히 보존한다”는 증거는 아니다.
+
+## 보존할 산출물
+
+보존할 가치가 있는 산출물:
+
+- dataset source audit와 provenance 기록
+- CircuitSample schema와 split manifest
+- Qwen3 baseline result
+- LeWM data pipeline sanity check
+- M5 first run negative result
+- M5.3 ROI graph diagnostic negative/partial result
+- offline teacher loop protocol draft
+- local artifact policy와 WSL training boundary
+
+main claim으로 쓰지 않을 산출물:
+
+- M5/M5.3 retrieval partial signal
+- ROI tile probe 결과
+- Gemma 4 offline teacher loop 초안
+- routing/adapter/certification 관련 계획 문서
+
+## 결과 문서
 
 M1 결과 문서는 [001_dataset_source_audit_ko.md](docs/20_results/001_dataset_source_audit_ko.md)에 있다.
 
@@ -138,3 +214,5 @@ M5 ROI-aware structure target audit 문서는 [005b_roi_structure_target_audit_k
 M5.3 ROI graph diagnostic 결과 문서는 [005c_m5_3_roi_graph_diagnostic_ko.md](docs/20_results/005c_m5_3_roi_graph_diagnostic_ko.md)에 있다.
 
 Offline teacher loop 설계 초안은 [offline_teacher_loop_protocol_ko.md](docs/10_protocols/offline_teacher_loop_protocol_ko.md)에 있다.
+
+잠정 중단 보고서 초안은 [project_pause_report_ko.md](docs/30_paper_notes/project_pause_report_ko.md)에 있다.
